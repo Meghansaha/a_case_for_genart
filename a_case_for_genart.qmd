@@ -1,0 +1,42 @@
+---
+title: "It's All About Perspective"
+subtitle: "Making A Case for Generative Art"
+author: "Meghan Harris, MPH"
+institute: "Posit::conf(2023)"
+date: "September 26th 2023 | 2023-09-26"
+format:
+  revealjs: 
+    slide-number: true
+    #theme: theme.scss
+    #css: theme.css
+    width: 1690
+    height: 1080
+    linkcolor: "#ad58c4"
+    highlight-style: github
+    code-copy: true
+    code-overflow: scroll
+    code-block-bg: true
+    transition: fade
+editor: visual
+title-slide-attributes: 
+  #data-background-image: "images/grid.png"
+  data-background-size: "60%"
+  data-background-position: "right"
+  data-background-color: "#000000"
+---
+
+## An Opening Hook/Story/Setup
+
+## What is Generative Art?
+
+## **What is Data Science?**
+
+## How Can we Make Generative Art in R or Python?
+
+## Why Should We Bother?
+
+## Examples of How Gen Art Translates into Data Science
+
+## Takeaway
+
+## Questions/References
