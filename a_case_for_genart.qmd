@@ -3,12 +3,11 @@ title: "It's All About Perspective"
 subtitle: "Making A Case for Generative Art"
 author: "Meghan Harris, MPH"
 institute: "Posit::conf(2023)"
-date: "September 26th 2023 | 2023-09-26"
+date: "09-26-2023"
+date-format: "MMMM Do, YYYY | YYYY-MM-DD"
 format:
   revealjs: 
     slide-number: true
-    #theme: theme.scss
-    #css: theme.css
     width: 1690
     height: 1080
     linkcolor: "#ad58c4"
@@ -17,6 +16,7 @@ format:
     code-overflow: scroll
     code-block-bg: true
     transition: fade
+css: "scripts/style.css"
 editor: visual
 title-slide-attributes: 
   #data-background-image: "images/grid.png"
@@ -25,7 +25,21 @@ title-slide-attributes:
   data-background-color: "#000000"
 ---
 
-## An Opening Hook/Story/Setup
+## Main Themes of This Talk
+
+::: columns
+::: {.column width="50%"}
+![](images/ga1.png)
+:::
+
+::: {.column width="50%"}
+![](images/ga2.png)
+:::
+:::
+
+::: notes
+Good afternoon, for those of you who don't know me, my name is Meghan Harris. I'm a data scientist at the prostate cancer clinical trials consortium at Memorial Sloan Kettering. I'm also a generative artist with an affinity for circles and galaxies, and I'm also someone who just loves to learn. In making this talk, I was trying to pinpoint who exactly my audience would be. My guess would be that you're here because you may want to hear about art, data science, or just learning in general. My hope is that whatever you're here for, you can treat this talk as a "choose your own adventure" Please tell me I'm not the only old person in this room that grew up in the time of Goosebumps? Do you all remember those "Choose Your Own adventure books?" They kinda looked like this -\> (show gen art covers) I started thinking about this talk in that way because there are three main themes you can possibly take away from this talk. While my goal here is to truly "make a case" for generative art and help establish its utility and purpose in the data science field, my hope is that those that want to can get a brief introduction into generative art, data science, -\> (show Data sci covers) alternative learning methods -\> (show Learning cover), or anything else they deem relevant. So, to start, I'll briefly explain what data science and generative art is, we'll then go into how we can make generative art in R or Python, why we should bother to do so, and then a look into how skills needed to make generative art and just "do" data science are transferable.
+:::
 
 ## What is Generative Art?
 

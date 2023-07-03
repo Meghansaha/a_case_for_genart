@@ -39,7 +39,7 @@ xy_grid <- tibble(x = seq(0,100, by = max(radi) - 1),
   expand.grid()
 
 pattern_n <- nrow(xy_grid)
-pal <- colorRampPalette(c("#F6BF07", "#F67C21", "#ED155A", "#F61867","#1D0B35"))(pattern_n)
+pal <- artpack::art_pals("brood", pattern_n)
 pattern_colors <- map(sample(pal), ~colorRampPalette(c(.x,sample(pal,1)))(nrow(main_circle)))
 radi_mod <- sample(seq(.05,5, l = pattern_n))
 pattern_lst <- list(1:pattern_n,
@@ -55,9 +55,9 @@ final <- pmap(pattern_lst, ~main_circle |>
                        y = (y + ..4)*..5,
                        group = paste0(group,"group_00",..1),
                        group = fct_inorder(group),
-                       x = jitter(x, amount = 30),
-                       y = jitter(y, amount = 30)),
-              ) |> list_rbind()
+                       x = jitter(x, amount = .05),
+                       y = jitter(y, amount = .05),
+              )) |> list_rbind()
 
 
 
@@ -68,7 +68,7 @@ final |>
   geom_polygon(fill = final$fills,
                linetype = final$linetype,
                linewidth = final$linewidth,
-               color = NA,
+               color = "#ffffff",
                alpha = final$alpha) +
   coord_equal(xlim = xlim,
               ylim = ylim,
