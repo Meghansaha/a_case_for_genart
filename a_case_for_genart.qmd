@@ -10,7 +10,8 @@ format:
     slide-number: true
     width: 1690
     height: 1080
-    linkcolor: "#ad58c4"
+    linkcolor: "#ffffff"
+   
     highlight-style: github
     code-copy: true
     code-overflow: scroll
@@ -19,13 +20,32 @@ format:
 css: "scripts/style.css"
 editor: visual
 title-slide-attributes: 
-  #data-background-image: "images/grid.png"
-  data-background-size: "60%"
-  data-background-position: "right"
-  data-background-color: "#000000"
+  data-background-image: "images/background.png"
+  data-background-size: "strecth"
+  data-background-position: "center"
+  data-background-color: "#1a1a1a"
+  data-notes: "Good morning, everyone! Im Meghan Harris,a data scientist at the Prostate Cancer Clinical Trials Consortium, and a generative artist that's here to introduce you all to generative art and,  potentially, a different approach to learning data science. But before I dive in to that, I have to tell you all that I feel like I'm only standing here right now because I decided to lock my work laptop in a drawer last year. Let me explain, I didn't go off the deep end, or _quiet quit_ or anything but 10 months ago, I gave birth to a beautiful baby and went on maternity leave for 6 months. I knew I didnt want to think about work during that time. But, because I love what I do, am passionate about coding, and am stubborn, I knew I would start missing it. So, as a compromise, I allowed myself to code on my personal computer, BUT, only if it was for fun stuff like art. Miraculously, even with the baby, I had a lot of opportunities to practice creating some art, and I was actually amazed at how much it helped me with my data science skills. I actually credit it for smoothing out my transition back into work. And today I'm going to show you all some examples of how."
+transition: fade
 ---
 
-## Main Themes of This Talk
+
+##  {background-color="#1a1a1a" background-image="images/background1.png" background-size="cover"}
+
+<br> <br> <br> <br> <br> <br> <br> <br> <br>
+
+<center>
+
+<h1>Disclaimer</h1>
+
+</center>
+
+::: notes
+
+With that being said, I also want to give a disclaimer that it's OK if you don't know how to make generative art, or even if you don't like art. It's also OK if you don't know much about data science. My  hope is that you treat this talk like a choose-your-own-adventure. just like those old goosebumps books. Hopefully, I'm not the only old person in here who remembers those, with those cool-looking covers? They kinda looked like this?
+
+:::
+
+##  {background-color="#7a2929"}
 
 ::: columns
 ::: {.column width="50%"}
@@ -38,19 +58,184 @@ title-slide-attributes:
 :::
 
 ::: notes
-Good afternoon, for those of you who don't know me, my name is Meghan Harris. I'm a data scientist at the prostate cancer clinical trials consortium at Memorial Sloan Kettering. I'm also a generative artist with an affinity for circles and galaxies, and I'm also someone who just loves to learn. While making this talk, I was trying to pinpoint who exactly my audience would be. My guess would be that you're here because you may want to hear about art, data science, or just learning in general. My hope is that whatever you're here for, you can treat this talk as a "choose your own adventure" Please tell me I'm not the only old person in this room that grew up in the time of Goosebumps? Do you all remember those "Choose Your Own adventure books?" They kinda looked like this -\> (show gen art covers) I started thinking about this talk in that way because there are three main themes you can possibly take away from this talk. While my goal here is to truly "make a case" for generative art and help establish its utility and purpose in the data science field, my hope is that those that want to can get a brief introduction into generative art, data science, -\> (show Data sci covers) alternative learning methods -\> (show Learning cover), or anything else they deem relevant. So, to start, I'll briefly explain what data science and generative art is, we'll then go into how we can make generative art in R or Python, why we should bother to do so, and then a look into how skills needed to make generative art and just "do" data science are transferable.
+So whether you're here for the art
 :::
 
-## What is Generative Art?
+##  {background-color="#7a2929"}
 
-## **What is Data Science?**
+::: columns
+::: {.column width="50%"}
+![](images/ds1.png)
+:::
 
-## How Can we Make Generative Art in R or Python?
+::: {.column width="50%"}
+![](images/ds2.png)
+:::
+:::
 
-## Why Should We Bother?
+::: notes
 
-## Examples of How Gen Art Translates into Data Science
+or the data science…
 
-## Takeaway
+:::
 
-## Questions/References
+##  {background-color="#7a2929"}
+
+<center>
+
+![](images/learn1.png){width="50%"}
+
+<center>
+
+::: notes
+or just learning, I'm hoping there will be something for you to take away from this today. So let's get started. ->
+:::
+
+##  {background-color="#1a1a1a" background-image="images/map1.png" background-size="cover"}
+
+##  {background-color="#1a1a1a" background-image="images/map2.png" background-size="cover"}
+
+##  {background-color="#1a1a1a" background-image="images/map3.png" background-size="cover"}
+
+##  {background-color="#1a1a1a" background-image="images/map4.png" background-size="cover"}
+
+##  {background-color="#1a1a1a" background-image="images/map5.png" background-size="cover"}
+
+##  {background-color="#1a1a1a" background-image="images/map6.png" background-size="cover"}
+
+##  {background-color="#1a1a1a" background-image="images/background2.png" background-size="cover"}
+
+<br> <br> <br> <br> <br> <br> <br> <br> <br>
+
+<center>
+
+<h1>What is Generative Art?</h1>
+
+</center>
+
+## What is Generative Art? {.purple background-color="#6c4161"}
+
+<br>
+
+. . .
+
+According to Wikipedia:
+
+> *Generative art refers to art that in whole or in part has been created with the use of an autonomous system.*
+
+<br> <br>
+
+. . .
+
+Further:
+
+> *An autonomous system in this context is generally one that is non-human and can independently determine features of an artwork that would otherwise require decisions made directly by the artist.*
+
+::: notes
+Webster doesn't have 'generative art' defined in their dictionary, so I had to go to Wikipedia.
+
+Furthermore...I don't agree with the inclusion of the words "autonomous system."
+
+It is true that some art is created with automated algorithms
+:::
+
+## What is Generative Art? {.purple background-color="#6c4161"}
+
+<br>
+
+::: {.fragment .fade-out}
+According to Wikipedia:
+
+> *Generative art refers to art that in whole or in part has been created with the use of an autonomous system.*
+
+<br> <br>
+
+Further:
+
+> *An autonomous system in this context is generally one that is non-human and can independently determine features of an artwork that would otherwise require decisions made directly by the artist.*
+:::
+
+## What is Generative Art? {.purple background-color="#6c4161"}
+
+<br>
+
+<center>
+
+<div>
+
+![](images/wrong.png){.false fig-align="left" width="45%"} ![](images/judging-you.gif){fig-align="center" width="40%"}
+
+</div>
+
+</center>
+
+## What is Generative Art - What it's not {.purple background-color="#6c4161"}
+
+
+<center>
+
+![](images/ai_art_ex.png){fig-alt="A vast, cosmic, and beautiful galaxy with swirling blue, purple, and pink colors in the background. In the foreground a vibrantly colored planet directly in front of the sun." }
+
+</center>
+
+
+
+##  {background-color="#1a1a1a" background-image="images/background3.png" background-size="cover"}
+
+<br> <br> <br> <br> <br> <br> <br> <br> <br>
+
+<center>
+
+<h1>How Can we Make Generative Art in R or Python?</h1>
+
+</center>
+
+## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
+
+##  {background-color="#1a1a1a" background-image="images/background4.png" background-size="cover"}
+
+<br> <br> <br> <br> <br> <br> <br> <br> <br>
+
+<center>
+
+<h1>Benefits of Creating Generative Art</h1>
+
+</center>
+
+## Benefits of Creating Generative Art {.turq background-color="#3a7188"}
+
+##  {background-color="#1a1a1a" background-image="images/background5.png" background-size="cover"}
+
+<br> <br> <br> <br> <br> <br> <br> <br> <br>
+
+<center>
+
+<h1>What is Data Science?</h1>
+
+</center>
+
+## **What is Data Science?** {.green background-color="#657750"}
+
+##  {background-color="#1a1a1a" background-image="images/background6.png" background-size="cover"}
+
+<br> <br> <br> <br> <br> <br> <br> <br> <br>
+
+<center>
+
+<h1>Examples of How Gen Art Translates into Data Science</h1>
+
+</center>
+
+## Examples of How Gen Art Translates into Data Science {.yellow background-color="#ba9c5e"}
+
+##  {background-color="#1a1a1a" background-image="images/background7.png" background-size="cover"}
+
+<br> <br> <br> <br> <br> <br> <br> <br> <br>
+
+<center>
+
+<h1>Takeaway</h1>
+
+</center>
+
+## Takeaway {background-color="#bb743e"}
