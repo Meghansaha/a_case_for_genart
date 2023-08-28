@@ -95,11 +95,26 @@ body {
   border-color: #1a1a1a;
 } 
 
+.black h2{
+  background-color: #000000;
+  font-size: 72px;
+  display: inline-block;
+  margin-left: -300px;
+  padding: 8px;
+  border-radius: 25px 15px 225px 15px/15px 225px 15px 255px;
+  border:solid 1px;
+  border-color: #1a1a1a;
+}
+
+
+#bullet{
+      margin-left: -300px;
+}
+
+
 .reveal blockquote{
   color: #ffffff;
   background-color: #280b20;
   padding: 20px;
 }
-
-
 

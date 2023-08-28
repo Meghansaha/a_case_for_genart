@@ -282,7 +282,7 @@ df7 <-
 df1 |>
   ggplot(aes(x,y, group = group))+
   theme_void()+
-  theme(plot.background = element_rect(fill = "#1a1a1a"))+
+  theme(plot.background = element_rect(fill = "#1a1a1a", color = NA))+
   geom_polygon(alpha = df1$alpha, fill = df1$fill)+
   geom_path( color = df1$line_color, linewidth = df1$width)+
   geom_polygon(data = df2, alpha = df2$alpha, fill = df2$fill)+
@@ -301,7 +301,7 @@ df1 |>
               ylim = c(-5,60))
 
 ggsave(
-  "images/map6.png",
+  "images/background.png",
   width = 17.6,
   height = 11.25,
   device = "png",
