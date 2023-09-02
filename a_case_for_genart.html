@@ -8,7 +8,7 @@
 <link href="a_case_for_genart_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="a_case_for_genart_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="a_case_for_genart_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.128">
+  <meta name="generator" content="quarto-1.4.274">
 
   <meta name="author" content="Meghan Harris, MPH">
   <title>It’s All About Perspective</title>
@@ -29,6 +29,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
   </style>
   <link rel="stylesheet" href="a_case_for_genart_files/libs/revealjs/dist/theme/quarto.css">
   <link rel="stylesheet" href="scripts/style.css">
@@ -326,7 +391,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-color="#1a1a1a" data-background-image="images/background.png" data-background-position="center" data-background-size="strecth" data-notes="Good morning, everyone! Im Meghan Harris, I’m a data scientist at the Prostate Cancer Clinical Trials Consortium, and I’m also a generative artist that’s here to introduce you all to generative art and, potentially, a different approach to learning data science. But before I dive in to that, I have to say that I feel like I’m only standing here because I decided to stop working about 10 months ago, as you can see here…" class="quarto-title-block center">
+<section id="title-slide" data-background-color="#1a1a1a" data-background-image="images/background.png" data-background-position="center" data-background-size="strecth" data-notes="Good morning, everyone! Im Meghan Harris, I’m a data scientist at the Prostate Cancer Clinical Trials Consortium, and I’m also a generative artist that’s here to introduce you all to generative art and, potentially, a different approach to learning data science. But before I dive in to that, I have to say that I feel like I’m only talking here today because I decided to stop working about 10 months ago. Now, Let me explain. I didn’t go off the deep end and quit my job or anything, but as you can see here…" class="quarto-title-block center">
   <h1 class="title">It’s All About Perspective</h1>
   <p class="subtitle">Making A Case for Generative Art</p>
 
@@ -354,7 +419,7 @@ Meghan Harris, MPH
 </div>
 </center>
 <aside class="notes">
-<p>I was very pregnant and ready to pop. I gave birth to a beautiful baby and went on maternity leave for 6 months and I know it sounds fake, but…</p>
+<p>10 months ago I was very pregnant and ready to pop. I gave birth to a beautiful baby and went on maternity leave for 6 months and I know it sounds fake, but…</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -378,7 +443,7 @@ Meghan Harris, MPH
 </div>
 </center>
 <aside class="notes">
-<p>… I actually found time to code on leave. But I only let myself code if it was for fun stuff like art…</p>
+<p>… I actually found time to code on leave. But I had a rule to only code if it was for fun stuff like art…</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -402,7 +467,7 @@ Meghan Harris, MPH
 </div>
 </center>
 <aside class="notes">
-<p>… By the end of my leave, I was actually amazed at how much coding up art like this helped with practical data science skills. I actually credit stuff like this for smoothing out my transition back into work, and today, I want to give you all a glimpse of how that was possible.</p>
+<p>… By the end of my leave, I was actually amazed at how much coding to make art like this helped with practical data science skills. I credit this for smoothing out my transition back into work.And Today, I want to give you all a glimpse of how that was possible.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -514,7 +579,7 @@ What is Generative Art?
 </section>
 <section id="what-are-we-talking-about-today-1" class="slide level2 black" data-background-color="#1a1a1a" data-background-image="images/map2.png" data-background-size="cover">
 <h2>What are we Talking About Today?</h2>
-<div id="bullet">
+<div>
 <ul>
 <li><h3>
 What is Generative Art?
@@ -527,7 +592,7 @@ How Can we Make Generative Art in R or Python?
 </section>
 <section id="what-are-we-talking-about-today-2" class="slide level2 black" data-background-color="#1a1a1a" data-background-image="images/map3.png" data-background-size="cover">
 <h2>What are we Talking About Today?</h2>
-<div id="bullet">
+<div>
 <ul>
 <li><h3>
 What is Generative Art?
@@ -543,7 +608,7 @@ Benefits of Creating Generative Art
 </section>
 <section id="what-are-we-talking-about-today-3" class="slide level2 black" data-background-color="#1a1a1a" data-background-image="images/map4.png" data-background-size="cover">
 <h2>What are we Talking About Today?</h2>
-<div id="bullet">
+<div>
 <ul>
 <li><h3>
 What is Generative Art?
@@ -562,7 +627,7 @@ What is Data Science?
 </section>
 <section id="what-are-we-talking-about-today-4" class="slide level2 black" data-background-color="#1a1a1a" data-background-image="images/map5.png" data-background-size="cover">
 <h2>What are we Talking About Today?</h2>
-<div id="bullet">
+<div>
 <ul>
 <li><h3>
 What is Generative Art?
@@ -584,7 +649,7 @@ Examples of How Generative Art Translates into Data Science
 </section>
 <section id="what-are-we-talking-about-today-5" class="slide level2 black" data-background-color="#1a1a1a" data-background-image="images/map6.png" data-background-size="cover">
 <h2>What are we Talking About Today?</h2>
-<div id="bullet">
+<div>
 <ul>
 <li><h3>
 What is Generative Art?
@@ -615,6 +680,26 @@ Final Thoughts
 What is Generative Art?
 </h1>
 </center>
+<aside class="notes">
+<p>So I want to pose a question to you all, you don’t have to answer me, but just think for a second, what do <strong><em>you</em></strong> think generative art is?</p>
+<ul>
+<li>Is it opening up a digital sketchpad and physically drawing on a screen?</li>
+<li>Is it using a 3D Plotter to create art?</li>
+<li>Is it making automated code that spits out random images</li>
+<li>Is outputs from AI art platforms like Dall-E or Lensa?</li>
+</ul>
+<p>So, I tried to find an official definition of generative art for you all, But it wasn’t in Webster or anything, so of course I had to use Wikipedia…</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="what-is-generative-art" class="slide level2 purple" data-background-color="#6c4161">
 <h2>What is Generative Art?</h2>
@@ -630,9 +715,8 @@ What is Generative Art?
 <p><em>An autonomous system in this context is generally one that is non-human and can independently determine features of an artwork that would otherwise require decisions made directly by the artist.</em></p>
 </blockquote>
 <aside class="notes">
-<p>Webster doesn’t have ‘generative art’ defined in their dictionary, so I had to go to Wikipedia.</p>
-<p>Furthermore…I don’t agree with the inclusion of the words “autonomous system.”</p>
-<p>It is true that some art is created with automated algorithms</p>
+<p>So, I’ll tell you right now….my response to this was “nah, this ain’t it”..</p>
+<p>actually…</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -654,27 +738,80 @@ What is Generative Art?
 <p><img data-src="images/wrong.png" class="false" style="width:45.0%" data-fig-align="left"> <img data-src="images/judging-you.gif" style="width:40.0%" data-fig-align="center"></p>
 </div>
 </center>
+<aside class="notes">
+<p>this was my reaction reading that definition..</p>
+<p>Because..I don’t agree with the inclusion of the words “autonomous system.” I feel that it implies that no work goes into the creation of generative art as a whole. Generative art is not simply just prompting a computer with something.</p>
+<p>It is true that some art is created with automated algorithms… But to generally say this is ALL generative art is wrong in my opinion… so…</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="what-is-generative-art-2" class="slide level2 purple" data-background-color="#6c4161">
 <h2>What is Generative Art?</h2>
 <p><br> <br></p>
 <p>In this room today, Generative Art is defined as:</p>
-<p><br></p>
+<p><br> <br></p>
 <blockquote>
 <p><strong>Artwork created through a program in any language or interface. As long as a program executes the generation of the art, it can be considered generative art.</strong></p>
 </blockquote>
+<aside class="notes">
+<p>Now, some of you might be thinking..that’s vague and general, and yes. that’s on purpose</p>
+<p><br></p>
+<p>Because I can guarantee you, that there are multiple definitions of generative art floating around in your minds, collectively in this room right now.</p>
+<p>and I’m making an assumption here that a portion of you know what kind of generative art I’m actually talking about today, and another chunk of you might just be thinking about AI art,</p>
+<p><br></p>
+<p>so let’s get this out of the way now… I don’t know much about AI art, actually, I’ve only made AI art once..</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="what-is-generative-art---what-its-not" class="slide level2 purple" data-background-color="#6c4161" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">What is Generative Art - What it’s not</h2>
-<div style="position: relative; float: center;">
+<section id="what-is-generative-art---distinctions" class="slide level2 purple" data-background-color="#6c4161" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">What is Generative Art - Distinctions</h2>
+<div style="position: relative; float: center; margin-top: 100px;">
 <center>
-<img data-src="images/ai_art_ex.png" alt="A vast, cosmic, and beautiful galaxy with swirling blue, purple, and pink colors in the background. In the foreground a vibrantly colored planet directly in front of the sun.">
+<img data-src="images/ai_art_ex.png" alt="A vast, cosmic, and beautiful galaxy with swirling blue, purple, and pink colors in the background. In the foreground a vibrantly colored planet directly in front of the sun." width="800">
 </center>
 </div>
+<aside class="notes">
+<p>Which produced this lovely piece here.</p>
+<p>Now, I don’t know too much about AI art so we wont be talking it today, but there are two things that I want to clarify in regards to AI art and automation…</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="what-is-generative-art---what-its-not-1" class="slide level2 purple" data-background-color="#6c4161" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">What is Generative Art - What it’s not</h2>
+<section id="what-is-generative-art---distinctions-1" class="slide level2 purple" data-background-color="#6c4161" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">What is Generative Art? - Distinctions</h2>
 <div class="columns">
+<div class="column" style="position: relative; float: left; margin-top: 100px; width='50%';  margin-right:0px;">
+<center>
+<img data-src="images/ai_art_ex.png" alt="A vast, cosmic, and beautiful galaxy with swirling blue, purple, and pink colors in the background. In the foreground a vibrantly colored planet directly in front of the sun." width="800">
+</center>
+</div>
+</div>
 <div class="column" style="width:50%;">
 <p><br><br></p>
 <div class="fragment">
@@ -701,18 +838,272 @@ What is Generative Art?
 </div>
 <div class="fragment">
 <ul>
-<li>Some generative art is intentional and deliberately created by a human</li>
+<li>Some generative art is intentional and deliberately calculated by a human</li>
 </ul>
 </div>
-</div><div class="column" style="width:50%;">
-<center>
-<img data-src="images/ai_art_ex.png" alt="A vast, cosmic, and beautiful galaxy with swirling blue, purple, and pink colors in the background. In the foreground a vibrantly colored planet directly in front of the sun.">
-</center>
 </div>
-</div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="what-is-generative-art---what-its-not-2" class="slide level2 purple" data-background-color="#6c4161">
-<h2>What is Generative Art - What it’s not</h2>
+<section id="what-is-generative-art---distinctions-2" class="slide level2 purple" data-background-color="#6c4161">
+<h2>What is Generative Art? - Distinctions</h2>
+<p><br> <br></p>
+<center>
+<img data-src="images/manual_scene.png">
+</center>
+</section>
+<section id="what-is-generative-art---distinctions-3" class="slide level2 purple" data-background-color="#6c4161">
+<h2>What is Generative Art? - Distinctions</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/manual_scene.png"></p>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Library Load-In </span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co">#Asset Creation====</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a></span>
+<span id="cb1-6"><a href="#cb1-6"></a>top_left_quad <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb1-7"><a href="#cb1-7"></a>  <span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="fl">5.1</span>,<span class="dv">1</span>,<span class="fl">5.1</span>,<span class="fl">5.1</span>,<span class="dv">1</span>),</span>
+<span id="cb1-8"><a href="#cb1-8"></a>  <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">10</span>,<span class="fl">7.5</span>,<span class="dv">7</span>,<span class="dv">7</span>,<span class="fl">7.5</span>,<span class="fl">7.5</span>,<span class="fl">7.5</span>,<span class="dv">10</span>,<span class="dv">10</span>)</span>
+<span id="cb1-9"><a href="#cb1-9"></a>)</span>
+<span id="cb1-10"><a href="#cb1-10"></a></span>
+<span id="cb1-11"><a href="#cb1-11"></a>top_right_quad <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb1-12"><a href="#cb1-12"></a>  <span class="at">x =</span> <span class="fu">c</span>(<span class="fl">6.5</span>,<span class="dv">10</span>,<span class="dv">10</span>,<span class="fl">7.4</span>,<span class="fl">6.5</span>,<span class="fl">7.4</span>,<span class="dv">10</span>,<span class="dv">10</span>,<span class="fl">7.4</span>,<span class="fl">7.4</span>,<span class="fl">7.4</span>,<span class="fl">6.5</span>,<span class="fl">6.5</span>),</span>
+<span id="cb1-13"><a href="#cb1-13"></a>  <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">7</span>,<span class="dv">7</span>,<span class="fl">7.5</span>,<span class="fl">7.5</span>,<span class="dv">7</span>,<span class="fl">7.5</span>,<span class="fl">7.5</span>,<span class="dv">10</span>,<span class="dv">10</span>,<span class="fl">7.5</span>,<span class="dv">10</span>,<span class="dv">10</span>,<span class="dv">7</span>)</span>
+<span id="cb1-14"><a href="#cb1-14"></a>)</span>
+<span id="cb1-15"><a href="#cb1-15"></a></span>
+<span id="cb1-16"><a href="#cb1-16"></a>bottom_left_wall <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb1-17"><a href="#cb1-17"></a>  <span class="at">x =</span> <span class="fu">c</span>(<span class="fl">3.25</span>,<span class="fl">3.25</span>,<span class="fl">7.5</span>,<span class="fl">7.5</span>,<span class="fl">3.25</span>),</span>
+<span id="cb1-18"><a href="#cb1-18"></a>  <span class="at">y =</span> <span class="fu">c</span>(<span class="fl">7.2</span>,<span class="dv">3</span>,<span class="dv">3</span>,<span class="fl">7.2</span>,<span class="fl">7.2</span>)</span>
+<span id="cb1-19"><a href="#cb1-19"></a>)</span>
+<span id="cb1-20"><a href="#cb1-20"></a></span>
+<span id="cb1-21"><a href="#cb1-21"></a>bottom_left_supports <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb1-22"><a href="#cb1-22"></a>  <span class="at">x =</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">3</span>,<span class="fl">3.5</span>,<span class="fl">3.5</span>,<span class="dv">3</span>,</span>
+<span id="cb1-23"><a href="#cb1-23"></a>        <span class="fl">3.5</span>,<span class="fl">3.5</span>,<span class="fl">3.55</span>,<span class="fl">3.55</span>,<span class="fl">3.55</span>,<span class="fl">3.5</span>,<span class="dv">3</span>,</span>
+<span id="cb1-24"><a href="#cb1-24"></a>        <span class="fl">3.8</span>,<span class="fl">3.8</span>,<span class="fl">4.3</span>,<span class="fl">4.3</span>,<span class="fl">3.8</span>,<span class="fl">4.3</span>,<span class="fl">4.3</span>,<span class="fl">4.35</span>,<span class="fl">4.35</span>,<span class="fl">4.35</span>,<span class="fl">4.3</span>,<span class="fl">3.8</span>),</span>
+<span id="cb1-25"><a href="#cb1-25"></a>  <span class="at">y =</span> <span class="fu">c</span>(<span class="fl">7.4</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="fl">7.4</span>,<span class="fl">7.4</span>,</span>
+<span id="cb1-26"><a href="#cb1-26"></a>        <span class="fl">7.4</span>,<span class="dv">2</span>,<span class="fl">2.3</span>,<span class="fl">2.3</span>,<span class="fl">7.3</span>,<span class="fl">7.4</span>,<span class="fl">7.4</span>,</span>
+<span id="cb1-27"><a href="#cb1-27"></a>        <span class="fl">7.4</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="fl">7.4</span>,<span class="fl">7.4</span>,</span>
+<span id="cb1-28"><a href="#cb1-28"></a>        <span class="fl">7.4</span>,<span class="dv">2</span>,<span class="fl">2.3</span>,<span class="fl">2.3</span>,<span class="fl">7.3</span>,<span class="fl">7.4</span>,<span class="fl">7.4</span>),</span>
+<span id="cb1-29"><a href="#cb1-29"></a>  <span class="at">group =</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="at">each =</span> <span class="dv">12</span>)</span>
+<span id="cb1-30"><a href="#cb1-30"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb1-31"><a href="#cb1-31"></a>  <span class="fu">mutate</span>(<span class="at">x =</span> x <span class="sc">-</span>.<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Heres, an example of a more manual piece of art. With just a snippet of code. What I want to point out here are all of these numbers that are literally making this image here. Those of you familiar with coding, especially the tidyverse, can probably see that I’m manually creating this data. This did not include an autonomous system….</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-is-generative-art---distinctions-4" class="slide level2 purple" data-background-color="#6c4161">
+<h2>What is Generative Art? - Distinctions</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><br></p>
+<center>
+<img data-src="images/rainbow_orb.png" width="696">
+</center>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Library Load-In====</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">library</span>(tidyverse) <span class="co"># For everything data</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">library</span>(artpack) <span class="co"># For art tools</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="do">## Number of points data wanted====</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>n <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="do">## Randomly sampled angles</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>theta <span class="ot">&lt;-</span> <span class="fu">seq</span>(</span>
+<span id="cb2-10"><a href="#cb2-10"></a>  <span class="at">from =</span> <span class="fu">sample</span>(<span class="sc">-</span><span class="dv">500</span><span class="sc">:</span><span class="dv">500</span>,<span class="dv">1</span>),</span>
+<span id="cb2-11"><a href="#cb2-11"></a>  <span class="at">to =</span> <span class="fu">sample</span>(<span class="sc">-</span><span class="dv">500</span><span class="sc">:</span><span class="dv">500</span>,<span class="dv">1</span>),</span>
+<span id="cb2-12"><a href="#cb2-12"></a>  <span class="at">length =</span> n</span>
+<span id="cb2-13"><a href="#cb2-13"></a>  ) </span>
+<span id="cb2-14"><a href="#cb2-14"></a></span>
+<span id="cb2-15"><a href="#cb2-15"></a><span class="do">## Circle's radius</span></span>
+<span id="cb2-16"><a href="#cb2-16"></a>r <span class="ot">=</span> <span class="dv">1</span><span class="sc">:</span>n</span>
+<span id="cb2-17"><a href="#cb2-17"></a></span>
+<span id="cb2-18"><a href="#cb2-18"></a><span class="do">## Placing everything into a dataset====</span></span>
+<span id="cb2-19"><a href="#cb2-19"></a>data <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb2-20"><a href="#cb2-20"></a>  <span class="at">x =</span> <span class="fu">cos</span>(theta)<span class="sc">*</span>r,</span>
+<span id="cb2-21"><a href="#cb2-21"></a>  <span class="at">y =</span> <span class="fu">sin</span>(theta)<span class="sc">*</span>r,</span>
+<span id="cb2-22"><a href="#cb2-22"></a>  <span class="at">color =</span> <span class="fu">art_pals</span>(<span class="st">"rainbow"</span>,n)</span>
+<span id="cb2-23"><a href="#cb2-23"></a>)</span>
+<span id="cb2-24"><a href="#cb2-24"></a></span>
+<span id="cb2-25"><a href="#cb2-25"></a><span class="co"># Pulling it all together====</span></span>
+<span id="cb2-26"><a href="#cb2-26"></a>data <span class="sc">|&gt;</span></span>
+<span id="cb2-27"><a href="#cb2-27"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
+<span id="cb2-28"><a href="#cb2-28"></a>  <span class="fu">geom_path</span>(</span>
+<span id="cb2-29"><a href="#cb2-29"></a>    <span class="at">color =</span> data<span class="sc">$</span>color,</span>
+<span id="cb2-30"><a href="#cb2-30"></a>    <span class="at">position =</span> <span class="fu">position_jitter</span>(<span class="at">width =</span> <span class="dv">20</span>, <span class="at">height =</span> <span class="dv">10</span>),</span>
+<span id="cb2-31"><a href="#cb2-31"></a>    <span class="at">linewidth =</span> <span class="fu">sample</span>(<span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">5</span>, <span class="at">l =</span> n))</span>
+<span id="cb2-32"><a href="#cb2-32"></a>    ) <span class="sc">+</span></span>
+<span id="cb2-33"><a href="#cb2-33"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb2-34"><a href="#cb2-34"></a>  <span class="fu">theme</span>(<span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"black"</span>))<span class="sc">+</span></span>
+<span id="cb2-35"><a href="#cb2-35"></a>  <span class="fu">coord_equal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>This is another example of some more randomly generated art. I would say that this does use an autonmous system, because you can possibly get a new output everytime it’s ran like this…</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-is-generative-art---distinctions-5" class="slide level2 purple" data-background-color="#6c4161">
+<h2>What is Generative Art? - Distinctions</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><br></p>
+<center>
+<img data-src="images/rainbow_orb2.png" width="696">
+</center>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Library Load-In====</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">library</span>(tidyverse) <span class="co"># For everything data</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="fu">library</span>(artpack) <span class="co"># For art tools</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="do">## Number of points data wanted====</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a>n <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a></span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="do">## Randomly sampled angles</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a>theta <span class="ot">&lt;-</span> <span class="fu">seq</span>(</span>
+<span id="cb3-10"><a href="#cb3-10"></a>  <span class="at">from =</span> <span class="fu">sample</span>(<span class="sc">-</span><span class="dv">500</span><span class="sc">:</span><span class="dv">500</span>,<span class="dv">1</span>),</span>
+<span id="cb3-11"><a href="#cb3-11"></a>  <span class="at">to =</span> <span class="fu">sample</span>(<span class="sc">-</span><span class="dv">500</span><span class="sc">:</span><span class="dv">500</span>,<span class="dv">1</span>),</span>
+<span id="cb3-12"><a href="#cb3-12"></a>  <span class="at">length =</span> n</span>
+<span id="cb3-13"><a href="#cb3-13"></a>  ) </span>
+<span id="cb3-14"><a href="#cb3-14"></a></span>
+<span id="cb3-15"><a href="#cb3-15"></a><span class="do">## Circle's radius</span></span>
+<span id="cb3-16"><a href="#cb3-16"></a>r <span class="ot">=</span> <span class="dv">1</span><span class="sc">:</span>n</span>
+<span id="cb3-17"><a href="#cb3-17"></a></span>
+<span id="cb3-18"><a href="#cb3-18"></a><span class="do">## Placing everything into a dataset====</span></span>
+<span id="cb3-19"><a href="#cb3-19"></a>data <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb3-20"><a href="#cb3-20"></a>  <span class="at">x =</span> <span class="fu">cos</span>(theta)<span class="sc">*</span>r,</span>
+<span id="cb3-21"><a href="#cb3-21"></a>  <span class="at">y =</span> <span class="fu">sin</span>(theta)<span class="sc">*</span>r,</span>
+<span id="cb3-22"><a href="#cb3-22"></a>  <span class="at">color =</span> <span class="fu">art_pals</span>(<span class="st">"rainbow"</span>,n)</span>
+<span id="cb3-23"><a href="#cb3-23"></a>)</span>
+<span id="cb3-24"><a href="#cb3-24"></a></span>
+<span id="cb3-25"><a href="#cb3-25"></a><span class="co"># Pulling it all together====</span></span>
+<span id="cb3-26"><a href="#cb3-26"></a>data <span class="sc">|&gt;</span></span>
+<span id="cb3-27"><a href="#cb3-27"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
+<span id="cb3-28"><a href="#cb3-28"></a>  <span class="fu">geom_path</span>(</span>
+<span id="cb3-29"><a href="#cb3-29"></a>    <span class="at">color =</span> data<span class="sc">$</span>color,</span>
+<span id="cb3-30"><a href="#cb3-30"></a>    <span class="at">position =</span> <span class="fu">position_jitter</span>(<span class="at">width =</span> <span class="dv">20</span>, <span class="at">height =</span> <span class="dv">10</span>),</span>
+<span id="cb3-31"><a href="#cb3-31"></a>    <span class="at">linewidth =</span> <span class="fu">sample</span>(<span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">5</span>, <span class="at">l =</span> n))</span>
+<span id="cb3-32"><a href="#cb3-32"></a>    ) <span class="sc">+</span></span>
+<span id="cb3-33"><a href="#cb3-33"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb3-34"><a href="#cb3-34"></a>  <span class="fu">theme</span>(<span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"black"</span>))<span class="sc">+</span></span>
+<span id="cb3-35"><a href="#cb3-35"></a>  <span class="fu">coord_equal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>and this…</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-is-generative-art---distinctions-6" class="slide level2 purple" data-background-color="#6c4161">
+<h2>What is Generative Art? - Distinctions</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><br></p>
+<center>
+<img data-src="images/rainbow_orb3.png" width="696">
+</center>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Library Load-In====</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">library</span>(tidyverse) <span class="co"># For everything data</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="fu">library</span>(artpack) <span class="co"># For art tools</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="do">## Number of points data wanted====</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a>n <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="do">## Randomly sampled angles</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a>theta <span class="ot">&lt;-</span> <span class="fu">seq</span>(</span>
+<span id="cb4-10"><a href="#cb4-10"></a>  <span class="at">from =</span> <span class="fu">sample</span>(<span class="sc">-</span><span class="dv">500</span><span class="sc">:</span><span class="dv">500</span>,<span class="dv">1</span>),</span>
+<span id="cb4-11"><a href="#cb4-11"></a>  <span class="at">to =</span> <span class="fu">sample</span>(<span class="sc">-</span><span class="dv">500</span><span class="sc">:</span><span class="dv">500</span>,<span class="dv">1</span>),</span>
+<span id="cb4-12"><a href="#cb4-12"></a>  <span class="at">length =</span> n</span>
+<span id="cb4-13"><a href="#cb4-13"></a>  ) </span>
+<span id="cb4-14"><a href="#cb4-14"></a></span>
+<span id="cb4-15"><a href="#cb4-15"></a><span class="do">## Circle's radius</span></span>
+<span id="cb4-16"><a href="#cb4-16"></a>r <span class="ot">=</span> <span class="dv">1</span><span class="sc">:</span>n</span>
+<span id="cb4-17"><a href="#cb4-17"></a></span>
+<span id="cb4-18"><a href="#cb4-18"></a><span class="do">## Placing everything into a dataset====</span></span>
+<span id="cb4-19"><a href="#cb4-19"></a>data <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb4-20"><a href="#cb4-20"></a>  <span class="at">x =</span> <span class="fu">cos</span>(theta)<span class="sc">*</span>r,</span>
+<span id="cb4-21"><a href="#cb4-21"></a>  <span class="at">y =</span> <span class="fu">sin</span>(theta)<span class="sc">*</span>r,</span>
+<span id="cb4-22"><a href="#cb4-22"></a>  <span class="at">color =</span> <span class="fu">art_pals</span>(<span class="st">"rainbow"</span>,n)</span>
+<span id="cb4-23"><a href="#cb4-23"></a>)</span>
+<span id="cb4-24"><a href="#cb4-24"></a></span>
+<span id="cb4-25"><a href="#cb4-25"></a><span class="co"># Pulling it all together====</span></span>
+<span id="cb4-26"><a href="#cb4-26"></a>data <span class="sc">|&gt;</span></span>
+<span id="cb4-27"><a href="#cb4-27"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
+<span id="cb4-28"><a href="#cb4-28"></a>  <span class="fu">geom_path</span>(</span>
+<span id="cb4-29"><a href="#cb4-29"></a>    <span class="at">color =</span> data<span class="sc">$</span>color,</span>
+<span id="cb4-30"><a href="#cb4-30"></a>    <span class="at">position =</span> <span class="fu">position_jitter</span>(<span class="at">width =</span> <span class="dv">20</span>, <span class="at">height =</span> <span class="dv">10</span>),</span>
+<span id="cb4-31"><a href="#cb4-31"></a>    <span class="at">linewidth =</span> <span class="fu">sample</span>(<span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">5</span>, <span class="at">l =</span> n))</span>
+<span id="cb4-32"><a href="#cb4-32"></a>    ) <span class="sc">+</span></span>
+<span id="cb4-33"><a href="#cb4-33"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb4-34"><a href="#cb4-34"></a>  <span class="fu">theme</span>(<span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"black"</span>))<span class="sc">+</span></span>
+<span id="cb4-35"><a href="#cb4-35"></a>  <span class="fu">coord_equal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>and this…</p>
+<p>Now that i’ve got that clarified,</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="section-8" class="slide level2" data-background-color="#1a1a1a" data-background-image="images/background3.png" data-background-size="cover">
 <h2></h2>
@@ -725,6 +1116,155 @@ How Can we Make Generative Art<br>in R or Python?
 </section>
 <section id="how-can-we-make-generative-art-in-r-or-python" class="slide level2 mutedblue" data-background-color="#4e5483">
 <h2>How Can we Make Generative Art in R or Python?</h2>
+<p><br> <br> <br></p>
+<center>
+<div id="bluequote">
+<blockquote>
+<p>Making generative art might not be as hard as you think…</p>
+<p>You just need ✨data✨ and to</p>
+<p><a href="https://thetidytrekker.com/post/thinking-outside-the-grid/thinking-outside-the-grid.html">Think outside the grid</a> 📊 of your favorite graphical software/package</p>
+</blockquote>
+</div>
+</center>
+<aside class="notes">
+<p>It’s probably safe to say we have data people in here, and probably safe to say most of you have either created data visualizations with R or Python. I will say this, if you know how to make visuals in R or Python, you’re already half way there. If you really want to dive into making this change in thinking in R with ggplot2, this slide has a link to a blog post I made showing this in detail in a beginner friendly way.</p>
+<p>I so so so, wish I had enough time to really dive into how to really do this in your language of choice, but I don’t have the time, so heres a gist</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="how-can-we-make-generative-art-in-r-or-python-1" class="slide level2 mutedblue" data-background-color="#4e5483">
+<h2>How Can we Make Generative Art in R or Python?</h2>
+<p><br><br></p>
+<center>
+<h3>
+Some Primitive Graphical Tools🛠
+</h3>
+</center>
+<p><br> <br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<center>
+<strong>R Packages</strong> <img data-src="images/r_logo.png">
+</center>
+<center>
+<ul>
+<li><a href="https://ggplot2.tidyverse.org/"><code>ggplot2</code></a></li>
+<li>Base R w/ <code>plot()</code> functions or <a href="https://www.stat.auckland.ac.nz/~paul/grid/grid.html"><code>grid</code></a></li>
+<li><a href="https://rstudio.github.io/r2d3/"><code>r2D3</code></a></li>
+<li><a href="http://lattice.r-forge.r-project.org/"><code>lattice</code></a></li>
+</ul>
+</center>
+</div><div class="column" style="width:50%;">
+<center>
+<strong>Python Libraries</strong> <img data-src="images/python_logo.png">
+</center>
+<center>
+<ul>
+<li><a href="https://plotnine.readthedocs.io/en/stable/"><code>plotnine</code></a></li>
+<li><a href="https://pypi.org/project/Pillow/"><code>pillow</code>(PIL)</a></li>
+<li><a href="https://matplotlib.org/"><code>matplotlib</code></a></li>
+<li><a href="https://docs.python.org/3/library/turtle.html"><code>turtle</code></a></li>
+</ul>
+</center>
+</div>
+</div>
+<p><br><br></p>
+<center>
+<em>If it lets you plot data, it will let you make art…</em>
+</center>
+<aside class="notes">
+<p>When first starting out, picking a package or library you are already familiar with may be helpful. But my personal bias is ggplot2 for R and plotnine for python because it’s ggplot2.</p>
+<p>I say this because of the grammar of graphics framework it is built on. I personally think it’s conducive to creating generative art.</p>
+<p>But you don’t need to use the tidyverse of ggplot to create art. The main point is that if a tool lets you plot data, it will let you make art. The challenge comes in when you need to understand how data translates into a visual.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="how-can-we-make-generative-art-in-r-or-python-2" class="slide level2 mutedblue" data-background-color="#4e5483" data-background-video="images/line_ex.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="contain">
+<h2>How Can we Make Generative Art in R or Python?</h2>
+<aside class="notes">
+<p>Imagine that we want to draw a line on a piece paper, that’s straightforward. If someone is physically able to pick up a pen, and draw a straight line on a piece of paper, that’s something most people could probably think they could do. Some people might think they can’t draw at all so wouldn’t be able to make a straight line, so maybe they try to do this on graph paper instead..</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="how-can-we-make-generative-art-in-r-or-python-3" class="slide level2 mutedblue" data-background-color="#4e5483" data-background-video="images/graph_ex.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="contain">
+<h2>How Can we Make Generative Art in R or Python?</h2>
+<aside class="notes">
+<p>Now, this may be way easier to people. There’s a guide now. A grid that can help you keep your line straight.</p>
+<p>But if you stop for a minute and think…where have a seen a grid before?</p>
+<p>For you, it may be in any of your favorite visualization tools, for me, it’s ggplot2</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="how-can-we-make-generative-art-in-r-or-python-4" class="slide level2 mutedblue" data-background-color="#4e5483" data-background-video="images/graph_ex.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="contain">
+<h2>How Can we Make Generative Art in R or Python?</h2>
+<aside class="notes">
+<p>Now, this may be way easier to people. There’s a guide now. A grid that can help you keep your line straight.</p>
+<p>But if you stop for a minute and think…where have a seen a grid before?</p>
+<p>For you, it may be in any of your favorite visualization tools, for me, it’s ggplot2</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="how-can-we-make-generative-art-in-r-or-python-5" class="slide level2 mutedblue" data-background-color="#4e5483" data-background-video="images/graph_ex2.mp4" data-background-video-loop="true" data-background-video-muted="true" data-background-size="contain">
+<h2>How Can we Make Generative Art in R or Python?</h2>
+<aside class="notes">
+<p>So now using a grid as guidance, we can set values to every mark we make on the paper. Set up on a coordinate system.</p>
+<p>If you take the time to understand the relationship between the visuals you want to make, and the data you need to make them, this process becomes easier to make more complicated things.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="section-9" class="slide level2" data-background-color="#1a1a1a" data-background-image="images/background4.png" data-background-size="cover">
 <h2></h2>
@@ -803,7 +1343,6 @@ Final Thoughts
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -988,6 +1527,44 @@ Final Thoughts
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

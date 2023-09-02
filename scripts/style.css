@@ -99,7 +99,7 @@ body {
   background-color: #000000;
   font-size: 72px;
   display: inline-block;
-  margin-left: -300px;
+  margin-left: -200px;
   padding: 8px;
   border-radius: 25px 15px 225px 15px/15px 225px 15px 255px;
   border:solid 1px;
@@ -108,7 +108,7 @@ body {
 
 
 #bullet{
-      margin-left: -300px;
+      margin-left: -200px;
 }
 
 
@@ -118,3 +118,29 @@ body {
   padding: 20px;
 }
 
+#bluequote > blockquote{
+  margin: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(30%);
+  color: #ffffff;
+  background-color: #0c0f27;
+  padding: 20px;
+  font-size: 50px;
+}
+.reveal pre.sourceCode code {
+  /* height: 500px; */
+  max-height: 100%;
+}
+
+#how-can-we-make-generative-art-in-r-or-python-1 > div > div:nth-child(1) > center > img{
+  display: inline-block;
+  margin-bottom: -10px;
+  border: 0px solid #000000;
+}
+
+#how-can-we-make-generative-art-in-r-or-python-1 > div > div:nth-child(2) > center > img{
+  display: inline-block;
+  margin-bottom: -10px;
+  border: 0px solid #000000;
+}
