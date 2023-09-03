@@ -1,0 +1,180 @@
+/* Style Sheet for Making A Case Talk */
+
+
+@import url('https://fonts.googleapis.com/css?family=Mulish&display=swap');
+
+body > div.reveal.focused.has-horizontal-slides.has-dark-background.ready.fade > div.slides{
+  font-family: 'Mulish', sans-serif;
+  color: #ffffff;
+}
+
+
+img{
+  border: 5px solid #000000;
+  border-radius: 255px 8px 225px 15px/15px 225px 15px 255px;
+}
+
+.false{
+  border: 0px solid #000000;
+}
+
+/* Title paragraph specs */
+#title-slide  {
+    text-align: center;
+    padding : 0;
+    margin : -180px;
+    margin-left: -300px;
+    font-size: 100%;
+    line-height: 50px;
+    height: 100px;
+}
+
+body {
+  font-family: 'Mulish', sans-serif;
+}
+
+.reveal .progress span {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    transition: transform .8s cubic-bezier(.26,.86,.60,.985);
+    transform-origin: 0 0;
+    transform: scaleX(0);
+}
+
+.purple h2{
+  background-color: #280b20;
+  font-size: 80px;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 25px 15px 225px 15px/15px 225px 15px 255px;
+  border:solid 3px;
+  border-color: #1a1a1a;
+}
+
+.mutedblue h2{
+  background-color: #0c0f27;
+  font-size: 80px;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 25px 15px 225px 15px/15px 225px 15px 255px;
+  border:solid 3px;
+  border-color: #1a1a1a;
+} 
+
+
+.turq h2{
+  background-color: #06212d;
+  font-size: 80px;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 25px 15px 225px 15px/15px 225px 15px 255px;
+  border:solid 3px;
+  border-color: #1a1a1a;
+} 
+
+.green h2{
+  background-color: #1a260d;
+  font-size: 80px;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 25px 15px 225px 15px/15px 225px 15px 255px;
+  border:solid 3px;
+  border-color: #1a1a1a;
+} 
+
+.yellow h2{
+  background-color: #f0cf8f;
+  font-size: 72px;
+  display: inline-block;
+  margin-left: -80px;
+  padding: 8px;
+  border-radius: 25px 15px 225px 15px/15px 225px 15px 255px;
+  border:solid 3px;
+  border-color: #1a1a1a;
+} 
+
+.black h2{
+  background-color: #000000;
+  font-size: 72px;
+  display: inline-block;
+  margin-left: -200px;
+  padding: 8px;
+  border-radius: 25px 15px 225px 15px/15px 225px 15px 255px;
+  border:solid 1px;
+  border-color: #1a1a1a;
+}
+
+.orange h2{
+  background-color: #d9ad8c;
+  font-size: 72px;
+  display: inline-block;
+  margin-left: -80px;
+  padding: 8px;
+  border-radius: 25px 15px 225px 15px/15px 225px 15px 255px;
+  border:solid 3px;
+  border-color: #1a1a1a;
+} 
+
+
+#bullet{
+      margin-left: -200px;
+}
+
+
+.reveal blockquote{
+  color: #ffffff;
+  background-color: #280b20;
+  padding: 20px;
+}
+
+#bluequote > blockquote{
+  margin: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(30%);
+  color: #ffffff;
+  background-color: #0c0f27;
+  padding: 20px;
+  font-size: 50px;
+}
+
+#purpquote > blockquote{
+  margin: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(30%);
+  color: #ffffff;
+  background-color: #0c0f27;
+  padding: 20px;
+  font-size: 50px;
+}
+
+#turqquote > blockquote{
+  margin: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(30%);
+  color: #ffffff;
+  background-color: #06212d;
+  padding: 20px;
+  font-size: 50px;
+}
+
+.reveal pre.sourceCode code {
+  /* height: 500px; */
+  max-height: 100%;
+}
+
+#how-can-we-make-generative-art-in-r-or-python-1 > div > div:nth-child(1) > center > img{
+  display: inline-block;
+  margin-bottom: -10px;
+  border: 0px solid #000000;
+}
+
+#how-can-we-make-generative-art-in-r-or-python-1 > div > div:nth-child(2) > center > img{
+  display: inline-block;
+  margin-bottom: -10px;
+  border: 0px solid #000000;
+}
