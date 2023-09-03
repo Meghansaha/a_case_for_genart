@@ -106,6 +106,17 @@ body {
   border-color: #1a1a1a;
 }
 
+.orange h2{
+  background-color: #d9ad8c;
+  font-size: 72px;
+  display: inline-block;
+  margin-left: -80px;
+  padding: 8px;
+  border-radius: 25px 15px 225px 15px/15px 225px 15px 255px;
+  border:solid 3px;
+  border-color: #1a1a1a;
+} 
+
 
 #bullet{
       margin-left: -200px;
@@ -128,6 +139,18 @@ body {
   padding: 20px;
   font-size: 50px;
 }
+
+#turqquote > blockquote{
+  margin: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(30%);
+  color: #ffffff;
+  background-color: #06212d;
+  padding: 20px;
+  font-size: 50px;
+}
+
 .reveal pre.sourceCode code {
   /* height: 500px; */
   max-height: 100%;
