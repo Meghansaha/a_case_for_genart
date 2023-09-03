@@ -36,11 +36,11 @@ transition: fade
 </center>
 
 ::: notes
-- I was very pregnant and ready to pop.
+-   I was very pregnant and ready to pop.
 
-- I gave birth to a beautiful baby.
+-   I gave birth to a beautiful baby.
 
-- Went on maternity leave for 6 months and I know it sounds fake, but...
+-   Went on maternity leave for 6 months and I know it sounds fake, but...
 :::
 
 ##  {background-color="#1a1a1a" background-image="images/intro_back.png" background-size="cover"}
@@ -52,11 +52,11 @@ transition: fade
 </center>
 
 ::: notes
-- I actually found time to code on leave.
+-   I actually found time to code on leave.
 
-- But I had a rule for myself
+-   But I had a rule for myself
 
-- to only code if it was for fun stuff like art...
+-   to only code if it was for fun stuff like art...
 :::
 
 ##  {background-color="#1a1a1a" background-image="images/intro_back.png" background-size="cover"}
@@ -68,13 +68,13 @@ transition: fade
 </center>
 
 ::: notes
-- By the end of my leave
+-   By the end of my leave
 
-- I was amazed at how coding art like this
+-   I was amazed at how coding art like this
 
-- helped with practical data science skills.
+-   helped with practical data science skills.
 
-- I credit this for smoothing out my transition back into work and Today, I want to give a glimpse into how that was possible
+-   I credit this for smoothing out my transition back into work and Today, I want to give a glimpse into how that was possible
 :::
 
 ##  {background-color="#1a1a1a" background-image="images/background1.png" background-size="cover"}
@@ -88,14 +88,14 @@ transition: fade
 </center>
 
 ::: notes
-- I want to give a disclaimer
-- it's OK if you don't know how to make generative art.
-- It's OK if you don't even like art.
-- It's OK if you don't know much about data science.
-- My hope is that you treat this talk like a "choose-your-own-adventure".
-- Just like those old goosebumps books...
-- I'm not the only old person in here who remembers those right?
-- They kinda looked like this...
+-   I want to give a disclaimer
+-   it's OK if you don't know how to make generative art.
+-   It's OK if you don't even like art.
+-   It's OK if you don't know much about data science.
+-   My hope is that you treat this talk like a "choose-your-own-adventure".
+-   Just like those old goosebumps books...
+-   I'm not the only old person in here who remembers those right?
+-   They kinda looked like this...
 :::
 
 ##  {background-color="#7a2929"}
@@ -141,9 +141,9 @@ or the data science... {pause}
 ::: notes
 ...or just learning, {pause}
 
-- I'm hoping there will be something for you to take away from this today.
+-   I'm hoping there will be something for you to take away from this today.
 
-- So let's get started....
+-   So let's get started....
 :::
 
 ## What are we Talking About Today? {.black background-color="#1a1a1a" background-image="images/map1.png" background-size="cover"}
@@ -153,7 +153,6 @@ or the data science... {pause}
 -   <h3>What is Generative Art?</h3>
 
 </div>
-
 
 ## What are we Talking About Today? {.black background-color="#1a1a1a" background-image="images/map2.png" background-size="cover"}
 
@@ -244,7 +243,6 @@ So I want to pose a question to you all, you don't have to answer me, but just t
 I couldn't find an official definition for you all, so I'm making one right here, right now.
 :::
 
-
 ## What is Generative Art? {.purple background-color="#6c4161"}
 
 <br> <br>
@@ -260,25 +258,25 @@ Now this is vague and general, and yes. that's on purpose
 
 <br>
 
-- Because I can guarantee you, that there are multiple definitions of generative art floating around in your minds, collectively in this room right now.
+-   Because I can guarantee you, that there are multiple definitions of generative art floating around in your minds, collectively in this room right now.
 
-- And I'm also going to make an assumption that at least one person in here is thinking of AI art.
+-   And I'm also going to make an assumption that at least one person in here is thinking of AI art.
 
-- So I want to address this now... I don't know much about AI art and I've actually only made it once..
+-   So I want to address this now... I don't know much about AI art and I've actually only made it once..
 :::
 
-## What is Generative Art - Distinctions {.purple background-color="#6c4161" auto-animate="true"}
+## What is Generative Art? - Distinctions {.purple background-color="#6c4161" auto-animate="true"}
 
 ::: {style="position: relative; float: center; margin-top: 100px;"}
 <center>![](images/ai_art_ex.png){fig-alt="A vast, cosmic, and beautiful galaxy with swirling blue, purple, and pink colors in the background. In the foreground a vibrantly colored planet directly in front of the sun." width="800"}</center>
 :::
 
 ::: notes
-- Which produced this lovely piece here.
+-   Which produced this lovely piece here.
 
-- As beautiful as this is, I'm really not qualified to talk about AI art
+-   As beautiful as this is, I'm really not qualified to talk about AI art
 
-- but there are two things that I want to clarify in regards to AI art and automation ...
+-   but there are two things that I want to clarify in regards to AI art and automation ...
 :::
 
 ## What is Generative Art? - Distinctions {.purple background-color="#6c4161" auto-animate="true"}
@@ -322,9 +320,9 @@ Now..what do I mean by that...we'll see some examples now as we talk about...
 </center>
 
 ::: notes
-- Safe to say we have some "data" people in here
-- Maybe safe to say most of you have probably created data visualizations with R or Python.
-- I will say that if you know how to make visuals in R or Python, you're already on your way to making generative art...
+-   Safe to say we have some "data" people in here
+-   Maybe safe to say most of you have probably created data visualizations with R or Python.
+-   I will say that if you know how to make visuals in R or Python, you're already on your way to making generative art...
 :::
 
 ## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
@@ -394,17 +392,17 @@ I'm going to be real with ya'll, I don't have enough time here to truly explain 
 <center>*If it lets you plot data, it will let you make art...*</center>
 
 ::: notes
-- When first starting out, picking a data visualization package or library that you are already familiar with can be helpful.
+-   When first starting out, picking a data visualization package or library that you are already familiar with can be helpful.
 
-- My personal favorite is ggplot2 in R
+-   My personal favorite is ggplot2 in R
 
-- But you can choose whatever language and graphical tool you'd like.
+-   But you can choose whatever language and graphical tool you'd like.
 
-- The main point is: if a tool lets you plot data, it will let you make art.
+-   The main point is: if a tool lets you plot data, it will let you make art.
 
-- The challenge come in: when you need to understand how data translates into a visual.
+-   The challenge come in: when you need to understand how data translates into a visual.
 
-- Without fail, whenever I do a talk like this, there's always somebody who says...
+-   Without fail, whenever I do a talk like this, there's always somebody who says...
 :::
 
 ## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
@@ -414,9 +412,7 @@ I'm going to be real with ya'll, I don't have enough time here to truly explain 
 <center>
 
 ::: {#bluequote}
-
 > "I don't understand how you get the data to put into \[ *insert your graphical tool of choice here* \]"
-
 :::
 
 <br><br><br>
@@ -436,11 +432,11 @@ And I get it. It can be tricky, so let's stop for a minute and Imagine that we w
 <center>![](images/line_ex.gif){.false}</center>
 
 ::: notes
-- If someone is physically able to pick up a pen and use it
+-   If someone is physically able to pick up a pen and use it
 
-- We might assume it's easy for them to draw a single line on a paper
+-   We might assume it's easy for them to draw a single line on a paper
 
-- We can make the argument that it might not be a straight line without some guidance though, so maybe we switch to using graph paper instead...
+-   We can make the argument that it might not be a straight line without some guidance though, so maybe we switch to using graph paper instead...
 :::
 
 ## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
@@ -448,11 +444,11 @@ And I get it. It can be tricky, so let's stop for a minute and Imagine that we w
 <center>![](images/graph_ex.gif){.false width="60%"}</center>
 
 ::: notes
-- Now this may be way easier to people because there's a visual guide now. the grid lines here.
+-   Now this may be way easier to people because there's a visual guide now. the grid lines here.
 
-- But if you stop for a minute and think...where have we probably seen a grid before?
+-   But if you stop for a minute and think...where have we probably seen a grid before?
 
-- Possibly in your favorite visualization tools, for me, it's ggplot2. The grid lines reminds me of the coordinate system all ggplots are created on...
+-   Possibly in your favorite visualization tools, for me, it's ggplot2. The grid lines reminds me of the coordinate system all ggplots are created on...
 :::
 
 ## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
@@ -460,16 +456,23 @@ And I get it. It can be tricky, so let's stop for a minute and Imagine that we w
 <center>![](images/graph_ex2.gif){.false width="60%"}</center>
 
 ::: notes
-- So now using a grid as guidance, in the real world..
-- we can set values to every mark we make on the paper.
-- Just like a coordinate system in your favorite graphical tool would
+-   So now using a grid as guidance, in the real world..
 
-- We have 4 coordinate points in this line, each with an x and y value
-- Where we have 4 values from 1 to 4 on the X axis horizontally
-- and a constant value of 1 on the y axis repeated 4 times to make a straight horizontal line.
-- Now this may be simple, but this is essentially all it takes to create generative art.
-- The trick here is that you need to understand the relationship between the visuals you want, and the data you need to make them in regards to a coordinate system.
-- Let's look at this in more detail, without getting into too much detail...because time...
+-   we can set values to every mark we make on the paper.
+
+-   Just like a coordinate system in your favorite graphical tool would
+
+-   We have 4 coordinate points in this line, each with an x and y value
+
+-   Where we have 4 values from 1 to 4 on the X axis horizontally
+
+-   and a constant value of 1 on the y axis repeated 4 times to make a straight horizontal line.
+
+-   Now this may be simple, but this is essentially all it takes to create generative art.
+
+-   The trick here is that you need to understand the relationship between the visuals you want, and the data you need to make them in regards to a coordinate system.
+
+-   Let's look at this in more detail, without getting into too much detail...because time...
 :::
 
 ## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
@@ -526,11 +529,11 @@ print(orange_line)
 :::
 
 ::: notes
-- There can be different approaches to creating that chunky orange line, but here's one way in python.
+-   There can be different approaches to creating that chunky orange line, but here's one way in python.
 
-- Now without getting too bogged down in the specific of the code, let's pay attention to the process
+-   Now without getting too bogged down in the specific of the code, let's pay attention to the process
 
-- First you load in your libraries you need. 
+-   First you load in your libraries you need.
 :::
 
 ## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
@@ -587,7 +590,7 @@ print(orange_line)
 :::
 
 ::: notes
--Next, you can do some prep for your data. 
+-Next, you can do some prep for your data.
 
 -Here, just setting values for color and size
 :::
@@ -646,9 +649,9 @@ print(orange_line)
 :::
 
 ::: notes
-- Next, you can start creating your data sources = these are things you'll feed into your graphical tool of choice.
+-   Next, you can start creating your data sources = these are things you'll feed into your graphical tool of choice.
 
-- Here, it's a pandas dataframe with coordinates (x and y), color, and size
+-   Here, it's a pandas dataframe with coordinates (x and y), color, and size
 :::
 
 ## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
@@ -705,9 +708,9 @@ print(orange_line)
 :::
 
 ::: notes
-- Finally, we feeding the data in to ggplot fxs, and create the line
+-   Finally, we feeding the data in to ggplot fxs, and create the line
 
-- Simple enough, let's look at something more complicated in R
+-   Simple enough, let's look at something more complicated in R
 :::
 
 ## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
@@ -762,9 +765,9 @@ library(ggplot2); library(dplyr); library(artpack)
 :::
 
 ::: notes
-- Again, Try not to focus too much on specific code
+-   Again, Try not to focus too much on specific code
 
-- but just observe the general relationship going on here between the data and the visual
+-   but just observe the general relationship going on here between the data and the visual
 
 This time, start with your libraries..and an idea of what to make - cityscape
 :::
@@ -821,10 +824,10 @@ df_sky |>
 :::
 
 ::: notes
-- Want to make a sky in background.
-- I want to use geom_segment, so that requires 2 x points and 2 y points to easily create a line.
-- That choice prompts me to set up a tibble named df_sky, that will translate into a sequence of horizontal lines on the plot with a gradient of colors applied to it from bottom to top.
-- We can see the result of this data frame plotted here.
+-   Want to make a sky in background.
+-   I want to use geom_segment, so that requires 2 x points and 2 y points to easily create a line.
+-   That choice prompts me to set up a tibble named df_sky, that will translate into a sequence of horizontal lines on the plot with a gradient of colors applied to it from bottom to top.
+-   We can see the result of this data frame plotted here.
 :::
 
 ## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
@@ -835,7 +838,7 @@ df_sky |>
 
 ::: columns
 ::: {.column width="55%"}
-```{r, echo = TRUE, eval = FALSE, `code-line-numbers`="4-15,18-28"}
+```{r, echo = TRUE, eval = FALSE, `code-line-numbers`="4-15,18-30"}
 # Library Load-ins-----------------------------------------------
 library(ggplot2); library(dplyr); library(artpack)
 
@@ -879,8 +882,7 @@ df_sky |>
 :::
 
 ::: notes
--Next, we can create some stars by creating a grid of points, applying a color, a sample of numbers for sizes, and  transparency values in the tibble
-- Then randomly selecting 20% of the data out to get this spaced out visual of stars in the sky that we see here...
+-Next, we can create some stars by creating a grid of points, applying a color, a sample of numbers for sizes, and transparency values in the tibble - Then randomly selecting 20% of the data out to get this spaced out visual of stars in the sky that we see here...
 :::
 
 ## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
@@ -935,9 +937,9 @@ df_sky |>
 :::
 
 ::: notes
-- Next, let's say we want to have a simple, big moon.
-- We can do this easily by creating data for a single point, setting a big value for it's size and color options
-- while making sure to tweak the geom_point function in the plot with the shape and stroke arguments in the ggplot functions down here...
+-   Next, let's say we want to have a simple, big moon.
+-   We can do this easily by creating data for a single point, setting a big value for it's size and color options
+-   while making sure to tweak the geom_point function in the plot with the shape and stroke arguments in the ggplot functions down here...
 :::
 
 ## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
@@ -993,8 +995,8 @@ df_sky |>
 :::
 
 ::: notes
-- Finally, we can decide to use geom_segment again and create thick vertical chunks of lines this time that makes a basic silhouette of some buildings.
-- Done again by storing this in a tibble called df_buildings and using geom_segment here... This may have been alot to see, but the main point is that...
+-   Finally, we can decide to use geom_segment again and create thick vertical chunks of lines this time that makes a basic silhouette of some buildings.
+-   Done again by storing this in a tibble called df_buildings and using geom_segment here... This may have been alot to see, but the main point is that...
 :::
 
 ## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
@@ -1004,17 +1006,13 @@ df_sky |>
 <center>
 
 ::: {#bluequote}
-
 > The concept of translating data into visuals is the same no matter how simple or complex a piece is...
-
 :::
 
 <br> <br>
 
 ::: {#bluequote}
-
 > The **hard** part is usually the programming or the math🤢
-
 :::
 
 </center>
@@ -1022,7 +1020,6 @@ df_sky |>
 ::: notes
 So now that everyone is up to speed about what generative art is, and you have some idea of how it can be made, let's talk about the benefits of making art like this
 :::
-
 
 ##  {background-color="#1a1a1a" background-image="images/background4.png" background-size="cover"}
 
@@ -1035,8 +1032,8 @@ So now that everyone is up to speed about what generative art is, and you have s
 </center>
 
 ::: notes
-- Theres lots of benefits to making art like this.
-- One of the biggest and obvious is just "learning" in general. And it got me to thinking about something...
+-   Theres lots of benefits to making art like this.
+-   One of the biggest and obvious is just "learning" in general. And it got me to thinking about something...
 :::
 
 ## Benefits of Creating Generative Art {.turq background-color="#3a7188"}
@@ -1072,10 +1069,9 @@ So now that everyone is up to speed about what generative art is, and you have s
 :::
 
 ::: notes
-- I have an idea that.. {first}
+-   I have an idea that.. {first} -> next click ->
 
-{after}
-- I'm not trying to be funny, I can't just stand up here and say this is a proven fact. I'm not an expert in determining how people learn efficiently...but the best I can do is give you personal examples of my experience with creating generative art...
+{after} - I'm not trying to be funny, I can't just stand up here and say this is a proven fact. I'm not an expert in determining how people learn efficiently...but the best I can do is give you personal examples of my experience with creating generative art...
 :::
 
 ## Benefits of Creating Generative Art {.turq background-color="#3a7188"}
@@ -1117,8 +1113,7 @@ This was my work after about 2 months of creating generative art...
 :::
 
 ::: notes
-And my most recent tidy tuesday I did this year...
-obviously, i deveolped knowledge of how to make things more aesthetically pleasing, and how to hack my tool of choice for some coll results.
+And my most recent tidy tuesday I did this year... obviously, i deveolped knowledge of how to make things more aesthetically pleasing, and how to hack my tool of choice for some coll results.
 :::
 
 ## Benefits of Creating Generative Art {.turq background-color="#3a7188"}
