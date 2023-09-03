@@ -140,6 +140,17 @@ body {
   font-size: 50px;
 }
 
+#purpquote > blockquote{
+  margin: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(30%);
+  color: #ffffff;
+  background-color: #0c0f27;
+  padding: 20px;
+  font-size: 50px;
+}
+
 #turqquote > blockquote{
   margin: 0;
   position: relative;
