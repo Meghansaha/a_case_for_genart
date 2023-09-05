@@ -1069,7 +1069,7 @@ So now that everyone is up to speed about what generative art is, and you have s
 :::
 
 ::: notes
--   I have an idea that.. {first} -> next click ->
+-   I have an idea that.. {first} -\> next click -\>
 
 {after} - I'm not trying to be funny, I can't just stand up here and say this is a proven fact. I'm not an expert in determining how people learn efficiently...but the best I can do is give you personal examples of my experience with creating generative art...
 :::
@@ -1325,6 +1325,24 @@ I owe alot to generative art, the tidyverse, and the R community. My life has ch
 
 ## What is Data Science? {.green background-color="#657750"}
 
+<br>
+
+In this room today, Data Science is defined as...
+
+::: {#greenquote}
+>An interdisciplinary field that uses statistics, scientific computing, scientific methods, processes, algorithms and systems *<span style="color:#CCD2BC">to extract or extrapolate knowledge and insights from data</span>*.
+:::
+
+<br><br><br>
+
+:::{.fragment}
+
+<center>
+<h3>*We'll focus on the technical methods and processes (coding) for the remainder of this talk...*</h3>
+</center>
+
+:::
+
 ##  {background-color="#1a1a1a" background-image="images/background6.png" background-size="cover"}
 
 <br> <br> <br> <br> <br> <br> <br> <br> <br>
@@ -1335,7 +1353,394 @@ I owe alot to generative art, the tidyverse, and the R community. My life has ch
 
 </center>
 
-## Examples of How Generative Art Translates into Data Science {.yellow background-color="#ba9c5e"}
+## Examples of How Generative Art Translates into Data Science {.yellow background-color="#C8B17E"}
+
+::: {style="padding-bottom: 20px; padding-top: 20px;"}
+
+<h3>Iteration♻️</h3>
+
+:::
+
+<br>
+
+::: columns
+:::{.column width="50%"}
+-   Mastering this in Art and Data Science can be a **HUGE feat**
+
+<br>
+
+-   Important concept in both art and Data Science.
+
+<br>
+
+-   A lot of use-cases and scenarios exist in both realms, where we want to do the same thing over and over.
+:::
+
+:::{.column width="50%"}
+<center>
+![](images/iterations.gif)
+</center>
+:::
+
+:::
+
+::: notes
+- It's so important, it even has it's own chapter in the R4DS book
+
+-   It doesn't matter how you do iteration
+
+-   Whether you use base control flows like for-loops, whiles, and repeats, or you've fully adopted tidyverse's purrr ecosystem
+
+- We can't deny that iteration really tends to take people into the next level of skill, because it allows you to do so much with less.
+
+- If you're not at a point in your journey where you feel comfortable with performing iterations, trying to do iterations for a different purpose might help with any mental blocks you might have.
+:::
+
+## Examples of How Generative Art Translates into Data Science - Iteration♻️ {.yellow background-color="#C8B17E"}
+
+<br>
+
+::: columns
+::: {.column width="50%"}
+<center><u>Gen Art Scenario</u></center>
+<br>
+
+**End Goal:**
+
+- Want to create a lot of copies of a shape where each shape has a different color and a different position on the coordinate system
+
+<center>![](images/maximalism.png){height="40%"}</center>
+:::
+
+::: {.column width="50%"}
+<center><u>Data Sci Scenario</u></center>
+<br>
+
+**End Goal:**
+
+- Want to skim, label, and save multiple processed data sets all at once
+
+<br>
+
+<center>![](images/ex1_flow.png)</center>
+:::
+:::
+
+::: notes
+On Maternity leave
+-   Did a daily gen art challenge called Genuary.
+-   The prompt on Jan 29th was Maximalism
+-   Wanted these finger-like things coming from the top and bottom of the page, lots of them.
+<br>
+Likewise, back at work
+-   A lot of imaging data to reconcile from vendors all at once.
+-   Wanted to make cleaner/smoother workflow as the amount of vendors can change
+-   Hard coding would get the job done, but make things hard in the long run.
+:::
+
+## Examples of How Generative Art Translates into Data Science - Iteration♻️ {.yellow background-color="#C8B17E"}
+
+<br>
+
+::: columns
+::: {.column width="50%"}
+<center><u>Gen Art Scenario</u></center>
+<br>
+
+**Approach:**
+
+- Isolate the problem.... how tf do we make a finger-like shape in the first place??
+
+<br>
+
+<center>![](images/ex1_isolate_art.png)</center>
+:::
+
+::: {.column width="50%"}
+<center><u>Data Sci Scenario</u></center>
+<br>
+
+**Approach:**
+
+- Isolate the problem.... How can I do this workflow for just one of the data sets without the console throwing errors??
+<br>
+
+<center>![](images/ex1_isolate_ds.png)</center>
+:::
+:::
+
+::: notes
+In art:
+-   the first challenge is creating the data
+-   keep trying until the plot shows what you're going for
+<br>
+In Data Science:
+-   You already have the data..
+-   But nuances may need to be addressed
+-   Isolate the problem by doing what you want for at least one data frame
+-   Keep debugging until the final output is correct and operating as intended
+
+:::
+
+## Examples of How Generative Art Translates into Data Science - Iteration♻️ {.yellow background-color="#C8B17E"}
+
+<br>
+
+::: columns
+::: {.column width="50%"}
+<center><u>Gen Art Scenario</u></center>
+<br>
+
+**Iterating in Action:**
+
+- Use your preferred method of iteration to create a generalized workflow.
+
+```{r, echo = TRUE, eval = FALSE}
+#finger options for iterations#
+drip_opts <- list(
+  1:n,
+  y_starts,
+  x_starts,
+  fills_colors
+)
+#Finger data from the top-down#
+drip <- pmap(drip_opts, ~tibble(
+  x = c(..3, *math for x-axis goes here*),
+  y = c(..2, *math for y-axis goes here*),
+  group = group_numbers(..1),
+  fill = c(..4)
+)) |>
+  list_rbind()
+```
+:::
+
+::: {.column width="50%"}
+<center><u>Data Sci Scenario</u></center>
+<br>
+
+**Iterating in Action:**
+
+- Use your preferred method of iteration to create a generalized workflow.
+
+```{r, echo = TRUE, eval = FALSE}
+# Different DFs for iterations
+lst_vendors <- 
+  list("Vender 1" = df_1,
+       "Vendor 2" = df_2
+  )
+# Apply labels to all DFs
+lst_labelled <- 
+  imap(lst_vendors, ~set_derived_variable_labels(
+         .x,.y, path = here("some_local_path_of_variables.csv")
+         ))
+# Skim all the DFs
+map(lst_labelled, ~ skimr::skim(.x)
+)
+#saving master analytic data set
+map(lst_labelled,
+    ~saveRDS(.x,
+             file = glue("{names(lst_labelled[.x])}.RDS")
+    ))
+```
+:::
+:::
+
+::: notes
+In art:
+-   the first challenge is creating the data
+<br>
+In Data Science:
+-   You already have the data..
+-   But nuances may need to be addressed
+-   Isolate the problem by doing what you want for at least one data frame
+
+:::
+
+
+
+## Examples of How Generative Art Translates into Data Science {.yellow background-color="#C8B17E"}
+
+::: {style="padding-bottom: 20px; padding-top: 20px;"}
+
+<h3>Development 📦</h3>
+
+:::
+
+<br>
+
+::: columns
+:::{.column width="50%"}
+-   Learning and Honing in on development skills is another **HUGE** feat
+<br><br>
+- In the art realm, this promotes cleaner and robust workflows and more complex operations
+<br><br>
+- In Data Science, it does the same, but you're *really* moving up to new levels✨.
+
+
+:::
+
+:::{.column width="50%"}
+<center>
+![](images/new_level.gif)
+</center>
+:::
+
+:::
+
+::: notes
+- For art, can really start to set your stuff apart from beginner/simpler things
+<br>
+- For DS, branching into development is HIGHLY desirable.
+- Allows you to take more advantage of the "open-source" paradigm by creating programs for your organization and others in the community.
+:::
+
+## Examples of How Generative Art Translates into Data Science - Development 📦 {.yellow background-color="#C8B17E"}
+
+<br>
+
+::: columns
+::: {.column width="50%"}
+<center><u>Gen Art Scenario</u></center>
+<br>
+
+**End Goal:**
+
+- Want to create a function that spits out a color palette of a specified length based on preset choices.
+
+<center>![](images/ex2_art.png)</center>
+
+:::
+
+::: {.column width="50%"}
+<center><u>Data Sci Scenario</u></center>
+<br>
+
+**End Goal:**
+
+- Want to create a function that left joins a table of existing data to another data frame.
+
+<br>
+
+<center>![](images/ex2_ds.png)</center>
+:::
+:::
+
+::: notes
+- Whether you are in R or python, this purpose of creating functions are generally the same
+- We wish to do a specific task, in an isolate environment for a consisent output or result.
+:::
+
+## Examples of How Generative Art Translates into Data Science - Development 📦 {.yellow background-color="#C8B17E"}
+
+<br>
+
+::: columns
+::: {.column width="50%"}
+<center><u>Gen Art Scenario</u></center>
+<br>
+
+**Approach:**
+
+- Isolate: How do we handle the input, code for the work in the function's body, and return the intended output/side effect to us?
+
+```{r, eval = FALSE, echo = TRUE}
+art_pals <- function(colors = "pal_1", n = 5) {
+  
+  # Preset Pals
+  pal = switch(colors, 
+               "pal_1" = c("#000000", "#ffffff", "#1a1a1a"),
+               "pal_2" = c("#1a2242", "#ea2242", "#9ad742")
+  )
+  
+  # Creating pal with specified n
+  final_pal = colorRampPalette(pal)(n)
+  
+  # Return final pal
+  return(final_pal)
+}
+```
+
+:::
+
+::: {.column width="50%"}
+<center><u>Data Sci Scenario</u></center>
+<br>
+
+**Approach:**
+
+- Isolate: How do we handle the input, code for the work in the function's body, and return the intended output/side effect to us?
+
+```{r, eval = FALSE, echo = TRUE}
+map_ae <- function(data = df_main, join_col = ae_term) {
+  
+  # Preset data frame gets pulled in
+  df_ae <- load(*df_ae path here*)
+  
+  # Creating new df with left_join
+  final_df <- df_main |>
+    left_join(df_ae, by = "ae_term")
+  
+  # Return final df
+  return(final_df)
+}
+```
+:::
+:::
+
+::: notes
+- Whether it's for art or data science, the approach is the same
+- Work has to be done to get from input to output
+- This can also open a can of worms to unit testing and pkg dev.
+:::
+
+## Examples of How Generative Art Translates into Data Science - Development 📦 {.yellow background-color="#C8B17E"}
+
+<br>
+
+::: columns
+::: {.column width="50%"}
+<center><u>Gen Art Scenario</u></center>
+<br>
+
+**Development in Action:**
+
+- Now we can just use our function and do the work in one line.
+
+```{r, eval = FALSE, echo = TRUE}
+art_pals("pal_2",50)
+
+*Returns 50 calculated colors based on the input `pal_2`*
+```
+
+:::
+
+::: {.column width="50%"}
+<center><u>Data Sci Scenario</u></center>
+<br>
+
+**Development in Action:**
+
+- Now we can just use our function and do the work in one line.
+
+```{r, eval = FALSE, echo = TRUE}
+map_ae(df_main, ae_term)
+
+*Returns a joined data frame*
+*with data from `df_main` and `df_ae`*
+```
+:::
+:::
+
+::: notes
+- Whether art or DS, the end goal of reducing code bloat is the same.
+- Especially helpful for larger processes where a single purrr function or for loop won't cut it.
+- Know this is just a taste, this obviously led down a rabbit hole of being able to create my own art package, and help to enhance and maintain existing packages at work
+- Creating functions is the tip of the iceberg and will lead you into a slippery slope of other crucial things I don't have time to talk about like unit testing and package maintenance.
+:::
+
+## Examples of How Generative Art Translates into Data Science {.yellow background-color="#C8B17E"}
+
+Communication Loop
 
 ##  {background-color="#1a1a1a" background-image="images/background7.png" background-size="cover"}
 
@@ -1347,4 +1752,4 @@ I owe alot to generative art, the tidyverse, and the R community. My life has ch
 
 </center>
 
-## Final Thoughts {.orange background-color="#bb743e"}
+## Final Thoughts {.orange background-color="#C88A5B"}

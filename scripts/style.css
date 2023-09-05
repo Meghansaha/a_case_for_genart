@@ -140,17 +140,6 @@ body {
   font-size: 50px;
 }
 
-#purpquote > blockquote{
-  margin: 0;
-  position: relative;
-  top: 50%;
-  transform: translateY(30%);
-  color: #ffffff;
-  background-color: #0c0f27;
-  padding: 20px;
-  font-size: 50px;
-}
-
 #turqquote > blockquote{
   margin: 0;
   position: relative;
@@ -158,6 +147,17 @@ body {
   transform: translateY(30%);
   color: #ffffff;
   background-color: #06212d;
+  padding: 20px;
+  font-size: 50px;
+}
+
+#greenquote > blockquote{
+  margin: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(30%);
+  color: #ffffff;
+  background-color: #202618;
   padding: 20px;
   font-size: 50px;
 }
@@ -177,4 +177,58 @@ body {
   display: inline-block;
   margin-bottom: -10px;
   border: 0px solid #000000;
+}
+
+#examples-of-how-generative-art-translates-into-data-science---iteration > div > div:nth-child(2){
+  border-left: 6px solid #1a1a1a;
+  height: 75%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  padding-left: 30px;
+}
+
+#examples-of-how-generative-art-translates-into-data-science---iteration-1 > div > div:nth-child(2){
+  border-left: 6px solid #1a1a1a;
+  height: 75%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  padding-left: 30px;
+}
+
+#examples-of-how-generative-art-translates-into-data-science---iteration-2 > div > div:nth-child(2){
+  border-left: 6px solid #1a1a1a;
+  height: 75%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  padding-left: 30px;
+}
+
+#examples-of-how-generative-art-translates-into-data-science---development > div > div:nth-child(2){
+  border-left: 6px solid #1a1a1a;
+  height: 75%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  padding-left: 30px;
+}
+
+#examples-of-how-generative-art-translates-into-data-science---development-1 > div > div:nth-child(2){
+  border-left: 6px solid #1a1a1a;
+  height: 75%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  padding-left: 30px;
+}
+
+#examples-of-how-generative-art-translates-into-data-science---development-2 > div > div:nth-child(2){
+  border-left: 6px solid #1a1a1a;
+  height: 75%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  padding-left: 30px;
 }
