@@ -483,13 +483,12 @@ And I get it. It can be tricky, so let's stop for a minute and Imagine that we w
 
 ::: columns
 ::: {.column width="55%"}
-```{python, echo = TRUE, eval = FALSE, `code-line-numbers`="1-5"}
+```{python, echo = TRUE, eval = FALSE}
 #===============================================================#
 # Library Load-in------------------------------------------------
 #===============================================================#
 from plotnine import *
 import pandas as pd
-
 #===============================================================#
 # Image Options--------------------------------------------------
 #===============================================================#
@@ -498,7 +497,6 @@ orange_hex = "#FFBB58"
 
 #Set the width
 chonk = 10
-
 #===============================================================#
 # Data Creation--------------------------------------------------
 #===============================================================#
@@ -506,7 +504,6 @@ line = pd.DataFrame({"x" : list(range(0,5)),
                      "y" : 1,
                      "color" : orange_hex,
                      "size" : chonk})
-
 #===============================================================#
 # Plot Creation--------------------------------------------------
 #===============================================================#
@@ -529,188 +526,14 @@ print(orange_line)
 :::
 
 ::: notes
--   There can be different approaches to creating that chunky orange line, but here's one way in python.
-
--   Now without getting too bogged down in the specific of the code, let's pay attention to the process
-
--   First you load in your libraries you need.
-:::
-
-## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
-
-::: {style="padding-bottom: 20px;"}
-<u>**A Simple Example *(In Python)***</u>
-:::
-
-::: columns
-::: {.column width="55%"}
-```{python, echo = TRUE, eval = FALSE, `code-line-numbers`="1-5,7-14"}
-#===============================================================#
-# Library Load-in------------------------------------------------
-#===============================================================#
-from plotnine import *
-import pandas as pd
-
-#===============================================================#
-# Image Options--------------------------------------------------
-#===============================================================#
-#Set the color
-orange_hex = "#FFBB58"
-
-#Set the width
-chonk = 10
-
-#===============================================================#
-# Data Creation--------------------------------------------------
-#===============================================================#
-line = pd.DataFrame({"x" : list(range(0,5)),
-                     "y" : 1,
-                     "color" : orange_hex,
-                     "size" : chonk})
-
-#===============================================================#
-# Plot Creation--------------------------------------------------
-#===============================================================#
-orange_line = (ggplot(line, aes("x", "y"))+
-               geom_path(color = line.loc[:,"color"],
-                         size = line.loc[:,"size"])+
-               coord_equal(ylim = (0,3), xlim = (0,4)))
-
-#View the plot
-print(orange_line)
-
-```
-:::
-
-::: {.column width="45%"}
-<br><br>
-
-<center>![](images/python_ex1.png){width="100%"}</center>
-:::
-:::
-
-::: notes
--Next, you can do some prep for your data.
-
--Here, just setting values for color and size
-:::
-
-## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
-
-::: {style="padding-bottom: 20px;"}
-<u>**A Simple Example *(In Python)***</u>
-:::
-
-::: columns
-::: {.column width="55%"}
-```{python, echo = TRUE, eval = FALSE, `code-line-numbers`="1-5,7-14,16-22"}
-#===============================================================#
-# Library Load-in------------------------------------------------
-#===============================================================#
-from plotnine import *
-import pandas as pd
-
-#===============================================================#
-# Image Options--------------------------------------------------
-#===============================================================#
-#Set the color
-orange_hex = "#FFBB58"
-
-#Set the width
-chonk = 10
-
-#===============================================================#
-# Data Creation--------------------------------------------------
-#===============================================================#
-line = pd.DataFrame({"x" : list(range(0,5)),
-                     "y" : 1,
-                     "color" : orange_hex,
-                     "size" : chonk})
-
-#===============================================================#
-# Plot Creation--------------------------------------------------
-#===============================================================#
-orange_line = (ggplot(line, aes("x", "y"))+
-               geom_path(color = line.loc[:,"color"],
-                         size = line.loc[:,"size"])+
-               coord_equal(ylim = (0,3), xlim = (0,4)))
-
-#View the plot
-print(orange_line)
-
-```
-:::
-
-::: {.column width="45%"}
-<br><br>
-
-<center>![](images/python_ex1.png){width="100%"}</center>
-:::
-:::
-
-::: notes
--   Next, you can start creating your data sources = these are things you'll feed into your graphical tool of choice.
-
--   Here, it's a pandas dataframe with coordinates (x and y), color, and size
-:::
-
-## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
-
-::: {style="padding-bottom: 20px;"}
-<u>**A Simple Example *(In Python)***</u>
-:::
-
-::: columns
-::: {.column width="55%"}
-```{python, echo = TRUE, eval = FALSE, `code-line-numbers`="1-5,7-14,16-22,24-33"}
-#===============================================================#
-# Library Load-in------------------------------------------------
-#===============================================================#
-from plotnine import *
-import pandas as pd
-
-#===============================================================#
-# Image Options--------------------------------------------------
-#===============================================================#
-#Set the color
-orange_hex = "#FFBB58"
-
-#Set the width
-chonk = 10
-
-#===============================================================#
-# Data Creation--------------------------------------------------
-#===============================================================#
-line = pd.DataFrame({"x" : list(range(0,5)),
-                     "y" : 1,
-                     "color" : orange_hex,
-                     "size" : chonk})
-
-#===============================================================#
-# Plot Creation--------------------------------------------------
-#===============================================================#
-orange_line = (ggplot(line, aes("x", "y"))+
-               geom_path(color = line.loc[:,"color"],
-                         size = line.loc[:,"size"])+
-               coord_equal(ylim = (0,3), xlim = (0,4)))
-
-#View the plot
-print(orange_line)
-
-```
-:::
-
-::: {.column width="45%"}
-<br><br>
-
-<center>![](images/python_ex1.png){width="100%"}</center>
-:::
-:::
-
-::: notes
--   Finally, we feeding the data in to ggplot fxs, and create the line
-
--   Simple enough, let's look at something more complicated in R
+-   There can be different approaches, but here's one way in python.
+-   Now without getting too bogged down in the specifics of the code, the process is relatively simple
+-   First you load in your libraries you need, then you can do some prep for your data.
+-   Here setting values for color and size
+-   Most important step -> create your data sources
+-   this is what you'll feed into your graphical tool of choice.
+-   pandas dataframe with coordinates (x and y), color, and size
+-   feed into plotnine's ggplot fx here.
 :::
 
 ## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
@@ -780,10 +603,7 @@ This time, start with your libraries..and an idea of what to make - cityscape
 
 ::: columns
 ::: {.column width="55%"}
-```{r, echo = TRUE, eval = FALSE, `code-line-numbers`="4-11,16-22"}
-# Library Load-ins-----------------------------------------------
-library(ggplot2); library(dplyr); library(artpack)
-
+```{r, echo = TRUE, eval = FALSE, `code-line-numbers`="1-11,14,18-19"}
 # Data for the sky-----------------------------------------------
 df_sky <- tibble(x = 0,
                  xend = 4,
@@ -803,6 +623,9 @@ df_sky |>
   coord_cartesian(expand = FALSE, xlim = c(0,4), ylim = c(0,3)) +
   geom_segment(color = df_sky$color,
                linewidth = df_sky$linewidth) 
+
+
+
 
 
 
@@ -838,10 +661,7 @@ df_sky |>
 
 ::: columns
 ::: {.column width="55%"}
-```{r, echo = TRUE, eval = FALSE, `code-line-numbers`="4-15,18-30"}
-# Library Load-ins-----------------------------------------------
-library(ggplot2); library(dplyr); library(artpack)
-
+```{r, echo = TRUE, eval = FALSE, `code-line-numbers`="1-12,22-27"}
 # Data for the stars---------------------------------------------
 df_stars <- tibble(
   x = seq(0,4, l = 50),
@@ -870,6 +690,9 @@ df_sky |>
              position = position_jitter(width = .1, height = .1),
              inherit.aes = FALSE) 
 
+
+
+
 #...
 ```
 :::
@@ -893,7 +716,7 @@ df_sky |>
 
 ::: columns
 ::: {.column width="55%"}
-```{r, echo = TRUE, eval = FALSE, `code-line-numbers`="1-8,10-29"}
+```{r, echo = TRUE, eval = FALSE, `code-line-numbers`="1-8,23-29"}
 # Data for the moon----------------------------------------------
 df_moon <- tibble(
   x = 2,
@@ -950,7 +773,7 @@ df_sky |>
 
 ::: columns
 ::: {.column width="55%"}
-```{r, echo = TRUE, eval = FALSE}
+```{r, echo = TRUE, eval = FALSE, `code-line-numbers`="1-8,31-32"}
 # Data for the buildings-----------------------------------------
 df_buildings <- tibble(
   x = 0:4,
@@ -1330,17 +1153,17 @@ I owe alot to generative art, the tidyverse, and the R community. My life has ch
 In this room today, Data Science is defined as...
 
 ::: {#greenquote}
->An interdisciplinary field that uses statistics, scientific computing, scientific methods, processes, algorithms and systems *<span style="color:#CCD2BC">to extract or extrapolate knowledge and insights from data</span>*.
+> An interdisciplinary field that uses statistics, scientific computing, scientific methods, processes, algorithms and systems [*to extract or extrapolate knowledge and insights from data*]{style="color:#CCD2BC"}.
 :::
 
 <br><br><br>
 
-:::{.fragment}
-
+::: fragment
 <center>
-<h3>*We'll focus on the technical methods and processes (coding) for the remainder of this talk...*</h3>
-</center>
 
+<h3>*We'll focus on the technical methods and processes (coding) for the remainder of this talk...*</h3>
+
+</center>
 :::
 
 ##  {background-color="#1a1a1a" background-image="images/background6.png" background-size="cover"}
@@ -1356,15 +1179,13 @@ In this room today, Data Science is defined as...
 ## Examples of How Generative Art Translates into Data Science {.yellow background-color="#C8B17E"}
 
 ::: {style="padding-bottom: 20px; padding-top: 20px;"}
-
 <h3>Iteration♻️</h3>
-
 :::
 
 <br>
 
 ::: columns
-:::{.column width="50%"}
+::: {.column width="50%"}
 -   Mastering this in Art and Data Science can be a **HUGE feat**
 
 <br>
@@ -1376,24 +1197,21 @@ In this room today, Data Science is defined as...
 -   A lot of use-cases and scenarios exist in both realms, where we want to do the same thing over and over.
 :::
 
-:::{.column width="50%"}
-<center>
-![](images/iterations.gif)
-</center>
+::: {.column width="50%"}
+<center>![](images/iterations.gif)</center>
 :::
-
 :::
 
 ::: notes
-- It's so important, it even has it's own chapter in the R4DS book
+-   It's so important, it even has it's own chapter in the R4DS book
 
 -   It doesn't matter how you do iteration
 
 -   Whether you use base control flows like for-loops, whiles, and repeats, or you've fully adopted tidyverse's purrr ecosystem
 
-- We can't deny that iteration really tends to take people into the next level of skill, because it allows you to do so much with less.
+-   We can't deny that iteration really tends to take people into the next level of skill, because it allows you to do so much with less.
 
-- If you're not at a point in your journey where you feel comfortable with performing iterations, trying to do iterations for a different purpose might help with any mental blocks you might have.
+-   If you're not at a point in your journey where you feel comfortable with performing iterations, trying to do iterations for a different purpose might help with any mental blocks you might have.
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Iteration♻️ {.yellow background-color="#C8B17E"}
@@ -1402,23 +1220,25 @@ In this room today, Data Science is defined as...
 
 ::: columns
 ::: {.column width="50%"}
-<center><u>Gen Art Scenario</u></center>
+<center><u>**Gen Art Scenario**</u></center>
+
 <br>
 
 **End Goal:**
 
-- Want to create a lot of copies of a shape where each shape has a different color and a different position on the coordinate system
+-   Want to create a lot of copies of a shape where each shape has a different color and a different position on the coordinate system
 
 <center>![](images/maximalism.png){height="40%"}</center>
 :::
 
 ::: {.column width="50%"}
-<center><u>Data Sci Scenario</u></center>
+<center><u>**Data Sci Scenario**</u></center>
+
 <br>
 
 **End Goal:**
 
-- Want to skim, label, and save multiple processed data sets all at once
+-   Want to skim, label, and save multiple processed data sets all at once
 
 <br>
 
@@ -1427,15 +1247,7 @@ In this room today, Data Science is defined as...
 :::
 
 ::: notes
-On Maternity leave
--   Did a daily gen art challenge called Genuary.
--   The prompt on Jan 29th was Maximalism
--   Wanted these finger-like things coming from the top and bottom of the page, lots of them.
-<br>
-Likewise, back at work
--   A lot of imaging data to reconcile from vendors all at once.
--   Wanted to make cleaner/smoother workflow as the amount of vendors can change
--   Hard coding would get the job done, but make things hard in the long run.
+On Maternity leave - Did a daily gen art challenge called Genuary. - The prompt on Jan 29th was Maximalism - Wanted these finger-like things coming from the top and bottom of the page, lots of them. <br> Likewise, back at work - A lot of imaging data to reconcile from vendors all at once. - Wanted to make cleaner/smoother workflow as the amount of vendors can change - Hard coding would get the job done, but make things hard in the long run.
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Iteration♻️ {.yellow background-color="#C8B17E"}
@@ -1444,12 +1256,13 @@ Likewise, back at work
 
 ::: columns
 ::: {.column width="50%"}
-<center><u>Gen Art Scenario</u></center>
+<center><u>**Gen Art Scenario**</u></center>
+
 <br>
 
 **Approach:**
 
-- Isolate the problem.... how tf do we make a finger-like shape in the first place??
+-   Isolate the problem.... how tf do we make a finger-like shape in the first place??
 
 <br>
 
@@ -1457,29 +1270,20 @@ Likewise, back at work
 :::
 
 ::: {.column width="50%"}
-<center><u>Data Sci Scenario</u></center>
+<center><u>**Data Sci Scenario**</u></center>
+
 <br>
 
 **Approach:**
 
-- Isolate the problem.... How can I do this workflow for just one of the data sets without the console throwing errors??
-<br>
+-   Isolate the problem.... How can I do this workflow for just one of the data sets without the console throwing errors?? <br>
 
 <center>![](images/ex1_isolate_ds.png)</center>
 :::
 :::
 
 ::: notes
-In art:
--   the first challenge is creating the data
--   keep trying until the plot shows what you're going for
-<br>
-In Data Science:
--   You already have the data..
--   But nuances may need to be addressed
--   Isolate the problem by doing what you want for at least one data frame
--   Keep debugging until the final output is correct and operating as intended
-
+In art: - the first challenge is creating the data - keep trying until the plot shows what you're going for <br> In Data Science: - You already have the data.. - But nuances may need to be addressed - Isolate the problem by doing what you want for at least one data frame - Keep debugging until the final output is correct and operating as intended
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Iteration♻️ {.yellow background-color="#C8B17E"}
@@ -1488,12 +1292,13 @@ In Data Science:
 
 ::: columns
 ::: {.column width="50%"}
-<center><u>Gen Art Scenario</u></center>
+<center><u>**Gen Art Scenario**</u></center>
+
 <br>
 
 **Iterating in Action:**
 
-- Use your preferred method of iteration to create a generalized workflow.
+-   Use your preferred method of iteration to create a generalized workflow.
 
 ```{r, echo = TRUE, eval = FALSE}
 #finger options for iterations#
@@ -1515,12 +1320,13 @@ drip <- pmap(drip_opts, ~tibble(
 :::
 
 ::: {.column width="50%"}
-<center><u>Data Sci Scenario</u></center>
+<center><u>**Data Sci Scenario**</u></center>
+
 <br>
 
 **Iterating in Action:**
 
-- Use your preferred method of iteration to create a generalized workflow.
+-   Use your preferred method of iteration to create a generalized workflow.
 
 ```{r, echo = TRUE, eval = FALSE}
 # Different DFs for iterations
@@ -1546,52 +1352,33 @@ map(lst_labelled,
 :::
 
 ::: notes
-In art:
--   the first challenge is creating the data
-<br>
-In Data Science:
--   You already have the data..
--   But nuances may need to be addressed
--   Isolate the problem by doing what you want for at least one data frame
-
+In art: - the first challenge is creating the data <br> In Data Science: - You already have the data.. - But nuances may need to be addressed - Isolate the problem by doing what you want for at least one data frame
 :::
-
-
 
 ## Examples of How Generative Art Translates into Data Science {.yellow background-color="#C8B17E"}
 
 ::: {style="padding-bottom: 20px; padding-top: 20px;"}
-
 <h3>Development 📦</h3>
-
 :::
 
 <br>
 
 ::: columns
-:::{.column width="50%"}
--   Learning and Honing in on development skills is another **HUGE** feat
-<br><br>
-- In the art realm, this promotes cleaner and robust workflows and more complex operations
-<br><br>
-- In Data Science, it does the same, but you're *really* moving up to new levels✨.
-
-
+::: {.column width="50%"}
+-   Learning and honing in on development skills is another **HUGE** feat <br><br>
+-   In the art realm, this promotes cleaner and robust workflows and more complex operations <br><br>
+-   In Data Science, it does the same, but you're *really* moving up to new levels✨.
 :::
 
-:::{.column width="50%"}
-<center>
-![](images/new_level.gif)
-</center>
+::: {.column width="50%"}
+<center>![](images/new_level.gif)</center>
 :::
-
 :::
 
 ::: notes
-- For art, can really start to set your stuff apart from beginner/simpler things
-<br>
-- For DS, branching into development is HIGHLY desirable.
-- Allows you to take more advantage of the "open-source" paradigm by creating programs for your organization and others in the community.
+-   For art, can really start to set your stuff apart from beginner/simpler things <br>
+-   For DS, branching into development is HIGHLY desirable.
+-   Allows you to take more advantage of the "open-source" paradigm by creating programs for your organization and others in the community.
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Development 📦 {.yellow background-color="#C8B17E"}
@@ -1600,24 +1387,25 @@ In Data Science:
 
 ::: columns
 ::: {.column width="50%"}
-<center><u>Gen Art Scenario</u></center>
+<center><u>**Gen Art Scenario**</u></center>
+
 <br>
 
 **End Goal:**
 
-- Want to create a function that spits out a color palette of a specified length based on preset choices.
+-   Want to create a function that spits out a color palette of a specified length based on preset choices.
 
 <center>![](images/ex2_art.png)</center>
-
 :::
 
 ::: {.column width="50%"}
-<center><u>Data Sci Scenario</u></center>
+<center><u>**Data Sci Scenario**</u></center>
+
 <br>
 
 **End Goal:**
 
-- Want to create a function that left joins a table of existing data to another data frame.
+-   Want to create a function that left joins a table of existing data to another data frame.
 
 <br>
 
@@ -1626,8 +1414,8 @@ In Data Science:
 :::
 
 ::: notes
-- Whether you are in R or python, this purpose of creating functions are generally the same
-- We wish to do a specific task, in an isolate environment for a consisent output or result.
+-   Whether you are in R or python, this purpose of creating functions are generally the same
+-   We wish to do a specific task, in an isolate environment for a consisent output or result.
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Development 📦 {.yellow background-color="#C8B17E"}
@@ -1636,12 +1424,13 @@ In Data Science:
 
 ::: columns
 ::: {.column width="50%"}
-<center><u>Gen Art Scenario</u></center>
+<center><u>**Gen Art Scenario**</u></center>
+
 <br>
 
 **Approach:**
 
-- Isolate: How do we handle the input, code for the work in the function's body, and return the intended output/side effect to us?
+-   Isolate: How do we handle the input, code for the work in the function's body, and return the intended output/side effect to us?
 
 ```{r, eval = FALSE, echo = TRUE}
 art_pals <- function(colors = "pal_1", n = 5) {
@@ -1659,16 +1448,16 @@ art_pals <- function(colors = "pal_1", n = 5) {
   return(final_pal)
 }
 ```
-
 :::
 
 ::: {.column width="50%"}
-<center><u>Data Sci Scenario</u></center>
+<center><u>**Data Sci Scenario**</u></center>
+
 <br>
 
 **Approach:**
 
-- Isolate: How do we handle the input, code for the work in the function's body, and return the intended output/side effect to us?
+-   Isolate: How do we handle the input, code for the work in the function's body, and return the intended output/side effect to us?
 
 ```{r, eval = FALSE, echo = TRUE}
 map_ae <- function(data = df_main, join_col = ae_term) {
@@ -1688,9 +1477,9 @@ map_ae <- function(data = df_main, join_col = ae_term) {
 :::
 
 ::: notes
-- Whether it's for art or data science, the approach is the same
-- Work has to be done to get from input to output
-- This can also open a can of worms to unit testing and pkg dev.
+-   Whether it's for art or data science, the approach is the same
+-   Work has to be done to get from input to output
+-   This can also open a can of worms to unit testing and pkg dev.
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Development 📦 {.yellow background-color="#C8B17E"}
@@ -1699,28 +1488,29 @@ map_ae <- function(data = df_main, join_col = ae_term) {
 
 ::: columns
 ::: {.column width="50%"}
-<center><u>Gen Art Scenario</u></center>
+<center><u>**Gen Art Scenario**</u></center>
+
 <br>
 
 **Development in Action:**
 
-- Now we can just use our function and do the work in one line.
+-   Now we can just use our function and do the work in one line.
 
 ```{r, eval = FALSE, echo = TRUE}
 art_pals("pal_2",50)
 
 *Returns 50 calculated colors based on the input `pal_2`*
 ```
-
 :::
 
 ::: {.column width="50%"}
-<center><u>Data Sci Scenario</u></center>
+<center><u>**Data Sci Scenario**</u></center>
+
 <br>
 
 **Development in Action:**
 
-- Now we can just use our function and do the work in one line.
+-   Now we can just use our function and do the work in one line.
 
 ```{r, eval = FALSE, echo = TRUE}
 map_ae(df_main, ae_term)
@@ -1732,15 +1522,182 @@ map_ae(df_main, ae_term)
 :::
 
 ::: notes
-- Whether art or DS, the end goal of reducing code bloat is the same.
-- Especially helpful for larger processes where a single purrr function or for loop won't cut it.
-- Know this is just a taste, this obviously led down a rabbit hole of being able to create my own art package, and help to enhance and maintain existing packages at work
-- Creating functions is the tip of the iceberg and will lead you into a slippery slope of other crucial things I don't have time to talk about like unit testing and package maintenance.
+-   Whether art or DS, the end goal of reducing code bloat is the same.
+-   Especially helpful for larger processes where a single purrr function or for loop won't cut it.
+-   Know this is just a taste, this obviously led down a rabbit hole of being able to create my own art package, and help to enhance and maintain existing packages at work
+-   Creating functions is the tip of the iceberg and will lead you into a slippery slope of other crucial things I don't have time to talk about like unit testing and package maintenance.
 :::
 
 ## Examples of How Generative Art Translates into Data Science {.yellow background-color="#C8B17E"}
 
-Communication Loop
+::: {style="padding-bottom: 20px; padding-top: 20px;"}
+<h3>Communication 💬</h3>
+:::
+
+<br>
+
+::: columns
+::: {.column width="50%"}
+
+
+-   It's **debatable** if you *need* communication for art<br><br>
+-   Explaining art methods, and collaborating on issues requires communication <br><br>
+-   In Data Science, you **NEED to communicate *or else*** 💀
+:::
+
+::: {.column width="50%"}
+<center>![](images/confused.png){width="80%"}</center>
+:::
+:::
+
+::: notes
+-   For art, you don't need to communicate really...but it can help you get better if you do.
+-   This may come naturally if you're trying to figure something out and can't - POSIT community boards, SO, Google Searching, etc.
+-   Data Science, communication is non-negotiable. YOU MUST DO THIS.
+:::
+
+
+
+## Examples of How Generative Art Translates into Data Science - Communication 💬 {.yellow background-color="#C8B17E"}
+
+<br>
+
+::: columns
+::: {.column width="50%"}
+<center><u>**Gen Art Scenario**</u></center>
+
+<br>
+
+**End Goal:**
+
+-   Need to ask people for help with developing unit test suites for art functions...but they don't understand what I'm trying to do with the function or test for...
+
+
+<center>![](images/comms_ex_art.gif)</center>
+:::
+
+::: {.column width="50%"}
+<center><u>**Data Sci Scenario**</u></center>
+
+<br>
+
+**End Goal:**
+
+-   Need to perform a data request for a stakeholder, but the stakeholder isn't intimately familiar with the data structure and can't help me with that...
+
+
+<center>![](images/comms_ex_ds.gif)</center>
+:::
+:::
+
+::: notes
+-   The scenarios are flipped. In the art scenario, I am the SME, In the Data Science Scenario, I am not the SME, and the SME doesn't know wth I need
+- Requires communicating in different ways, but both with the need to get everyone involved on the same page.
+:::
+
+## Examples of How Generative Art Translates into Data Science - Communication 💬 {.yellow background-color="#C8B17E"}
+
+<br>
+
+::: columns
+::: {.column width="50%"}
+<center><u>**Gen Art Scenario**</u></center>
+
+<br>
+
+**Approach:**
+
+-   Identify what I am functionally trying to do without the context of the art, then create a proper reprex or explain the desired result plainly to someone smarter than me.
+
+:::
+
+::: {.column width="50%"}
+<center><u>**Data Sci Scenario**</u></center>
+
+<br>
+
+**Approach:**
+
+-   Identify what context or details I am missing OR explain what the current process is so someone smarter than me can assist me.
+
+:::
+:::
+
+<center>![](images/comms_approach.gif)</center>
+
+::: notes
+-   The scenarios are flipped. In the art scenario, I am the SME, In the Data Science Scenario, I am not the SME, and the SME doesn't know wth I need
+- Requires communicating in different ways, but both with the need to get everyone involved on the same page.
+:::
+
+## Examples of How Generative Art Translates into Data Science - Communication 💬 {.yellow background-color="#C8B17E"}
+
+<br>
+
+::: columns
+::: {.column width="50%"}
+<center><u>**Gen Art Scenario**</u></center>
+
+<br>
+
+**Communicating in Action:**
+
+-   Create a reprex with the [`reprex` package](https://reprex.tidyverse.org/) (R) or the [`reprexpy` library](https://reprexpy.readthedocs.io/en/latest/) (Python) and only give art "context" when needed. Most issues are a programming/logic one, or a math one that has nothing to do with "art" 😖
+
+<br>
+
+```{r echo = FALSE, eval = TRUE, include = TRUE}
+  is.color <- function(...) {
+    # is the input a base R color?
+    r_color <-
+      sapply(
+        ...,
+        function(x) x %in% colors()
+      )
+    # is the input a valid hex color code?
+    hex_color <-
+      sapply(
+        ...,
+        function(x) grepl("^#[A-Fa-f0-9]{6}", tolower(x))
+      )
+    out <- r_color + hex_color
+    output <- ifelse(out > 0, TRUE, FALSE)
+    return(output)
+  } 
+
+```
+
+```{r echo = TRUE, eval = TRUE}
+# Some function that I can't get to work as expected----
+reprex::reprex(
+  {
+  # UPPERCASES don't work
+  is.color("BLUE")
+  # lowercases do
+  is.color("blue")
+  }
+)
+```
+:::
+
+::: {.column width="50%"}
+<center><u>**Data Sci Scenario**</u></center>
+
+<br>
+
+**Communicating in Action:**
+
+- Translate what you are doing in R or Python to the Subject Matter Expert. Explain the uncertainties, ask clarifying questions about the subject matter and explain where gaps are.
+
+<center>![](images/no_tech.png){width="45%"}</center>
+:::
+:::
+
+
+::: notes
+-   with art, your head may not be thinking "functionally" - youre wrapped up in getting the final result w/o thinking about what you are actually trying to do in R
+-   with DS, you may be taksed with communicating with 
+:::
 
 ##  {background-color="#1a1a1a" background-image="images/background7.png" background-size="cover"}
 
@@ -1753,3 +1710,27 @@ Communication Loop
 </center>
 
 ## Final Thoughts {.orange background-color="#C88A5B"}
+
+<br><br>
+
+<center>
+::: {#orangequote}
+>This was a tiny introduction into the concept of one type of generative art
+:::
+
+::: {#orangequote .fragment}
+>This was personal: Generative Art was MY motivation to learn and do more 
+:::
+
+::: {#orangequote .fragment}
+>Doing something I loved made programming/data science digestible
+:::
+</center>
+
+## {background-image="images/background.png" background-size="cover"}
+
+## {background-color="#1a1a1a"}
+
+<center>
+![](images/heart_end.png){.false}
+</center>

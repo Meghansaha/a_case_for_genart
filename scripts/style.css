@@ -162,6 +162,17 @@ body {
   font-size: 50px;
 }
 
+#orangequote > blockquote{
+  margin: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(30%);
+  color: #000000;
+  background-color: #d9ad8c;
+  padding: 20px;
+  font-size: 50px;
+}
+
 .reveal pre.sourceCode code {
   /* height: 500px; */
   max-height: 100%;

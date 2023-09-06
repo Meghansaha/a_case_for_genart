@@ -1041,39 +1041,36 @@ Some “Primitive” Graphical Tools🛠
 <div class="columns">
 <div class="column" style="width:55%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="1-5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">#===============================================================#</span></span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">#===============================================================#</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="co"># Library Load-in------------------------------------------------</span></span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="co">#===============================================================#</span></span>
 <span id="cb1-4"><a href="#cb1-4"></a><span class="im">from</span> plotnine <span class="im">import</span> <span class="op">*</span></span>
 <span id="cb1-5"><a href="#cb1-5"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-6"><a href="#cb1-6"></a></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="co">#===============================================================#</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="co"># Image Options--------------------------------------------------</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="co">#===============================================================#</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a><span class="co">#Set the color</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a>orange_hex <span class="op">=</span> <span class="st">"#FFBB58"</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a></span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="co">#Set the width</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a>chonk <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb1-15"><a href="#cb1-15"></a></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="co">#===============================================================#</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="co"># Image Options--------------------------------------------------</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co">#===============================================================#</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co">#Set the color</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>orange_hex <span class="op">=</span> <span class="st">"#FFBB58"</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="co">#Set the width</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>chonk <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="co">#===============================================================#</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="co"># Data Creation--------------------------------------------------</span></span>
 <span id="cb1-16"><a href="#cb1-16"></a><span class="co">#===============================================================#</span></span>
-<span id="cb1-17"><a href="#cb1-17"></a><span class="co"># Data Creation--------------------------------------------------</span></span>
-<span id="cb1-18"><a href="#cb1-18"></a><span class="co">#===============================================================#</span></span>
-<span id="cb1-19"><a href="#cb1-19"></a>line <span class="op">=</span> pd.DataFrame({<span class="st">"x"</span> : <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">5</span>)),</span>
-<span id="cb1-20"><a href="#cb1-20"></a>                     <span class="st">"y"</span> : <span class="dv">1</span>,</span>
-<span id="cb1-21"><a href="#cb1-21"></a>                     <span class="st">"color"</span> : orange_hex,</span>
-<span id="cb1-22"><a href="#cb1-22"></a>                     <span class="st">"size"</span> : chonk})</span>
-<span id="cb1-23"><a href="#cb1-23"></a></span>
-<span id="cb1-24"><a href="#cb1-24"></a><span class="co">#===============================================================#</span></span>
-<span id="cb1-25"><a href="#cb1-25"></a><span class="co"># Plot Creation--------------------------------------------------</span></span>
-<span id="cb1-26"><a href="#cb1-26"></a><span class="co">#===============================================================#</span></span>
-<span id="cb1-27"><a href="#cb1-27"></a>orange_line <span class="op">=</span> (ggplot(line, aes(<span class="st">"x"</span>, <span class="st">"y"</span>))<span class="op">+</span></span>
-<span id="cb1-28"><a href="#cb1-28"></a>               geom_path(color <span class="op">=</span> line.loc[:,<span class="st">"color"</span>],</span>
-<span id="cb1-29"><a href="#cb1-29"></a>                         size <span class="op">=</span> line.loc[:,<span class="st">"size"</span>])<span class="op">+</span></span>
-<span id="cb1-30"><a href="#cb1-30"></a>               coord_equal(ylim <span class="op">=</span> (<span class="dv">0</span>,<span class="dv">3</span>), xlim <span class="op">=</span> (<span class="dv">0</span>,<span class="dv">4</span>)))</span>
-<span id="cb1-31"><a href="#cb1-31"></a></span>
-<span id="cb1-32"><a href="#cb1-32"></a><span class="co">#View the plot</span></span>
-<span id="cb1-33"><a href="#cb1-33"></a><span class="bu">print</span>(orange_line)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-17"><a href="#cb1-17"></a>line <span class="op">=</span> pd.DataFrame({<span class="st">"x"</span> : <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">5</span>)),</span>
+<span id="cb1-18"><a href="#cb1-18"></a>                     <span class="st">"y"</span> : <span class="dv">1</span>,</span>
+<span id="cb1-19"><a href="#cb1-19"></a>                     <span class="st">"color"</span> : orange_hex,</span>
+<span id="cb1-20"><a href="#cb1-20"></a>                     <span class="st">"size"</span> : chonk})</span>
+<span id="cb1-21"><a href="#cb1-21"></a><span class="co">#===============================================================#</span></span>
+<span id="cb1-22"><a href="#cb1-22"></a><span class="co"># Plot Creation--------------------------------------------------</span></span>
+<span id="cb1-23"><a href="#cb1-23"></a><span class="co">#===============================================================#</span></span>
+<span id="cb1-24"><a href="#cb1-24"></a>orange_line <span class="op">=</span> (ggplot(line, aes(<span class="st">"x"</span>, <span class="st">"y"</span>))<span class="op">+</span></span>
+<span id="cb1-25"><a href="#cb1-25"></a>               geom_path(color <span class="op">=</span> line.loc[:,<span class="st">"color"</span>],</span>
+<span id="cb1-26"><a href="#cb1-26"></a>                         size <span class="op">=</span> line.loc[:,<span class="st">"size"</span>])<span class="op">+</span></span>
+<span id="cb1-27"><a href="#cb1-27"></a>               coord_equal(ylim <span class="op">=</span> (<span class="dv">0</span>,<span class="dv">3</span>), xlim <span class="op">=</span> (<span class="dv">0</span>,<span class="dv">4</span>)))</span>
+<span id="cb1-28"><a href="#cb1-28"></a></span>
+<span id="cb1-29"><a href="#cb1-29"></a><span class="co">#View the plot</span></span>
+<span id="cb1-30"><a href="#cb1-30"></a><span class="bu">print</span>(orange_line)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:45%;">
 <p><br><br></p>
@@ -1084,9 +1081,14 @@ Some “Primitive” Graphical Tools🛠
 </div>
 <aside class="notes">
 <ul>
-<li><p>There can be different approaches to creating that chunky orange line, but here’s one way in python.</p></li>
-<li><p>Now without getting too bogged down in the specific of the code, let’s pay attention to the process</p></li>
-<li><p>First you load in your libraries you need.</p></li>
+<li>There can be different approaches, but here’s one way in python.</li>
+<li>Now without getting too bogged down in the specifics of the code, the process is relatively simple</li>
+<li>First you load in your libraries you need, then you can do some prep for your data.</li>
+<li>Here setting values for color and size</li>
+<li>Most important step -&gt; create your data sources</li>
+<li>this is what you’ll feed into your graphical tool of choice.</li>
+<li>pandas dataframe with coordinates (x and y), color, and size</li>
+<li>feed into plotnine’s ggplot fx here.</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -1103,239 +1105,43 @@ Some “Primitive” Graphical Tools🛠
 <section id="how-can-we-make-generative-art-in-r-or-python-7" class="slide level2 mutedblue" data-background-color="#4e5483">
 <h2>How Can we Make Generative Art in R or Python?</h2>
 <div style="padding-bottom: 20px;">
-<p><u><strong>A Simple Example <em>(In Python)</em></strong></u></p>
-</div>
-<div class="columns">
-<div class="column" style="width:55%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="1-5,7-14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">#===============================================================#</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="co"># Library Load-in------------------------------------------------</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="co">#===============================================================#</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="im">from</span> plotnine <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb2-6"><a href="#cb2-6"></a></span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="co">#===============================================================#</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a><span class="co"># Image Options--------------------------------------------------</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a><span class="co">#===============================================================#</span></span>
-<span id="cb2-10"><a href="#cb2-10"></a><span class="co">#Set the color</span></span>
-<span id="cb2-11"><a href="#cb2-11"></a>orange_hex <span class="op">=</span> <span class="st">"#FFBB58"</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a></span>
-<span id="cb2-13"><a href="#cb2-13"></a><span class="co">#Set the width</span></span>
-<span id="cb2-14"><a href="#cb2-14"></a>chonk <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a></span>
-<span id="cb2-16"><a href="#cb2-16"></a><span class="co">#===============================================================#</span></span>
-<span id="cb2-17"><a href="#cb2-17"></a><span class="co"># Data Creation--------------------------------------------------</span></span>
-<span id="cb2-18"><a href="#cb2-18"></a><span class="co">#===============================================================#</span></span>
-<span id="cb2-19"><a href="#cb2-19"></a>line <span class="op">=</span> pd.DataFrame({<span class="st">"x"</span> : <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">5</span>)),</span>
-<span id="cb2-20"><a href="#cb2-20"></a>                     <span class="st">"y"</span> : <span class="dv">1</span>,</span>
-<span id="cb2-21"><a href="#cb2-21"></a>                     <span class="st">"color"</span> : orange_hex,</span>
-<span id="cb2-22"><a href="#cb2-22"></a>                     <span class="st">"size"</span> : chonk})</span>
-<span id="cb2-23"><a href="#cb2-23"></a></span>
-<span id="cb2-24"><a href="#cb2-24"></a><span class="co">#===============================================================#</span></span>
-<span id="cb2-25"><a href="#cb2-25"></a><span class="co"># Plot Creation--------------------------------------------------</span></span>
-<span id="cb2-26"><a href="#cb2-26"></a><span class="co">#===============================================================#</span></span>
-<span id="cb2-27"><a href="#cb2-27"></a>orange_line <span class="op">=</span> (ggplot(line, aes(<span class="st">"x"</span>, <span class="st">"y"</span>))<span class="op">+</span></span>
-<span id="cb2-28"><a href="#cb2-28"></a>               geom_path(color <span class="op">=</span> line.loc[:,<span class="st">"color"</span>],</span>
-<span id="cb2-29"><a href="#cb2-29"></a>                         size <span class="op">=</span> line.loc[:,<span class="st">"size"</span>])<span class="op">+</span></span>
-<span id="cb2-30"><a href="#cb2-30"></a>               coord_equal(ylim <span class="op">=</span> (<span class="dv">0</span>,<span class="dv">3</span>), xlim <span class="op">=</span> (<span class="dv">0</span>,<span class="dv">4</span>)))</span>
-<span id="cb2-31"><a href="#cb2-31"></a></span>
-<span id="cb2-32"><a href="#cb2-32"></a><span class="co">#View the plot</span></span>
-<span id="cb2-33"><a href="#cb2-33"></a><span class="bu">print</span>(orange_line)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div><div class="column" style="width:45%;">
-<p><br><br></p>
-<center>
-<img data-src="images/python_ex1.png" style="width:100.0%">
-</center>
-</div>
-</div>
-<aside class="notes">
-<p>-Next, you can do some prep for your data.</p>
-<p>-Here, just setting values for color and size</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="how-can-we-make-generative-art-in-r-or-python-8" class="slide level2 mutedblue" data-background-color="#4e5483">
-<h2>How Can we Make Generative Art in R or Python?</h2>
-<div style="padding-bottom: 20px;">
-<p><u><strong>A Simple Example <em>(In Python)</em></strong></u></p>
-</div>
-<div class="columns">
-<div class="column" style="width:55%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3" data-code-line-numbers="1-5,7-14,16-22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="co">#===============================================================#</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="co"># Library Load-in------------------------------------------------</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="co">#===============================================================#</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="im">from</span> plotnine <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb3-6"><a href="#cb3-6"></a></span>
-<span id="cb3-7"><a href="#cb3-7"></a><span class="co">#===============================================================#</span></span>
-<span id="cb3-8"><a href="#cb3-8"></a><span class="co"># Image Options--------------------------------------------------</span></span>
-<span id="cb3-9"><a href="#cb3-9"></a><span class="co">#===============================================================#</span></span>
-<span id="cb3-10"><a href="#cb3-10"></a><span class="co">#Set the color</span></span>
-<span id="cb3-11"><a href="#cb3-11"></a>orange_hex <span class="op">=</span> <span class="st">"#FFBB58"</span></span>
-<span id="cb3-12"><a href="#cb3-12"></a></span>
-<span id="cb3-13"><a href="#cb3-13"></a><span class="co">#Set the width</span></span>
-<span id="cb3-14"><a href="#cb3-14"></a>chonk <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb3-15"><a href="#cb3-15"></a></span>
-<span id="cb3-16"><a href="#cb3-16"></a><span class="co">#===============================================================#</span></span>
-<span id="cb3-17"><a href="#cb3-17"></a><span class="co"># Data Creation--------------------------------------------------</span></span>
-<span id="cb3-18"><a href="#cb3-18"></a><span class="co">#===============================================================#</span></span>
-<span id="cb3-19"><a href="#cb3-19"></a>line <span class="op">=</span> pd.DataFrame({<span class="st">"x"</span> : <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">5</span>)),</span>
-<span id="cb3-20"><a href="#cb3-20"></a>                     <span class="st">"y"</span> : <span class="dv">1</span>,</span>
-<span id="cb3-21"><a href="#cb3-21"></a>                     <span class="st">"color"</span> : orange_hex,</span>
-<span id="cb3-22"><a href="#cb3-22"></a>                     <span class="st">"size"</span> : chonk})</span>
-<span id="cb3-23"><a href="#cb3-23"></a></span>
-<span id="cb3-24"><a href="#cb3-24"></a><span class="co">#===============================================================#</span></span>
-<span id="cb3-25"><a href="#cb3-25"></a><span class="co"># Plot Creation--------------------------------------------------</span></span>
-<span id="cb3-26"><a href="#cb3-26"></a><span class="co">#===============================================================#</span></span>
-<span id="cb3-27"><a href="#cb3-27"></a>orange_line <span class="op">=</span> (ggplot(line, aes(<span class="st">"x"</span>, <span class="st">"y"</span>))<span class="op">+</span></span>
-<span id="cb3-28"><a href="#cb3-28"></a>               geom_path(color <span class="op">=</span> line.loc[:,<span class="st">"color"</span>],</span>
-<span id="cb3-29"><a href="#cb3-29"></a>                         size <span class="op">=</span> line.loc[:,<span class="st">"size"</span>])<span class="op">+</span></span>
-<span id="cb3-30"><a href="#cb3-30"></a>               coord_equal(ylim <span class="op">=</span> (<span class="dv">0</span>,<span class="dv">3</span>), xlim <span class="op">=</span> (<span class="dv">0</span>,<span class="dv">4</span>)))</span>
-<span id="cb3-31"><a href="#cb3-31"></a></span>
-<span id="cb3-32"><a href="#cb3-32"></a><span class="co">#View the plot</span></span>
-<span id="cb3-33"><a href="#cb3-33"></a><span class="bu">print</span>(orange_line)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div><div class="column" style="width:45%;">
-<p><br><br></p>
-<center>
-<img data-src="images/python_ex1.png" style="width:100.0%">
-</center>
-</div>
-</div>
-<aside class="notes">
-<ul>
-<li><p>Next, you can start creating your data sources = these are things you’ll feed into your graphical tool of choice.</p></li>
-<li><p>Here, it’s a pandas dataframe with coordinates (x and y), color, and size</p></li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="how-can-we-make-generative-art-in-r-or-python-9" class="slide level2 mutedblue" data-background-color="#4e5483">
-<h2>How Can we Make Generative Art in R or Python?</h2>
-<div style="padding-bottom: 20px;">
-<p><u><strong>A Simple Example <em>(In Python)</em></strong></u></p>
-</div>
-<div class="columns">
-<div class="column" style="width:55%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4" data-code-line-numbers="1-5,7-14,16-22,24-33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="co">#===============================================================#</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="co"># Library Load-in------------------------------------------------</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="co">#===============================================================#</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="im">from</span> plotnine <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb4-6"><a href="#cb4-6"></a></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="co">#===============================================================#</span></span>
-<span id="cb4-8"><a href="#cb4-8"></a><span class="co"># Image Options--------------------------------------------------</span></span>
-<span id="cb4-9"><a href="#cb4-9"></a><span class="co">#===============================================================#</span></span>
-<span id="cb4-10"><a href="#cb4-10"></a><span class="co">#Set the color</span></span>
-<span id="cb4-11"><a href="#cb4-11"></a>orange_hex <span class="op">=</span> <span class="st">"#FFBB58"</span></span>
-<span id="cb4-12"><a href="#cb4-12"></a></span>
-<span id="cb4-13"><a href="#cb4-13"></a><span class="co">#Set the width</span></span>
-<span id="cb4-14"><a href="#cb4-14"></a>chonk <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb4-15"><a href="#cb4-15"></a></span>
-<span id="cb4-16"><a href="#cb4-16"></a><span class="co">#===============================================================#</span></span>
-<span id="cb4-17"><a href="#cb4-17"></a><span class="co"># Data Creation--------------------------------------------------</span></span>
-<span id="cb4-18"><a href="#cb4-18"></a><span class="co">#===============================================================#</span></span>
-<span id="cb4-19"><a href="#cb4-19"></a>line <span class="op">=</span> pd.DataFrame({<span class="st">"x"</span> : <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">5</span>)),</span>
-<span id="cb4-20"><a href="#cb4-20"></a>                     <span class="st">"y"</span> : <span class="dv">1</span>,</span>
-<span id="cb4-21"><a href="#cb4-21"></a>                     <span class="st">"color"</span> : orange_hex,</span>
-<span id="cb4-22"><a href="#cb4-22"></a>                     <span class="st">"size"</span> : chonk})</span>
-<span id="cb4-23"><a href="#cb4-23"></a></span>
-<span id="cb4-24"><a href="#cb4-24"></a><span class="co">#===============================================================#</span></span>
-<span id="cb4-25"><a href="#cb4-25"></a><span class="co"># Plot Creation--------------------------------------------------</span></span>
-<span id="cb4-26"><a href="#cb4-26"></a><span class="co">#===============================================================#</span></span>
-<span id="cb4-27"><a href="#cb4-27"></a>orange_line <span class="op">=</span> (ggplot(line, aes(<span class="st">"x"</span>, <span class="st">"y"</span>))<span class="op">+</span></span>
-<span id="cb4-28"><a href="#cb4-28"></a>               geom_path(color <span class="op">=</span> line.loc[:,<span class="st">"color"</span>],</span>
-<span id="cb4-29"><a href="#cb4-29"></a>                         size <span class="op">=</span> line.loc[:,<span class="st">"size"</span>])<span class="op">+</span></span>
-<span id="cb4-30"><a href="#cb4-30"></a>               coord_equal(ylim <span class="op">=</span> (<span class="dv">0</span>,<span class="dv">3</span>), xlim <span class="op">=</span> (<span class="dv">0</span>,<span class="dv">4</span>)))</span>
-<span id="cb4-31"><a href="#cb4-31"></a></span>
-<span id="cb4-32"><a href="#cb4-32"></a><span class="co">#View the plot</span></span>
-<span id="cb4-33"><a href="#cb4-33"></a><span class="bu">print</span>(orange_line)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div><div class="column" style="width:45%;">
-<p><br><br></p>
-<center>
-<img data-src="images/python_ex1.png" style="width:100.0%">
-</center>
-</div>
-</div>
-<aside class="notes">
-<ul>
-<li><p>Finally, we feeding the data in to ggplot fxs, and create the line</p></li>
-<li><p>Simple enough, let’s look at something more complicated in R</p></li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="how-can-we-make-generative-art-in-r-or-python-10" class="slide level2 mutedblue" data-background-color="#4e5483">
-<h2>How Can we Make Generative Art in R or Python?</h2>
-<div style="padding-bottom: 20px;">
 <p><u><strong>A More Complicated Example <em>(In R)</em></strong></u></p>
 </div>
 <div class="columns">
 <div class="column" style="width:55%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Library Load-ins-----------------------------------------------</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">library</span>(ggplot2); <span class="fu">library</span>(dplyr); <span class="fu">library</span>(artpack)</span>
-<span id="cb5-3"><a href="#cb5-3"></a></span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="co"># Let's make a basic "cityscape" with a moon </span></span>
-<span id="cb5-5"><a href="#cb5-5"></a></span>
-<span id="cb5-6"><a href="#cb5-6"></a></span>
-<span id="cb5-7"><a href="#cb5-7"></a></span>
-<span id="cb5-8"><a href="#cb5-8"></a></span>
-<span id="cb5-9"><a href="#cb5-9"></a></span>
-<span id="cb5-10"><a href="#cb5-10"></a></span>
-<span id="cb5-11"><a href="#cb5-11"></a></span>
-<span id="cb5-12"><a href="#cb5-12"></a></span>
-<span id="cb5-13"><a href="#cb5-13"></a></span>
-<span id="cb5-14"><a href="#cb5-14"></a></span>
-<span id="cb5-15"><a href="#cb5-15"></a></span>
-<span id="cb5-16"><a href="#cb5-16"></a></span>
-<span id="cb5-17"><a href="#cb5-17"></a></span>
-<span id="cb5-18"><a href="#cb5-18"></a></span>
-<span id="cb5-19"><a href="#cb5-19"></a></span>
-<span id="cb5-20"><a href="#cb5-20"></a></span>
-<span id="cb5-21"><a href="#cb5-21"></a></span>
-<span id="cb5-22"><a href="#cb5-22"></a></span>
-<span id="cb5-23"><a href="#cb5-23"></a></span>
-<span id="cb5-24"><a href="#cb5-24"></a></span>
-<span id="cb5-25"><a href="#cb5-25"></a></span>
-<span id="cb5-26"><a href="#cb5-26"></a></span>
-<span id="cb5-27"><a href="#cb5-27"></a><span class="co"># Plot Creation--------------------------------------------------</span></span>
-<span id="cb5-28"><a href="#cb5-28"></a><span class="co">#Data Goes Here |&gt;</span></span>
-<span id="cb5-29"><a href="#cb5-29"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y)) <span class="sc">+</span></span>
-<span id="cb5-30"><a href="#cb5-30"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
-<span id="cb5-31"><a href="#cb5-31"></a>  <span class="fu">coord_cartesian</span>(<span class="at">expand =</span> <span class="cn">FALSE</span>, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">4</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">3</span>))</span>
-<span id="cb5-32"><a href="#cb5-32"></a> <span class="co">#....</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Library Load-ins-----------------------------------------------</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">library</span>(ggplot2); <span class="fu">library</span>(dplyr); <span class="fu">library</span>(artpack)</span>
+<span id="cb2-3"><a href="#cb2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="co"># Let's make a basic "cityscape" with a moon </span></span>
+<span id="cb2-5"><a href="#cb2-5"></a></span>
+<span id="cb2-6"><a href="#cb2-6"></a></span>
+<span id="cb2-7"><a href="#cb2-7"></a></span>
+<span id="cb2-8"><a href="#cb2-8"></a></span>
+<span id="cb2-9"><a href="#cb2-9"></a></span>
+<span id="cb2-10"><a href="#cb2-10"></a></span>
+<span id="cb2-11"><a href="#cb2-11"></a></span>
+<span id="cb2-12"><a href="#cb2-12"></a></span>
+<span id="cb2-13"><a href="#cb2-13"></a></span>
+<span id="cb2-14"><a href="#cb2-14"></a></span>
+<span id="cb2-15"><a href="#cb2-15"></a></span>
+<span id="cb2-16"><a href="#cb2-16"></a></span>
+<span id="cb2-17"><a href="#cb2-17"></a></span>
+<span id="cb2-18"><a href="#cb2-18"></a></span>
+<span id="cb2-19"><a href="#cb2-19"></a></span>
+<span id="cb2-20"><a href="#cb2-20"></a></span>
+<span id="cb2-21"><a href="#cb2-21"></a></span>
+<span id="cb2-22"><a href="#cb2-22"></a></span>
+<span id="cb2-23"><a href="#cb2-23"></a></span>
+<span id="cb2-24"><a href="#cb2-24"></a></span>
+<span id="cb2-25"><a href="#cb2-25"></a></span>
+<span id="cb2-26"><a href="#cb2-26"></a></span>
+<span id="cb2-27"><a href="#cb2-27"></a><span class="co"># Plot Creation--------------------------------------------------</span></span>
+<span id="cb2-28"><a href="#cb2-28"></a><span class="co">#Data Goes Here |&gt;</span></span>
+<span id="cb2-29"><a href="#cb2-29"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y)) <span class="sc">+</span></span>
+<span id="cb2-30"><a href="#cb2-30"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb2-31"><a href="#cb2-31"></a>  <span class="fu">coord_cartesian</span>(<span class="at">expand =</span> <span class="cn">FALSE</span>, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">4</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">3</span>))</span>
+<span id="cb2-32"><a href="#cb2-32"></a> <span class="co">#....</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:45%;">
 <p><br><br></p>
@@ -1362,7 +1168,7 @@ Some “Primitive” Graphical Tools🛠
           display:block!important;
       }</style></aside>
 </section>
-<section id="how-can-we-make-generative-art-in-r-or-python-11" class="slide level2 mutedblue" data-background-color="#4e5483">
+<section id="how-can-we-make-generative-art-in-r-or-python-8" class="slide level2 mutedblue" data-background-color="#4e5483">
 <h2>How Can we Make Generative Art in R or Python?</h2>
 <div style="padding-bottom: 20px;">
 <p><u><strong>A More Complicated Example <em>(In R)</em></strong></u></p>
@@ -1370,38 +1176,38 @@ Some “Primitive” Graphical Tools🛠
 <div class="columns">
 <div class="column" style="width:55%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" data-code-line-numbers="4-11,16-22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># Library Load-ins-----------------------------------------------</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">library</span>(ggplot2); <span class="fu">library</span>(dplyr); <span class="fu">library</span>(artpack)</span>
-<span id="cb6-3"><a href="#cb6-3"></a></span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="co"># Data for the sky-----------------------------------------------</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a>df_sky <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="dv">0</span>,</span>
-<span id="cb6-6"><a href="#cb6-6"></a>                 <span class="at">xend =</span> <span class="dv">4</span>,</span>
-<span id="cb6-7"><a href="#cb6-7"></a>                 <span class="at">y =</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">3</span>, <span class="at">length =</span> <span class="dv">100</span>),</span>
-<span id="cb6-8"><a href="#cb6-8"></a>                 <span class="at">yend =</span> y,</span>
-<span id="cb6-9"><a href="#cb6-9"></a>                 <span class="at">color =</span> <span class="fu">art_pals</span>(<span class="st">"sunnyside"</span>, <span class="at">n =</span> <span class="dv">100</span>),</span>
-<span id="cb6-10"><a href="#cb6-10"></a>                 <span class="at">linewidth =</span> <span class="dv">10</span></span>
-<span id="cb6-11"><a href="#cb6-11"></a>                 )</span>
-<span id="cb6-12"><a href="#cb6-12"></a></span>
-<span id="cb6-13"><a href="#cb6-13"></a></span>
-<span id="cb6-14"><a href="#cb6-14"></a></span>
-<span id="cb6-15"><a href="#cb6-15"></a></span>
-<span id="cb6-16"><a href="#cb6-16"></a><span class="co"># Plot Creation--------------------------------------------------</span></span>
-<span id="cb6-17"><a href="#cb6-17"></a>df_sky <span class="sc">|&gt;</span></span>
-<span id="cb6-18"><a href="#cb6-18"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y, <span class="at">xend =</span> xend, <span class="at">yend =</span> yend,)) <span class="sc">+</span></span>
-<span id="cb6-19"><a href="#cb6-19"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
-<span id="cb6-20"><a href="#cb6-20"></a>  <span class="fu">coord_cartesian</span>(<span class="at">expand =</span> <span class="cn">FALSE</span>, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">4</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">3</span>)) <span class="sc">+</span></span>
-<span id="cb6-21"><a href="#cb6-21"></a>  <span class="fu">geom_segment</span>(<span class="at">color =</span> df_sky<span class="sc">$</span>color,</span>
-<span id="cb6-22"><a href="#cb6-22"></a>               <span class="at">linewidth =</span> df_sky<span class="sc">$</span>linewidth) </span>
-<span id="cb6-23"><a href="#cb6-23"></a></span>
-<span id="cb6-24"><a href="#cb6-24"></a></span>
-<span id="cb6-25"><a href="#cb6-25"></a></span>
-<span id="cb6-26"><a href="#cb6-26"></a></span>
-<span id="cb6-27"><a href="#cb6-27"></a></span>
-<span id="cb6-28"><a href="#cb6-28"></a></span>
-<span id="cb6-29"><a href="#cb6-29"></a></span>
-<span id="cb6-30"><a href="#cb6-30"></a></span>
-<span id="cb6-31"><a href="#cb6-31"></a></span>
-<span id="cb6-32"><a href="#cb6-32"></a><span class="co">#...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3" data-code-line-numbers="1-11,14,18-19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Data for the sky-----------------------------------------------</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>df_sky <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="dv">0</span>,</span>
+<span id="cb3-3"><a href="#cb3-3"></a>                 <span class="at">xend =</span> <span class="dv">4</span>,</span>
+<span id="cb3-4"><a href="#cb3-4"></a>                 <span class="at">y =</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">3</span>, <span class="at">length =</span> <span class="dv">100</span>),</span>
+<span id="cb3-5"><a href="#cb3-5"></a>                 <span class="at">yend =</span> y,</span>
+<span id="cb3-6"><a href="#cb3-6"></a>                 <span class="at">color =</span> <span class="fu">art_pals</span>(<span class="st">"sunnyside"</span>, <span class="at">n =</span> <span class="dv">100</span>),</span>
+<span id="cb3-7"><a href="#cb3-7"></a>                 <span class="at">linewidth =</span> <span class="dv">10</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a>                 )</span>
+<span id="cb3-9"><a href="#cb3-9"></a></span>
+<span id="cb3-10"><a href="#cb3-10"></a></span>
+<span id="cb3-11"><a href="#cb3-11"></a></span>
+<span id="cb3-12"><a href="#cb3-12"></a></span>
+<span id="cb3-13"><a href="#cb3-13"></a><span class="co"># Plot Creation--------------------------------------------------</span></span>
+<span id="cb3-14"><a href="#cb3-14"></a>df_sky <span class="sc">|&gt;</span></span>
+<span id="cb3-15"><a href="#cb3-15"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y, <span class="at">xend =</span> xend, <span class="at">yend =</span> yend,)) <span class="sc">+</span></span>
+<span id="cb3-16"><a href="#cb3-16"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb3-17"><a href="#cb3-17"></a>  <span class="fu">coord_cartesian</span>(<span class="at">expand =</span> <span class="cn">FALSE</span>, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">4</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">3</span>)) <span class="sc">+</span></span>
+<span id="cb3-18"><a href="#cb3-18"></a>  <span class="fu">geom_segment</span>(<span class="at">color =</span> df_sky<span class="sc">$</span>color,</span>
+<span id="cb3-19"><a href="#cb3-19"></a>               <span class="at">linewidth =</span> df_sky<span class="sc">$</span>linewidth) </span>
+<span id="cb3-20"><a href="#cb3-20"></a></span>
+<span id="cb3-21"><a href="#cb3-21"></a></span>
+<span id="cb3-22"><a href="#cb3-22"></a></span>
+<span id="cb3-23"><a href="#cb3-23"></a></span>
+<span id="cb3-24"><a href="#cb3-24"></a></span>
+<span id="cb3-25"><a href="#cb3-25"></a></span>
+<span id="cb3-26"><a href="#cb3-26"></a></span>
+<span id="cb3-27"><a href="#cb3-27"></a></span>
+<span id="cb3-28"><a href="#cb3-28"></a></span>
+<span id="cb3-29"><a href="#cb3-29"></a></span>
+<span id="cb3-30"><a href="#cb3-30"></a></span>
+<span id="cb3-31"><a href="#cb3-31"></a></span>
+<span id="cb3-32"><a href="#cb3-32"></a><span class="co">#...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:45%;">
 <p><br><br></p>
@@ -1429,7 +1235,7 @@ Some “Primitive” Graphical Tools🛠
           display:block!important;
       }</style></aside>
 </section>
-<section id="how-can-we-make-generative-art-in-r-or-python-12" class="slide level2 mutedblue" data-background-color="#4e5483">
+<section id="how-can-we-make-generative-art-in-r-or-python-9" class="slide level2 mutedblue" data-background-color="#4e5483">
 <h2>How Can we Make Generative Art in R or Python?</h2>
 <div style="padding-bottom: 20px;">
 <p><u><strong>A More Complicated Example <em>(In R)</em></strong></u></p>
@@ -1437,38 +1243,38 @@ Some “Primitive” Graphical Tools🛠
 <div class="columns">
 <div class="column" style="width:55%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7" data-code-line-numbers="4-15,18-30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># Library Load-ins-----------------------------------------------</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">library</span>(ggplot2); <span class="fu">library</span>(dplyr); <span class="fu">library</span>(artpack)</span>
-<span id="cb7-3"><a href="#cb7-3"></a></span>
-<span id="cb7-4"><a href="#cb7-4"></a><span class="co"># Data for the stars---------------------------------------------</span></span>
-<span id="cb7-5"><a href="#cb7-5"></a>df_stars <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb7-6"><a href="#cb7-6"></a>  <span class="at">x =</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">4</span>, <span class="at">l =</span> <span class="dv">50</span>),</span>
-<span id="cb7-7"><a href="#cb7-7"></a>  <span class="at">y =</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">3</span>, <span class="at">l =</span> <span class="dv">50</span>)</span>
-<span id="cb7-8"><a href="#cb7-8"></a>) <span class="sc">|&gt;</span></span>
-<span id="cb7-9"><a href="#cb7-9"></a>  <span class="fu">expand.grid</span>() <span class="sc">|&gt;</span></span>
-<span id="cb7-10"><a href="#cb7-10"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb7-11"><a href="#cb7-11"></a>    <span class="at">color =</span> <span class="st">"white"</span>,</span>
-<span id="cb7-12"><a href="#cb7-12"></a>    <span class="at">size =</span> <span class="fu">sample</span>(<span class="fu">seq</span>(.<span class="dv">01</span>,.<span class="dv">2</span>, <span class="at">l =</span> <span class="dv">25</span>), <span class="dv">2500</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb7-13"><a href="#cb7-13"></a>    <span class="at">alpha =</span> <span class="fu">sample</span>(<span class="fu">seq</span>(.<span class="dv">1</span>,.<span class="dv">7</span>, <span class="at">l =</span> <span class="dv">25</span>), <span class="dv">2500</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb7-14"><a href="#cb7-14"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb7-15"><a href="#cb7-15"></a>  <span class="fu">slice_sample</span>(<span class="at">prop =</span> .<span class="dv">2</span>)</span>
-<span id="cb7-16"><a href="#cb7-16"></a></span>
-<span id="cb7-17"><a href="#cb7-17"></a></span>
-<span id="cb7-18"><a href="#cb7-18"></a><span class="co"># Plot Creation--------------------------------------------------</span></span>
-<span id="cb7-19"><a href="#cb7-19"></a>df_sky <span class="sc">|&gt;</span></span>
-<span id="cb7-20"><a href="#cb7-20"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y, <span class="at">xend =</span> xend, <span class="at">yend =</span> yend,)) <span class="sc">+</span></span>
-<span id="cb7-21"><a href="#cb7-21"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
-<span id="cb7-22"><a href="#cb7-22"></a>  <span class="fu">coord_cartesian</span>(<span class="at">expand =</span> <span class="cn">FALSE</span>, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">4</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">3</span>)) <span class="sc">+</span></span>
-<span id="cb7-23"><a href="#cb7-23"></a>  <span class="fu">geom_segment</span>(<span class="at">color =</span> df_sky<span class="sc">$</span>color,</span>
-<span id="cb7-24"><a href="#cb7-24"></a>               <span class="at">linewidth =</span> df_sky<span class="sc">$</span>linewidth) <span class="sc">+</span></span>
-<span id="cb7-25"><a href="#cb7-25"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> df_stars, <span class="fu">aes</span>(x,y),</span>
-<span id="cb7-26"><a href="#cb7-26"></a>             <span class="at">alpha =</span> df_stars<span class="sc">$</span>alpha,</span>
-<span id="cb7-27"><a href="#cb7-27"></a>             <span class="at">color =</span> df_stars<span class="sc">$</span>color,</span>
-<span id="cb7-28"><a href="#cb7-28"></a>             <span class="at">size =</span> df_stars<span class="sc">$</span>size,</span>
-<span id="cb7-29"><a href="#cb7-29"></a>             <span class="at">position =</span> <span class="fu">position_jitter</span>(<span class="at">width =</span> .<span class="dv">1</span>, <span class="at">height =</span> .<span class="dv">1</span>),</span>
-<span id="cb7-30"><a href="#cb7-30"></a>             <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) </span>
-<span id="cb7-31"><a href="#cb7-31"></a></span>
-<span id="cb7-32"><a href="#cb7-32"></a><span class="co">#...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4" data-code-line-numbers="1-12,22-27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Data for the stars---------------------------------------------</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>df_stars <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb4-3"><a href="#cb4-3"></a>  <span class="at">x =</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">4</span>, <span class="at">l =</span> <span class="dv">50</span>),</span>
+<span id="cb4-4"><a href="#cb4-4"></a>  <span class="at">y =</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">3</span>, <span class="at">l =</span> <span class="dv">50</span>)</span>
+<span id="cb4-5"><a href="#cb4-5"></a>) <span class="sc">|&gt;</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a>  <span class="fu">expand.grid</span>() <span class="sc">|&gt;</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb4-8"><a href="#cb4-8"></a>    <span class="at">color =</span> <span class="st">"white"</span>,</span>
+<span id="cb4-9"><a href="#cb4-9"></a>    <span class="at">size =</span> <span class="fu">sample</span>(<span class="fu">seq</span>(.<span class="dv">01</span>,.<span class="dv">2</span>, <span class="at">l =</span> <span class="dv">25</span>), <span class="dv">2500</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb4-10"><a href="#cb4-10"></a>    <span class="at">alpha =</span> <span class="fu">sample</span>(<span class="fu">seq</span>(.<span class="dv">1</span>,.<span class="dv">7</span>, <span class="at">l =</span> <span class="dv">25</span>), <span class="dv">2500</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-11"><a href="#cb4-11"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb4-12"><a href="#cb4-12"></a>  <span class="fu">slice_sample</span>(<span class="at">prop =</span> .<span class="dv">2</span>)</span>
+<span id="cb4-13"><a href="#cb4-13"></a></span>
+<span id="cb4-14"><a href="#cb4-14"></a></span>
+<span id="cb4-15"><a href="#cb4-15"></a><span class="co"># Plot Creation--------------------------------------------------</span></span>
+<span id="cb4-16"><a href="#cb4-16"></a>df_sky <span class="sc">|&gt;</span></span>
+<span id="cb4-17"><a href="#cb4-17"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y, <span class="at">xend =</span> xend, <span class="at">yend =</span> yend,)) <span class="sc">+</span></span>
+<span id="cb4-18"><a href="#cb4-18"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb4-19"><a href="#cb4-19"></a>  <span class="fu">coord_cartesian</span>(<span class="at">expand =</span> <span class="cn">FALSE</span>, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">4</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">3</span>)) <span class="sc">+</span></span>
+<span id="cb4-20"><a href="#cb4-20"></a>  <span class="fu">geom_segment</span>(<span class="at">color =</span> df_sky<span class="sc">$</span>color,</span>
+<span id="cb4-21"><a href="#cb4-21"></a>               <span class="at">linewidth =</span> df_sky<span class="sc">$</span>linewidth) <span class="sc">+</span></span>
+<span id="cb4-22"><a href="#cb4-22"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> df_stars, <span class="fu">aes</span>(x,y),</span>
+<span id="cb4-23"><a href="#cb4-23"></a>             <span class="at">alpha =</span> df_stars<span class="sc">$</span>alpha,</span>
+<span id="cb4-24"><a href="#cb4-24"></a>             <span class="at">color =</span> df_stars<span class="sc">$</span>color,</span>
+<span id="cb4-25"><a href="#cb4-25"></a>             <span class="at">size =</span> df_stars<span class="sc">$</span>size,</span>
+<span id="cb4-26"><a href="#cb4-26"></a>             <span class="at">position =</span> <span class="fu">position_jitter</span>(<span class="at">width =</span> .<span class="dv">1</span>, <span class="at">height =</span> .<span class="dv">1</span>),</span>
+<span id="cb4-27"><a href="#cb4-27"></a>             <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) </span>
+<span id="cb4-28"><a href="#cb4-28"></a></span>
+<span id="cb4-29"><a href="#cb4-29"></a></span>
+<span id="cb4-30"><a href="#cb4-30"></a></span>
+<span id="cb4-31"><a href="#cb4-31"></a></span>
+<span id="cb4-32"><a href="#cb4-32"></a><span class="co">#...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:45%;">
 <p><br><br></p>
@@ -1491,7 +1297,7 @@ Some “Primitive” Graphical Tools🛠
           display:block!important;
       }</style></aside>
 </section>
-<section id="how-can-we-make-generative-art-in-r-or-python-13" class="slide level2 mutedblue" data-background-color="#4e5483">
+<section id="how-can-we-make-generative-art-in-r-or-python-10" class="slide level2 mutedblue" data-background-color="#4e5483">
 <h2>How Can we Make Generative Art in R or Python?</h2>
 <div style="padding-bottom: 20px;">
 <p><u><strong>A More Complicated Example <em>(In R)</em></strong></u></p>
@@ -1499,38 +1305,38 @@ Some “Primitive” Graphical Tools🛠
 <div class="columns">
 <div class="column" style="width:55%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8" data-code-line-numbers="1-8,10-29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># Data for the moon----------------------------------------------</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a>df_moon <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb8-3"><a href="#cb8-3"></a>  <span class="at">x =</span> <span class="dv">2</span>,</span>
-<span id="cb8-4"><a href="#cb8-4"></a>  <span class="at">y =</span> <span class="fl">1.5</span>,</span>
-<span id="cb8-5"><a href="#cb8-5"></a>  <span class="at">size =</span> <span class="dv">100</span>,</span>
-<span id="cb8-6"><a href="#cb8-6"></a>  <span class="at">fill =</span> <span class="st">"#f0e4bb"</span>,</span>
-<span id="cb8-7"><a href="#cb8-7"></a>  <span class="at">color =</span> <span class="st">"#000000"</span></span>
-<span id="cb8-8"><a href="#cb8-8"></a>)</span>
-<span id="cb8-9"><a href="#cb8-9"></a></span>
-<span id="cb8-10"><a href="#cb8-10"></a><span class="co"># Plot Creation--------------------------------------------------</span></span>
-<span id="cb8-11"><a href="#cb8-11"></a>df_sky <span class="sc">|&gt;</span></span>
-<span id="cb8-12"><a href="#cb8-12"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y, <span class="at">xend =</span> xend, <span class="at">yend =</span> yend,)) <span class="sc">+</span></span>
-<span id="cb8-13"><a href="#cb8-13"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
-<span id="cb8-14"><a href="#cb8-14"></a>  <span class="fu">coord_cartesian</span>(<span class="at">expand =</span> <span class="cn">FALSE</span>, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">4</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">3</span>)) <span class="sc">+</span></span>
-<span id="cb8-15"><a href="#cb8-15"></a>  <span class="fu">geom_segment</span>(<span class="at">color =</span> df_sky<span class="sc">$</span>color,</span>
-<span id="cb8-16"><a href="#cb8-16"></a>               <span class="at">linewidth =</span> df_sky<span class="sc">$</span>linewidth) <span class="sc">+</span></span>
-<span id="cb8-17"><a href="#cb8-17"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> df_stars, <span class="fu">aes</span>(x,y),</span>
-<span id="cb8-18"><a href="#cb8-18"></a>             <span class="at">alpha =</span> df_stars<span class="sc">$</span>alpha,</span>
-<span id="cb8-19"><a href="#cb8-19"></a>             <span class="at">color =</span> df_stars<span class="sc">$</span>color,</span>
-<span id="cb8-20"><a href="#cb8-20"></a>             <span class="at">size =</span> df_stars<span class="sc">$</span>size,</span>
-<span id="cb8-21"><a href="#cb8-21"></a>             <span class="at">position =</span> <span class="fu">position_jitter</span>(<span class="at">width =</span> .<span class="dv">1</span>, <span class="at">height =</span> .<span class="dv">1</span>),</span>
-<span id="cb8-22"><a href="#cb8-22"></a>             <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb8-23"><a href="#cb8-23"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> df_moon, <span class="fu">aes</span>(x,y),</span>
-<span id="cb8-24"><a href="#cb8-24"></a>             <span class="at">color =</span> df_moon<span class="sc">$</span>color,</span>
-<span id="cb8-25"><a href="#cb8-25"></a>             <span class="at">fill =</span> df_moon<span class="sc">$</span>fill,</span>
-<span id="cb8-26"><a href="#cb8-26"></a>             <span class="at">size =</span> df_moon<span class="sc">$</span>size,</span>
-<span id="cb8-27"><a href="#cb8-27"></a>             <span class="at">shape =</span> <span class="dv">21</span>,</span>
-<span id="cb8-28"><a href="#cb8-28"></a>             <span class="at">stroke =</span> .<span class="dv">5</span>,</span>
-<span id="cb8-29"><a href="#cb8-29"></a>             <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) </span>
-<span id="cb8-30"><a href="#cb8-30"></a></span>
-<span id="cb8-31"><a href="#cb8-31"></a></span>
-<span id="cb8-32"><a href="#cb8-32"></a><span class="co">#...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5" data-code-line-numbers="1-8,23-29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Data for the moon----------------------------------------------</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>df_moon <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb5-3"><a href="#cb5-3"></a>  <span class="at">x =</span> <span class="dv">2</span>,</span>
+<span id="cb5-4"><a href="#cb5-4"></a>  <span class="at">y =</span> <span class="fl">1.5</span>,</span>
+<span id="cb5-5"><a href="#cb5-5"></a>  <span class="at">size =</span> <span class="dv">100</span>,</span>
+<span id="cb5-6"><a href="#cb5-6"></a>  <span class="at">fill =</span> <span class="st">"#f0e4bb"</span>,</span>
+<span id="cb5-7"><a href="#cb5-7"></a>  <span class="at">color =</span> <span class="st">"#000000"</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a>)</span>
+<span id="cb5-9"><a href="#cb5-9"></a></span>
+<span id="cb5-10"><a href="#cb5-10"></a><span class="co"># Plot Creation--------------------------------------------------</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a>df_sky <span class="sc">|&gt;</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y, <span class="at">xend =</span> xend, <span class="at">yend =</span> yend,)) <span class="sc">+</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb5-14"><a href="#cb5-14"></a>  <span class="fu">coord_cartesian</span>(<span class="at">expand =</span> <span class="cn">FALSE</span>, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">4</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">3</span>)) <span class="sc">+</span></span>
+<span id="cb5-15"><a href="#cb5-15"></a>  <span class="fu">geom_segment</span>(<span class="at">color =</span> df_sky<span class="sc">$</span>color,</span>
+<span id="cb5-16"><a href="#cb5-16"></a>               <span class="at">linewidth =</span> df_sky<span class="sc">$</span>linewidth) <span class="sc">+</span></span>
+<span id="cb5-17"><a href="#cb5-17"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> df_stars, <span class="fu">aes</span>(x,y),</span>
+<span id="cb5-18"><a href="#cb5-18"></a>             <span class="at">alpha =</span> df_stars<span class="sc">$</span>alpha,</span>
+<span id="cb5-19"><a href="#cb5-19"></a>             <span class="at">color =</span> df_stars<span class="sc">$</span>color,</span>
+<span id="cb5-20"><a href="#cb5-20"></a>             <span class="at">size =</span> df_stars<span class="sc">$</span>size,</span>
+<span id="cb5-21"><a href="#cb5-21"></a>             <span class="at">position =</span> <span class="fu">position_jitter</span>(<span class="at">width =</span> .<span class="dv">1</span>, <span class="at">height =</span> .<span class="dv">1</span>),</span>
+<span id="cb5-22"><a href="#cb5-22"></a>             <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb5-23"><a href="#cb5-23"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> df_moon, <span class="fu">aes</span>(x,y),</span>
+<span id="cb5-24"><a href="#cb5-24"></a>             <span class="at">color =</span> df_moon<span class="sc">$</span>color,</span>
+<span id="cb5-25"><a href="#cb5-25"></a>             <span class="at">fill =</span> df_moon<span class="sc">$</span>fill,</span>
+<span id="cb5-26"><a href="#cb5-26"></a>             <span class="at">size =</span> df_moon<span class="sc">$</span>size,</span>
+<span id="cb5-27"><a href="#cb5-27"></a>             <span class="at">shape =</span> <span class="dv">21</span>,</span>
+<span id="cb5-28"><a href="#cb5-28"></a>             <span class="at">stroke =</span> .<span class="dv">5</span>,</span>
+<span id="cb5-29"><a href="#cb5-29"></a>             <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) </span>
+<span id="cb5-30"><a href="#cb5-30"></a></span>
+<span id="cb5-31"><a href="#cb5-31"></a></span>
+<span id="cb5-32"><a href="#cb5-32"></a><span class="co">#...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:45%;">
 <p><br><br></p>
@@ -1557,7 +1363,7 @@ Some “Primitive” Graphical Tools🛠
           display:block!important;
       }</style></aside>
 </section>
-<section id="how-can-we-make-generative-art-in-r-or-python-14" class="slide level2 mutedblue" data-background-color="#4e5483">
+<section id="how-can-we-make-generative-art-in-r-or-python-11" class="slide level2 mutedblue" data-background-color="#4e5483">
 <h2>How Can we Make Generative Art in R or Python?</h2>
 <div style="padding-bottom: 20px;">
 <p><u><strong>A More Complicated Example <em>(In R)</em></strong></u></p>
@@ -1565,38 +1371,38 @@ Some “Primitive” Graphical Tools🛠
 <div class="columns">
 <div class="column" style="width:55%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># Data for the buildings-----------------------------------------</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a>df_buildings <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb9-3"><a href="#cb9-3"></a>  <span class="at">x =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">4</span>,</span>
-<span id="cb9-4"><a href="#cb9-4"></a>  <span class="at">xend =</span> x, </span>
-<span id="cb9-5"><a href="#cb9-5"></a>  <span class="at">y =</span> <span class="dv">0</span>,</span>
-<span id="cb9-6"><a href="#cb9-6"></a>  <span class="at">yend =</span> <span class="fu">sample</span>(<span class="fu">seq</span>(.<span class="dv">5</span>,<span class="dv">2</span>, <span class="at">l =</span> <span class="dv">10</span>), <span class="dv">5</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb9-7"><a href="#cb9-7"></a>  <span class="at">color =</span> <span class="st">"#000000"</span>,<span class="at">linewidth =</span> <span class="dv">60</span></span>
-<span id="cb9-8"><a href="#cb9-8"></a>)</span>
-<span id="cb9-9"><a href="#cb9-9"></a></span>
-<span id="cb9-10"><a href="#cb9-10"></a></span>
-<span id="cb9-11"><a href="#cb9-11"></a><span class="co"># Plot Creation--------------------------------------------------</span></span>
-<span id="cb9-12"><a href="#cb9-12"></a>df_sky <span class="sc">|&gt;</span></span>
-<span id="cb9-13"><a href="#cb9-13"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y, <span class="at">xend =</span> xend, <span class="at">yend =</span> yend)) <span class="sc">+</span></span>
-<span id="cb9-14"><a href="#cb9-14"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
-<span id="cb9-15"><a href="#cb9-15"></a>  <span class="fu">coord_cartesian</span>(<span class="at">expand =</span> <span class="cn">FALSE</span>, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">4</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">3</span>)) <span class="sc">+</span></span>
-<span id="cb9-16"><a href="#cb9-16"></a>  <span class="fu">geom_segment</span>(<span class="at">color =</span> df_sky<span class="sc">$</span>color,</span>
-<span id="cb9-17"><a href="#cb9-17"></a>               <span class="at">linewidth =</span> df_sky<span class="sc">$</span>linewidth) <span class="sc">+</span></span>
-<span id="cb9-18"><a href="#cb9-18"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> df_stars, <span class="fu">aes</span>(x,y),</span>
-<span id="cb9-19"><a href="#cb9-19"></a>             <span class="at">alpha =</span> df_stars<span class="sc">$</span>alpha,</span>
-<span id="cb9-20"><a href="#cb9-20"></a>             <span class="at">color =</span> df_stars<span class="sc">$</span>color,</span>
-<span id="cb9-21"><a href="#cb9-21"></a>             <span class="at">size =</span> df_stars<span class="sc">$</span>size,</span>
-<span id="cb9-22"><a href="#cb9-22"></a>             <span class="at">position =</span> <span class="fu">position_jitter</span>(<span class="at">width =</span> .<span class="dv">1</span>, <span class="at">height =</span> .<span class="dv">1</span>),</span>
-<span id="cb9-23"><a href="#cb9-23"></a>             <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb9-24"><a href="#cb9-24"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> df_moon, <span class="fu">aes</span>(x,y),</span>
-<span id="cb9-25"><a href="#cb9-25"></a>             <span class="at">color =</span> df_moon<span class="sc">$</span>color,</span>
-<span id="cb9-26"><a href="#cb9-26"></a>             <span class="at">fill =</span> df_moon<span class="sc">$</span>fill,</span>
-<span id="cb9-27"><a href="#cb9-27"></a>             <span class="at">size =</span> df_moon<span class="sc">$</span>size,</span>
-<span id="cb9-28"><a href="#cb9-28"></a>             <span class="at">shape =</span> <span class="dv">21</span>,</span>
-<span id="cb9-29"><a href="#cb9-29"></a>             <span class="at">stroke =</span> .<span class="dv">5</span>,</span>
-<span id="cb9-30"><a href="#cb9-30"></a>             <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb9-31"><a href="#cb9-31"></a>  <span class="fu">geom_segment</span>(<span class="at">data =</span> df_buildings, <span class="at">color =</span> df_buildings<span class="sc">$</span>color,</span>
-<span id="cb9-32"><a href="#cb9-32"></a>               <span class="at">linewidth =</span> df_buildings<span class="sc">$</span>linewidth)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6" data-code-line-numbers="1-8,31-32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># Data for the buildings-----------------------------------------</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>df_buildings <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb6-3"><a href="#cb6-3"></a>  <span class="at">x =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">4</span>,</span>
+<span id="cb6-4"><a href="#cb6-4"></a>  <span class="at">xend =</span> x, </span>
+<span id="cb6-5"><a href="#cb6-5"></a>  <span class="at">y =</span> <span class="dv">0</span>,</span>
+<span id="cb6-6"><a href="#cb6-6"></a>  <span class="at">yend =</span> <span class="fu">sample</span>(<span class="fu">seq</span>(.<span class="dv">5</span>,<span class="dv">2</span>, <span class="at">l =</span> <span class="dv">10</span>), <span class="dv">5</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb6-7"><a href="#cb6-7"></a>  <span class="at">color =</span> <span class="st">"#000000"</span>,<span class="at">linewidth =</span> <span class="dv">60</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a>)</span>
+<span id="cb6-9"><a href="#cb6-9"></a></span>
+<span id="cb6-10"><a href="#cb6-10"></a></span>
+<span id="cb6-11"><a href="#cb6-11"></a><span class="co"># Plot Creation--------------------------------------------------</span></span>
+<span id="cb6-12"><a href="#cb6-12"></a>df_sky <span class="sc">|&gt;</span></span>
+<span id="cb6-13"><a href="#cb6-13"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y, <span class="at">xend =</span> xend, <span class="at">yend =</span> yend)) <span class="sc">+</span></span>
+<span id="cb6-14"><a href="#cb6-14"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb6-15"><a href="#cb6-15"></a>  <span class="fu">coord_cartesian</span>(<span class="at">expand =</span> <span class="cn">FALSE</span>, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">4</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">3</span>)) <span class="sc">+</span></span>
+<span id="cb6-16"><a href="#cb6-16"></a>  <span class="fu">geom_segment</span>(<span class="at">color =</span> df_sky<span class="sc">$</span>color,</span>
+<span id="cb6-17"><a href="#cb6-17"></a>               <span class="at">linewidth =</span> df_sky<span class="sc">$</span>linewidth) <span class="sc">+</span></span>
+<span id="cb6-18"><a href="#cb6-18"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> df_stars, <span class="fu">aes</span>(x,y),</span>
+<span id="cb6-19"><a href="#cb6-19"></a>             <span class="at">alpha =</span> df_stars<span class="sc">$</span>alpha,</span>
+<span id="cb6-20"><a href="#cb6-20"></a>             <span class="at">color =</span> df_stars<span class="sc">$</span>color,</span>
+<span id="cb6-21"><a href="#cb6-21"></a>             <span class="at">size =</span> df_stars<span class="sc">$</span>size,</span>
+<span id="cb6-22"><a href="#cb6-22"></a>             <span class="at">position =</span> <span class="fu">position_jitter</span>(<span class="at">width =</span> .<span class="dv">1</span>, <span class="at">height =</span> .<span class="dv">1</span>),</span>
+<span id="cb6-23"><a href="#cb6-23"></a>             <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb6-24"><a href="#cb6-24"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> df_moon, <span class="fu">aes</span>(x,y),</span>
+<span id="cb6-25"><a href="#cb6-25"></a>             <span class="at">color =</span> df_moon<span class="sc">$</span>color,</span>
+<span id="cb6-26"><a href="#cb6-26"></a>             <span class="at">fill =</span> df_moon<span class="sc">$</span>fill,</span>
+<span id="cb6-27"><a href="#cb6-27"></a>             <span class="at">size =</span> df_moon<span class="sc">$</span>size,</span>
+<span id="cb6-28"><a href="#cb6-28"></a>             <span class="at">shape =</span> <span class="dv">21</span>,</span>
+<span id="cb6-29"><a href="#cb6-29"></a>             <span class="at">stroke =</span> .<span class="dv">5</span>,</span>
+<span id="cb6-30"><a href="#cb6-30"></a>             <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb6-31"><a href="#cb6-31"></a>  <span class="fu">geom_segment</span>(<span class="at">data =</span> df_buildings, <span class="at">color =</span> df_buildings<span class="sc">$</span>color,</span>
+<span id="cb6-32"><a href="#cb6-32"></a>               <span class="at">linewidth =</span> df_buildings<span class="sc">$</span>linewidth)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:45%;">
 <p><br><br></p>
@@ -1622,7 +1428,7 @@ Some “Primitive” Graphical Tools🛠
           display:block!important;
       }</style></aside>
 </section>
-<section id="how-can-we-make-generative-art-in-r-or-python-15" class="slide level2 mutedblue" data-background-color="#4e5483">
+<section id="how-can-we-make-generative-art-in-r-or-python-12" class="slide level2 mutedblue" data-background-color="#4e5483">
 <h2>How Can we Make Generative Art in R or Python?</h2>
 <p><br> <br></p>
 <center>
@@ -1883,15 +1689,15 @@ Benefits of Creating<br>Generative Art
 <li>Functional Programming</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># Custom FX from the Functions in Rtistry Workshop -</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a><span class="co"># Found Here: https://thetidytrekker.com/talks/functions_in_rtistry/functions_for_rtistry</span></span>
-<span id="cb10-3"><a href="#cb10-3"></a></span>
-<span id="cb10-4"><a href="#cb10-4"></a><span class="fu">circle_randomizer</span>(</span>
-<span id="cb10-5"><a href="#cb10-5"></a>  <span class="at">color_pal =</span> <span class="st">"random"</span>,</span>
-<span id="cb10-6"><a href="#cb10-6"></a>  <span class="at">border_color =</span> <span class="st">"random"</span>,</span>
-<span id="cb10-7"><a href="#cb10-7"></a>  <span class="at">crowding =</span> <span class="st">"random"</span>,</span>
-<span id="cb10-8"><a href="#cb10-8"></a>  <span class="at">coordinates =</span> <span class="st">"random"</span></span>
-<span id="cb10-9"><a href="#cb10-9"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># Custom FX from the Functions in Rtistry Workshop -</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="co"># Found Here: https://thetidytrekker.com/talks/functions_in_rtistry/functions_for_rtistry</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="fu">circle_randomizer</span>(</span>
+<span id="cb7-5"><a href="#cb7-5"></a>  <span class="at">color_pal =</span> <span class="st">"random"</span>,</span>
+<span id="cb7-6"><a href="#cb7-6"></a>  <span class="at">border_color =</span> <span class="st">"random"</span>,</span>
+<span id="cb7-7"><a href="#cb7-7"></a>  <span class="at">crowding =</span> <span class="st">"random"</span>,</span>
+<span id="cb7-8"><a href="#cb7-8"></a>  <span class="at">coordinates =</span> <span class="st">"random"</span></span>
+<span id="cb7-9"><a href="#cb7-9"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="columns">
 <div class="column" style="width:33%;">
@@ -2098,7 +1904,7 @@ What is Data Science?
 <p>In this room today, Data Science is defined as…</p>
 <div id="greenquote">
 <blockquote>
-<p>An interdisciplinary field that uses statistics, scientific computing, scientific methods, processes, algorithms and systems <em><span style="color:#CCD2BC">to extract or extrapolate knowledge and insights from data</span></em>.</p>
+<p>An interdisciplinary field that uses statistics, scientific computing, scientific methods, processes, algorithms and systems <span style="color:#CCD2BC"><em>to extract or extrapolate knowledge and insights from data</em></span>.</p>
 </blockquote>
 </div>
 <p><br><br><br></p>
@@ -2172,7 +1978,7 @@ Iteration♻️
 <div class="columns">
 <div class="column" style="width:50%;">
 <center>
-<u>Gen Art Scenario</u>
+<u><strong>Gen Art Scenario</strong></u>
 </center>
 <p><br></p>
 <p><strong>End Goal:</strong></p>
@@ -2184,7 +1990,7 @@ Iteration♻️
 </center>
 </div><div class="column" style="width:50%;">
 <center>
-<u>Data Sci Scenario</u>
+<u><strong>Data Sci Scenario</strong></u>
 </center>
 <p><br></p>
 <p><strong>End Goal:</strong></p>
@@ -2217,7 +2023,7 @@ Iteration♻️
 <div class="columns">
 <div class="column" style="width:50%;">
 <center>
-<u>Gen Art Scenario</u>
+<u><strong>Gen Art Scenario</strong></u>
 </center>
 <p><br></p>
 <p><strong>Approach:</strong></p>
@@ -2230,7 +2036,7 @@ Iteration♻️
 </center>
 </div><div class="column" style="width:50%;">
 <center>
-<u>Data Sci Scenario</u>
+<u><strong>Data Sci Scenario</strong></u>
 </center>
 <p><br></p>
 <p><strong>Approach:</strong></p>
@@ -2262,7 +2068,7 @@ Iteration♻️
 <div class="columns">
 <div class="column" style="width:50%;">
 <center>
-<u>Gen Art Scenario</u>
+<u><strong>Gen Art Scenario</strong></u>
 </center>
 <p><br></p>
 <p><strong>Iterating in Action:</strong></p>
@@ -2270,25 +2076,25 @@ Iteration♻️
 <li>Use your preferred method of iteration to create a generalized workflow.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co">#finger options for iterations#</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a>drip_opts <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb11-3"><a href="#cb11-3"></a>  <span class="dv">1</span><span class="sc">:</span>n,</span>
-<span id="cb11-4"><a href="#cb11-4"></a>  y_starts,</span>
-<span id="cb11-5"><a href="#cb11-5"></a>  x_starts,</span>
-<span id="cb11-6"><a href="#cb11-6"></a>  fills_colors</span>
-<span id="cb11-7"><a href="#cb11-7"></a>)</span>
-<span id="cb11-8"><a href="#cb11-8"></a><span class="co">#Finger data from the top-down#</span></span>
-<span id="cb11-9"><a href="#cb11-9"></a>drip <span class="ot">&lt;-</span> <span class="fu">pmap</span>(drip_opts, <span class="sc">~</span><span class="fu">tibble</span>(</span>
-<span id="cb11-10"><a href="#cb11-10"></a>  <span class="at">x =</span> <span class="fu">c</span>(..<span class="dv">3</span>, <span class="sc">*</span>math <span class="cf">for</span> x<span class="sc">-</span>axis goes here<span class="sc">*</span>),</span>
-<span id="cb11-11"><a href="#cb11-11"></a>  <span class="at">y =</span> <span class="fu">c</span>(..<span class="dv">2</span>, <span class="sc">*</span>math <span class="cf">for</span> y<span class="sc">-</span>axis goes here<span class="sc">*</span>),</span>
-<span id="cb11-12"><a href="#cb11-12"></a>  <span class="at">group =</span> <span class="fu">group_numbers</span>(..<span class="dv">1</span>),</span>
-<span id="cb11-13"><a href="#cb11-13"></a>  <span class="at">fill =</span> <span class="fu">c</span>(..<span class="dv">4</span>)</span>
-<span id="cb11-14"><a href="#cb11-14"></a>)) <span class="sc">|&gt;</span></span>
-<span id="cb11-15"><a href="#cb11-15"></a>  <span class="fu">list_rbind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co">#finger options for iterations#</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>drip_opts <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb8-3"><a href="#cb8-3"></a>  <span class="dv">1</span><span class="sc">:</span>n,</span>
+<span id="cb8-4"><a href="#cb8-4"></a>  y_starts,</span>
+<span id="cb8-5"><a href="#cb8-5"></a>  x_starts,</span>
+<span id="cb8-6"><a href="#cb8-6"></a>  fills_colors</span>
+<span id="cb8-7"><a href="#cb8-7"></a>)</span>
+<span id="cb8-8"><a href="#cb8-8"></a><span class="co">#Finger data from the top-down#</span></span>
+<span id="cb8-9"><a href="#cb8-9"></a>drip <span class="ot">&lt;-</span> <span class="fu">pmap</span>(drip_opts, <span class="sc">~</span><span class="fu">tibble</span>(</span>
+<span id="cb8-10"><a href="#cb8-10"></a>  <span class="at">x =</span> <span class="fu">c</span>(..<span class="dv">3</span>, <span class="sc">*</span>math <span class="cf">for</span> x<span class="sc">-</span>axis goes here<span class="sc">*</span>),</span>
+<span id="cb8-11"><a href="#cb8-11"></a>  <span class="at">y =</span> <span class="fu">c</span>(..<span class="dv">2</span>, <span class="sc">*</span>math <span class="cf">for</span> y<span class="sc">-</span>axis goes here<span class="sc">*</span>),</span>
+<span id="cb8-12"><a href="#cb8-12"></a>  <span class="at">group =</span> <span class="fu">group_numbers</span>(..<span class="dv">1</span>),</span>
+<span id="cb8-13"><a href="#cb8-13"></a>  <span class="at">fill =</span> <span class="fu">c</span>(..<span class="dv">4</span>)</span>
+<span id="cb8-14"><a href="#cb8-14"></a>)) <span class="sc">|&gt;</span></span>
+<span id="cb8-15"><a href="#cb8-15"></a>  <span class="fu">list_rbind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <center>
-<u>Data Sci Scenario</u>
+<u><strong>Data Sci Scenario</strong></u>
 </center>
 <p><br></p>
 <p><strong>Iterating in Action:</strong></p>
@@ -2296,24 +2102,24 @@ Iteration♻️
 <li>Use your preferred method of iteration to create a generalized workflow.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># Different DFs for iterations</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a>lst_vendors <span class="ot">&lt;-</span> </span>
-<span id="cb12-3"><a href="#cb12-3"></a>  <span class="fu">list</span>(<span class="st">"Vender 1"</span> <span class="ot">=</span> df_1,</span>
-<span id="cb12-4"><a href="#cb12-4"></a>       <span class="st">"Vendor 2"</span> <span class="ot">=</span> df_2</span>
-<span id="cb12-5"><a href="#cb12-5"></a>  )</span>
-<span id="cb12-6"><a href="#cb12-6"></a><span class="co"># Apply labels to all DFs</span></span>
-<span id="cb12-7"><a href="#cb12-7"></a>lst_labelled <span class="ot">&lt;-</span> </span>
-<span id="cb12-8"><a href="#cb12-8"></a>  <span class="fu">imap</span>(lst_vendors, <span class="sc">~</span><span class="fu">set_derived_variable_labels</span>(</span>
-<span id="cb12-9"><a href="#cb12-9"></a>         .x,.y, <span class="at">path =</span> <span class="fu">here</span>(<span class="st">"some_local_path_of_variables.csv"</span>)</span>
-<span id="cb12-10"><a href="#cb12-10"></a>         ))</span>
-<span id="cb12-11"><a href="#cb12-11"></a><span class="co"># Skim all the DFs</span></span>
-<span id="cb12-12"><a href="#cb12-12"></a><span class="fu">map</span>(lst_labelled, <span class="sc">~</span> skimr<span class="sc">::</span><span class="fu">skim</span>(.x)</span>
-<span id="cb12-13"><a href="#cb12-13"></a>)</span>
-<span id="cb12-14"><a href="#cb12-14"></a><span class="co">#saving master analytic data set</span></span>
-<span id="cb12-15"><a href="#cb12-15"></a><span class="fu">map</span>(lst_labelled,</span>
-<span id="cb12-16"><a href="#cb12-16"></a>    <span class="sc">~</span><span class="fu">saveRDS</span>(.x,</span>
-<span id="cb12-17"><a href="#cb12-17"></a>             <span class="at">file =</span> <span class="fu">glue</span>(<span class="st">"{names(lst_labelled[.x])}.RDS"</span>)</span>
-<span id="cb12-18"><a href="#cb12-18"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># Different DFs for iterations</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>lst_vendors <span class="ot">&lt;-</span> </span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">list</span>(<span class="st">"Vender 1"</span> <span class="ot">=</span> df_1,</span>
+<span id="cb9-4"><a href="#cb9-4"></a>       <span class="st">"Vendor 2"</span> <span class="ot">=</span> df_2</span>
+<span id="cb9-5"><a href="#cb9-5"></a>  )</span>
+<span id="cb9-6"><a href="#cb9-6"></a><span class="co"># Apply labels to all DFs</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a>lst_labelled <span class="ot">&lt;-</span> </span>
+<span id="cb9-8"><a href="#cb9-8"></a>  <span class="fu">imap</span>(lst_vendors, <span class="sc">~</span><span class="fu">set_derived_variable_labels</span>(</span>
+<span id="cb9-9"><a href="#cb9-9"></a>         .x,.y, <span class="at">path =</span> <span class="fu">here</span>(<span class="st">"some_local_path_of_variables.csv"</span>)</span>
+<span id="cb9-10"><a href="#cb9-10"></a>         ))</span>
+<span id="cb9-11"><a href="#cb9-11"></a><span class="co"># Skim all the DFs</span></span>
+<span id="cb9-12"><a href="#cb9-12"></a><span class="fu">map</span>(lst_labelled, <span class="sc">~</span> skimr<span class="sc">::</span><span class="fu">skim</span>(.x)</span>
+<span id="cb9-13"><a href="#cb9-13"></a>)</span>
+<span id="cb9-14"><a href="#cb9-14"></a><span class="co">#saving master analytic data set</span></span>
+<span id="cb9-15"><a href="#cb9-15"></a><span class="fu">map</span>(lst_labelled,</span>
+<span id="cb9-16"><a href="#cb9-16"></a>    <span class="sc">~</span><span class="fu">saveRDS</span>(.x,</span>
+<span id="cb9-17"><a href="#cb9-17"></a>             <span class="at">file =</span> <span class="fu">glue</span>(<span class="st">"{names(lst_labelled[.x])}.RDS"</span>)</span>
+<span id="cb9-18"><a href="#cb9-18"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -2342,7 +2148,7 @@ Development 📦
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li>Learning and Honing in on development skills is another <strong>HUGE</strong> feat <br><br></li>
+<li>Learning and honing in on development skills is another <strong>HUGE</strong> feat <br><br></li>
 <li>In the art realm, this promotes cleaner and robust workflows and more complex operations <br><br></li>
 <li>In Data Science, it does the same, but you’re <em>really</em> moving up to new levels✨.</li>
 </ul>
@@ -2376,7 +2182,7 @@ Development 📦
 <div class="columns">
 <div class="column" style="width:50%;">
 <center>
-<u>Gen Art Scenario</u>
+<u><strong>Gen Art Scenario</strong></u>
 </center>
 <p><br></p>
 <p><strong>End Goal:</strong></p>
@@ -2388,7 +2194,7 @@ Development 📦
 </center>
 </div><div class="column" style="width:50%;">
 <center>
-<u>Data Sci Scenario</u>
+<u><strong>Data Sci Scenario</strong></u>
 </center>
 <p><br></p>
 <p><strong>End Goal:</strong></p>
@@ -2424,7 +2230,7 @@ Development 📦
 <div class="columns">
 <div class="column" style="width:50%;">
 <center>
-<u>Gen Art Scenario</u>
+<u><strong>Gen Art Scenario</strong></u>
 </center>
 <p><br></p>
 <p><strong>Approach:</strong></p>
@@ -2432,24 +2238,24 @@ Development 📦
 <li>Isolate: How do we handle the input, code for the work in the function’s body, and return the intended output/side effect to us?</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>art_pals <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">colors =</span> <span class="st">"pal_1"</span>, <span class="at">n =</span> <span class="dv">5</span>) {</span>
-<span id="cb13-2"><a href="#cb13-2"></a>  </span>
-<span id="cb13-3"><a href="#cb13-3"></a>  <span class="co"># Preset Pals</span></span>
-<span id="cb13-4"><a href="#cb13-4"></a>  pal <span class="ot">=</span> <span class="cf">switch</span>(colors, </span>
-<span id="cb13-5"><a href="#cb13-5"></a>               <span class="st">"pal_1"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"#000000"</span>, <span class="st">"#ffffff"</span>, <span class="st">"#1a1a1a"</span>),</span>
-<span id="cb13-6"><a href="#cb13-6"></a>               <span class="st">"pal_2"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"#1a2242"</span>, <span class="st">"#ea2242"</span>, <span class="st">"#9ad742"</span>)</span>
-<span id="cb13-7"><a href="#cb13-7"></a>  )</span>
-<span id="cb13-8"><a href="#cb13-8"></a>  </span>
-<span id="cb13-9"><a href="#cb13-9"></a>  <span class="co"># Creating pal with specified n</span></span>
-<span id="cb13-10"><a href="#cb13-10"></a>  final_pal <span class="ot">=</span> <span class="fu">colorRampPalette</span>(pal)(n)</span>
-<span id="cb13-11"><a href="#cb13-11"></a>  </span>
-<span id="cb13-12"><a href="#cb13-12"></a>  <span class="co"># Return final pal</span></span>
-<span id="cb13-13"><a href="#cb13-13"></a>  <span class="fu">return</span>(final_pal)</span>
-<span id="cb13-14"><a href="#cb13-14"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>art_pals <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">colors =</span> <span class="st">"pal_1"</span>, <span class="at">n =</span> <span class="dv">5</span>) {</span>
+<span id="cb10-2"><a href="#cb10-2"></a>  </span>
+<span id="cb10-3"><a href="#cb10-3"></a>  <span class="co"># Preset Pals</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a>  pal <span class="ot">=</span> <span class="cf">switch</span>(colors, </span>
+<span id="cb10-5"><a href="#cb10-5"></a>               <span class="st">"pal_1"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"#000000"</span>, <span class="st">"#ffffff"</span>, <span class="st">"#1a1a1a"</span>),</span>
+<span id="cb10-6"><a href="#cb10-6"></a>               <span class="st">"pal_2"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"#1a2242"</span>, <span class="st">"#ea2242"</span>, <span class="st">"#9ad742"</span>)</span>
+<span id="cb10-7"><a href="#cb10-7"></a>  )</span>
+<span id="cb10-8"><a href="#cb10-8"></a>  </span>
+<span id="cb10-9"><a href="#cb10-9"></a>  <span class="co"># Creating pal with specified n</span></span>
+<span id="cb10-10"><a href="#cb10-10"></a>  final_pal <span class="ot">=</span> <span class="fu">colorRampPalette</span>(pal)(n)</span>
+<span id="cb10-11"><a href="#cb10-11"></a>  </span>
+<span id="cb10-12"><a href="#cb10-12"></a>  <span class="co"># Return final pal</span></span>
+<span id="cb10-13"><a href="#cb10-13"></a>  <span class="fu">return</span>(final_pal)</span>
+<span id="cb10-14"><a href="#cb10-14"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <center>
-<u>Data Sci Scenario</u>
+<u><strong>Data Sci Scenario</strong></u>
 </center>
 <p><br></p>
 <p><strong>Approach:</strong></p>
@@ -2457,18 +2263,18 @@ Development 📦
 <li>Isolate: How do we handle the input, code for the work in the function’s body, and return the intended output/side effect to us?</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>map_ae <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">data =</span> df_main, <span class="at">join_col =</span> ae_term) {</span>
-<span id="cb14-2"><a href="#cb14-2"></a>  </span>
-<span id="cb14-3"><a href="#cb14-3"></a>  <span class="co"># Preset data frame gets pulled in</span></span>
-<span id="cb14-4"><a href="#cb14-4"></a>  df_ae <span class="ot">&lt;-</span> <span class="fu">load</span>(<span class="sc">*</span>df_ae path here<span class="sc">*</span>)</span>
-<span id="cb14-5"><a href="#cb14-5"></a>  </span>
-<span id="cb14-6"><a href="#cb14-6"></a>  <span class="co"># Creating new df with left_join</span></span>
-<span id="cb14-7"><a href="#cb14-7"></a>  final_df <span class="ot">&lt;-</span> df_main <span class="sc">|&gt;</span></span>
-<span id="cb14-8"><a href="#cb14-8"></a>    <span class="fu">left_join</span>(df_ae, <span class="at">by =</span> <span class="st">"ae_term"</span>)</span>
-<span id="cb14-9"><a href="#cb14-9"></a>  </span>
-<span id="cb14-10"><a href="#cb14-10"></a>  <span class="co"># Return final df</span></span>
-<span id="cb14-11"><a href="#cb14-11"></a>  <span class="fu">return</span>(final_df)</span>
-<span id="cb14-12"><a href="#cb14-12"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>map_ae <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">data =</span> df_main, <span class="at">join_col =</span> ae_term) {</span>
+<span id="cb11-2"><a href="#cb11-2"></a>  </span>
+<span id="cb11-3"><a href="#cb11-3"></a>  <span class="co"># Preset data frame gets pulled in</span></span>
+<span id="cb11-4"><a href="#cb11-4"></a>  df_ae <span class="ot">&lt;-</span> <span class="fu">load</span>(<span class="sc">*</span>df_ae path here<span class="sc">*</span>)</span>
+<span id="cb11-5"><a href="#cb11-5"></a>  </span>
+<span id="cb11-6"><a href="#cb11-6"></a>  <span class="co"># Creating new df with left_join</span></span>
+<span id="cb11-7"><a href="#cb11-7"></a>  final_df <span class="ot">&lt;-</span> df_main <span class="sc">|&gt;</span></span>
+<span id="cb11-8"><a href="#cb11-8"></a>    <span class="fu">left_join</span>(df_ae, <span class="at">by =</span> <span class="st">"ae_term"</span>)</span>
+<span id="cb11-9"><a href="#cb11-9"></a>  </span>
+<span id="cb11-10"><a href="#cb11-10"></a>  <span class="co"># Return final df</span></span>
+<span id="cb11-11"><a href="#cb11-11"></a>  <span class="fu">return</span>(final_df)</span>
+<span id="cb11-12"><a href="#cb11-12"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -2496,7 +2302,7 @@ Development 📦
 <div class="columns">
 <div class="column" style="width:50%;">
 <center>
-<u>Gen Art Scenario</u>
+<u><strong>Gen Art Scenario</strong></u>
 </center>
 <p><br></p>
 <p><strong>Development in Action:</strong></p>
@@ -2504,13 +2310,13 @@ Development 📦
 <li>Now we can just use our function and do the work in one line.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">art_pals</span>(<span class="st">"pal_2"</span>,<span class="dv">50</span>)</span>
-<span id="cb15-2"><a href="#cb15-2"></a></span>
-<span id="cb15-3"><a href="#cb15-3"></a><span class="sc">*</span>Returns <span class="dv">50</span> calculated colors based on the input <span class="st">`</span><span class="at">pal_2</span><span class="st">`</span><span class="sc">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">art_pals</span>(<span class="st">"pal_2"</span>,<span class="dv">50</span>)</span>
+<span id="cb12-2"><a href="#cb12-2"></a></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="sc">*</span>Returns <span class="dv">50</span> calculated colors based on the input <span class="st">`</span><span class="at">pal_2</span><span class="st">`</span><span class="sc">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <center>
-<u>Data Sci Scenario</u>
+<u><strong>Data Sci Scenario</strong></u>
 </center>
 <p><br></p>
 <p><strong>Development in Action:</strong></p>
@@ -2518,10 +2324,10 @@ Development 📦
 <li>Now we can just use our function and do the work in one line.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">map_ae</span>(df_main, ae_term)</span>
-<span id="cb16-2"><a href="#cb16-2"></a></span>
-<span id="cb16-3"><a href="#cb16-3"></a><span class="sc">*</span>Returns a joined data frame<span class="sc">*</span></span>
-<span id="cb16-4"><a href="#cb16-4"></a><span class="er">*</span>with data from <span class="st">`</span><span class="at">df_main</span><span class="st">`</span> and <span class="st">`</span><span class="at">df_ae</span><span class="st">`</span><span class="sc">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">map_ae</span>(df_main, ae_term)</span>
+<span id="cb13-2"><a href="#cb13-2"></a></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="sc">*</span>Returns a joined data frame<span class="sc">*</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a><span class="er">*</span>with data from <span class="st">`</span><span class="at">df_main</span><span class="st">`</span> and <span class="st">`</span><span class="at">df_ae</span><span class="st">`</span><span class="sc">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -2546,7 +2352,189 @@ Development 📦
 </section>
 <section id="examples-of-how-generative-art-translates-into-data-science-2" class="slide level2 yellow" data-background-color="#C8B17E">
 <h2>Examples of How Generative Art Translates into Data Science</h2>
-<p>Communication Loop</p>
+<div style="padding-bottom: 20px; padding-top: 20px;">
+<h3>
+Communication 💬
+</h3>
+</div>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>It’s <strong>debatable</strong> if you <em>need</em> communication for art<br><br></li>
+<li>Explaining art methods, and collaborating on issues requires communication <br><br></li>
+<li>In Data Science, you <strong>NEED to communicate <em>or else</em></strong> 💀</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<center>
+<img data-src="images/confused.png" style="width:80.0%">
+</center>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>For art, you don’t need to communicate really…but it can help you get better if you do.</li>
+<li>This may come naturally if you’re trying to figure something out and can’t - POSIT community boards, SO, Google Searching, etc.</li>
+<li>Data Science, communication is non-negotiable. YOU MUST DO THIS.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="examples-of-how-generative-art-translates-into-data-science---communication" class="slide level2 yellow" data-background-color="#C8B17E">
+<h2>Examples of How Generative Art Translates into Data Science - Communication 💬</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<center>
+<u><strong>Gen Art Scenario</strong></u>
+</center>
+<p><br></p>
+<p><strong>End Goal:</strong></p>
+<ul>
+<li>Need to ask people for help with developing unit test suites for art functions…but they don’t understand what I’m trying to do with the function or test for…</li>
+</ul>
+<center>
+<img data-src="images/comms_ex_art.gif">
+</center>
+</div><div class="column" style="width:50%;">
+<center>
+<u><strong>Data Sci Scenario</strong></u>
+</center>
+<p><br></p>
+<p><strong>End Goal:</strong></p>
+<ul>
+<li>Need to perform a data request for a stakeholder, but the stakeholder isn’t intimately familiar with the data structure and can’t help me with that…</li>
+</ul>
+<center>
+<img data-src="images/comms_ex_ds.gif">
+</center>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>The scenarios are flipped. In the art scenario, I am the SME, In the Data Science Scenario, I am not the SME, and the SME doesn’t know wth I need</li>
+<li>Requires communicating in different ways, but both with the need to get everyone involved on the same page.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="examples-of-how-generative-art-translates-into-data-science---communication-1" class="slide level2 yellow" data-background-color="#C8B17E">
+<h2>Examples of How Generative Art Translates into Data Science - Communication 💬</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<center>
+<u><strong>Gen Art Scenario</strong></u>
+</center>
+<p><br></p>
+<p><strong>Approach:</strong></p>
+<ul>
+<li>Identify what I am functionally trying to do without the context of the art, then create a proper reprex or explain the desired result plainly to someone smarter than me.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<center>
+<u><strong>Data Sci Scenario</strong></u>
+</center>
+<p><br></p>
+<p><strong>Approach:</strong></p>
+<ul>
+<li>Identify what context or details I am missing OR explain what the current process is so someone smarter than me can assist me.</li>
+</ul>
+</div>
+</div>
+<center>
+<img data-src="images/comms_approach.gif">
+</center>
+<aside class="notes">
+<ul>
+<li>The scenarios are flipped. In the art scenario, I am the SME, In the Data Science Scenario, I am not the SME, and the SME doesn’t know wth I need</li>
+<li>Requires communicating in different ways, but both with the need to get everyone involved on the same page.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="examples-of-how-generative-art-translates-into-data-science---communication-2" class="slide level2 yellow" data-background-color="#C8B17E">
+<h2>Examples of How Generative Art Translates into Data Science - Communication 💬</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<center>
+<u><strong>Gen Art Scenario</strong></u>
+</center>
+<p><br></p>
+<p><strong>Communicating in Action:</strong></p>
+<ul>
+<li>Create a reprex with the <a href="https://reprex.tidyverse.org/"><code>reprex</code> package</a> (R) or the <a href="https://reprexpy.readthedocs.io/en/latest/"><code>reprexpy</code> library</a> (Python) and only give art “context” when needed. Most issues are a programming/logic one, or a math one that has nothing to do with “art” 😖</li>
+</ul>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="co"># Some function that I can't get to work as expected----</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a>reprex<span class="sc">::</span><span class="fu">reprex</span>(</span>
+<span id="cb14-3"><a href="#cb14-3"></a>  {</span>
+<span id="cb14-4"><a href="#cb14-4"></a>  <span class="co"># UPPERCASES don't work</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a>  <span class="fu">is.color</span>(<span class="st">"BLUE"</span>)</span>
+<span id="cb14-6"><a href="#cb14-6"></a>  <span class="co"># lowercases do</span></span>
+<span id="cb14-7"><a href="#cb14-7"></a>  <span class="fu">is.color</span>(<span class="st">"blue"</span>)</span>
+<span id="cb14-8"><a href="#cb14-8"></a>  }</span>
+<span id="cb14-9"><a href="#cb14-9"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<center>
+<u><strong>Data Sci Scenario</strong></u>
+</center>
+<p><br></p>
+<p><strong>Communicating in Action:</strong></p>
+<ul>
+<li>Translate what you are doing in R or Python to the Subject Matter Expert. Explain the uncertainties, ask clarifying questions about the subject matter and explain where gaps are.</li>
+</ul>
+<center>
+<img data-src="images/no_tech.png" style="width:45.0%">
+</center>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>with art, your head may not be thinking “functionally” - youre wrapped up in getting the final result w/o thinking about what you are actually trying to do in R</li>
+<li>with DS, you may be taksed with communicating with</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="section-12" class="slide level2" data-background-color="#1a1a1a" data-background-image="images/background7.png" data-background-size="cover">
 <h2></h2>
@@ -2559,6 +2547,33 @@ Final Thoughts
 </section>
 <section id="final-thoughts" class="slide level2 orange" data-background-color="#C88A5B">
 <h2>Final Thoughts</h2>
+<p><br><br></p>
+<center>
+<div id="orangequote">
+<blockquote>
+<p>This was a tiny introduction into the concept of one type of generative art</p>
+</blockquote>
+</div>
+<div id="orangequote" class="fragment">
+<blockquote>
+<p>This was personal: Generative Art was MY motivation to learn and do more</p>
+</blockquote>
+</div>
+<div id="orangequote" class="fragment">
+<blockquote>
+<p>Doing something I loved made programming/data science digestible</p>
+</blockquote>
+</div>
+</center>
+</section>
+<section id="section-13" class="slide level2" data-background-image="images/background.png" data-background-size="cover">
+<h2></h2>
+</section>
+<section id="section-14" class="slide level2" data-background-color="#1a1a1a">
+<h2></h2>
+<center>
+<img data-src="images/heart_end.png" class="false">
+</center>
 <div class="footer footer-default">
 
 </div>

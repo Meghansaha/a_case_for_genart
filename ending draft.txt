@@ -1,0 +1,9 @@
+We could easily swap out art for something else here. Yeah a few things would be tweaked here or there. But this is actually the beauty of Data Science. Think of all of us in this room right now. How vastly different our interests and hobbies may be. But at the end of the day, Data Science is so workable into different fields and this is evident even here at Posit Conf as we see all the fields people work in like public health, sports analytics, environmental.....art is just antoher field that can also serve as a vehicle into the world of data science. 
+
+For those of you who are new to generative art and interested in getting started in it, that if anything, this convinces you to open up your favorite IDE and give it a shot. But for everyone else, I invite you all to think about any skill youre trying to improve and ask yourself if you have the bandwidth to incoporate a hobby or interest into your learning journay.
+
+For those managing teams at work, could you make room in your team's weekly schedule to allow for personal development that looks like this? Are you willing to let go of the belief that learning only looks like Coursera courses, textbooks, and looged hours on youtube? 
+
+No matter what you do after this talk, I want you all to at least know that there are different perspectives and approaches to technical learning that may work for different people. If theres something you're just not understanding, the youtube videos aren't cutting it or blog posts are leaving you confused...Try embracing learning in a low-stress environment fueled soley by your hobby or interest of choice. Let go of the idea that data science has to only be for profit or for practical insights.
+
+Take the mess that is whatever challenge you're trying to overcome, and incorpoarte it into something you love
