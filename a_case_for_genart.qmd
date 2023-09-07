@@ -15,6 +15,7 @@ format:
     code-copy: true
     code-overflow: scroll
     code-block-bg: true
+    
     transition: fade
 css: "scripts/style.css"
 editor: visual
@@ -251,7 +252,9 @@ In this room today, Generative Art is defined as:
 
 <br> <br>
 
+
 > **Artwork created through a program in any language or interface. As long as a program executes the generation of the art, it can be considered generative art.**
+
 
 ::: notes
 Now this is vague and general, and yes. that's on purpose
@@ -262,52 +265,40 @@ Now this is vague and general, and yes. that's on purpose
 
 -   And I'm also going to make an assumption that at least one person in here is thinking of AI art.
 
--   So I want to address this now... I don't know much about AI art and I've actually only made it once..
+-   So I want to address this now... We are not talking about AI art today
+
+-   and, In fact, I want to make two statements regarding AI art and automation...
 :::
 
-## What is Generative Art? - Distinctions {.purple background-color="#6c4161" auto-animate="true"}
+## What is Generative Art? {.purple background-color="#6c4161"}
 
-::: {style="position: relative; float: center; margin-top: 100px;"}
-<center>![](images/ai_art_ex.png){fig-alt="A vast, cosmic, and beautiful galaxy with swirling blue, purple, and pink colors in the background. In the foreground a vibrantly colored planet directly in front of the sun." width="800"}</center>
-:::
-
-::: notes
--   Which produced this lovely piece here.
-
--   As beautiful as this is, I'm really not qualified to talk about AI art
-
--   but there are two things that I want to clarify in regards to AI art and automation ...
-:::
-
-## What is Generative Art? - Distinctions {.purple background-color="#6c4161" auto-animate="true"}
-
-::: columns
-::: {.column style="position: relative; float: left; margin-top: 100px; width='50%';  margin-right:0px;"}
-<center>![](images/ai_art_ex.png){fig-alt="A vast, cosmic, and beautiful galaxy with swirling blue, purple, and pink colors in the background. In the foreground a vibrantly colored planet directly in front of the sun." width="800"}</center>
-:::
-:::
-
-::: {.column width="50%"}
 <br><br>
 
--   While all AI Art is generative art...
+<center>
+>While all AI Art is generative art... <br> 
 
--   All generative art **IS NOT** AI art
+:::{.fragment}
+>...All generative art **IS NOT** AI art 
+:::
 
 <br>
 
-<center>&</center>
+:::{.fragment}
+&
 
 <br>
 
--   While some generative art is randomly calculated by the computer...
 
--   Some generative art is intentional and deliberately calculated by a human
+> While some generative art is randomly calculated by the computer... <br>
 :::
 
-::: notes
-Now..what do I mean by that...we'll see some examples now as we talk about...
+:::{.fragment}
+>...Some generative art is intentional and deliberately calculated by a human
 :::
+
+</center>
+
+
 
 ##  {background-color="#1a1a1a" background-image="images/background3.png" background-size="cover"}
 
@@ -530,7 +521,7 @@ print(orange_line)
 -   Now without getting too bogged down in the specifics of the code, the process is relatively simple
 -   First you load in your libraries you need, then you can do some prep for your data.
 -   Here setting values for color and size
--   Most important step -> create your data sources
+-   Most important step -\> create your data sources
 -   this is what you'll feed into your graphical tool of choice.
 -   pandas dataframe with coordinates (x and y), color, and size
 -   feed into plotnine's ggplot fx here.
@@ -603,38 +594,27 @@ This time, start with your libraries..and an idea of what to make - cityscape
 
 ::: columns
 ::: {.column width="55%"}
-```{r, echo = TRUE, eval = FALSE, `code-line-numbers`="1-11,14,18-19"}
-# Data for the sky-----------------------------------------------
-df_sky <- tibble(x = 0,
-                 xend = 4,
-                 y = seq(0,3, length = 100),
-                 yend = y,
-                 color = art_pals("sunnyside", n = 100),
-                 linewidth = 10
-                 )
-
-
-
-
-# Plot Creation--------------------------------------------------
+```{r, echo = TRUE, eval = FALSE, `code-line-numbers`="1-11,19-20"}
+# Data for the sky---------------------
+df_sky <- 
+  tibble(x = 0,
+         xend = 4,
+         y = seq(0,3, length = 100),
+         yend = y,
+         color = art_pals("sunnyside", 100),
+         linewidth = 10
+  )
+# Plot Creation-----------------------
 df_sky |>
-  ggplot(aes(x,y, xend = xend, yend = yend,)) +
+  ggplot(aes(x,y,
+             xend = xend, yend = yend)
+  ) +
   theme_void() +
-  coord_cartesian(expand = FALSE, xlim = c(0,4), ylim = c(0,3)) +
+  coord_cartesian(expand = FALSE, 
+                  xlim = c(0,4),
+                  ylim = c(0,3)) +
   geom_segment(color = df_sky$color,
                linewidth = df_sky$linewidth) 
-
-
-
-
-
-
-
-
-
-
-
-
 #...
 ```
 :::
@@ -653,60 +633,6 @@ df_sky |>
 -   We can see the result of this data frame plotted here.
 :::
 
-## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
-
-::: {style="padding-bottom: 20px;"}
-<u>**A More Complicated Example *(In R)***</u>
-:::
-
-::: columns
-::: {.column width="55%"}
-```{r, echo = TRUE, eval = FALSE, `code-line-numbers`="1-12,22-27"}
-# Data for the stars---------------------------------------------
-df_stars <- tibble(
-  x = seq(0,4, l = 50),
-  y = seq(0,3, l = 50)
-) |>
-  expand.grid() |>
-  mutate(
-    color = "white",
-    size = sample(seq(.01,.2, l = 25), 2500, replace = TRUE),
-    alpha = sample(seq(.1,.7, l = 25), 2500, replace = TRUE)
-  ) |>
-  slice_sample(prop = .2)
-
-
-# Plot Creation--------------------------------------------------
-df_sky |>
-  ggplot(aes(x,y, xend = xend, yend = yend,)) +
-  theme_void() +
-  coord_cartesian(expand = FALSE, xlim = c(0,4), ylim = c(0,3)) +
-  geom_segment(color = df_sky$color,
-               linewidth = df_sky$linewidth) +
-  geom_point(data = df_stars, aes(x,y),
-             alpha = df_stars$alpha,
-             color = df_stars$color,
-             size = df_stars$size,
-             position = position_jitter(width = .1, height = .1),
-             inherit.aes = FALSE) 
-
-
-
-
-#...
-```
-:::
-
-::: {.column width="45%"}
-<br><br>
-
-<center>![](images/stars_ggplot.png){width="100%"}</center>
-:::
-:::
-
-::: notes
--Next, we can create some stars by creating a grid of points, applying a color, a sample of numbers for sizes, and transparency values in the tibble - Then randomly selecting 20% of the data out to get this spaced out visual of stars in the sky that we see here...
-:::
 
 ## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
 
@@ -733,12 +659,6 @@ df_sky |>
   coord_cartesian(expand = FALSE, xlim = c(0,4), ylim = c(0,3)) +
   geom_segment(color = df_sky$color,
                linewidth = df_sky$linewidth) +
-  geom_point(data = df_stars, aes(x,y),
-             alpha = df_stars$alpha,
-             color = df_stars$color,
-             size = df_stars$size,
-             position = position_jitter(width = .1, height = .1),
-             inherit.aes = FALSE) +
   geom_point(data = df_moon, aes(x,y),
              color = df_moon$color,
              fill = df_moon$fill,
@@ -1538,8 +1458,6 @@ map_ae(df_main, ae_term)
 
 ::: columns
 ::: {.column width="50%"}
-
-
 -   It's **debatable** if you *need* communication for art<br><br>
 -   Explaining art methods, and collaborating on issues requires communication <br><br>
 -   In Data Science, you **NEED to communicate *or else*** 💀
@@ -1556,8 +1474,6 @@ map_ae(df_main, ae_term)
 -   Data Science, communication is non-negotiable. YOU MUST DO THIS.
 :::
 
-
-
 ## Examples of How Generative Art Translates into Data Science - Communication 💬 {.yellow background-color="#C8B17E"}
 
 <br>
@@ -1572,7 +1488,6 @@ map_ae(df_main, ae_term)
 
 -   Need to ask people for help with developing unit test suites for art functions...but they don't understand what I'm trying to do with the function or test for...
 
-
 <center>![](images/comms_ex_art.gif)</center>
 :::
 
@@ -1585,14 +1500,13 @@ map_ae(df_main, ae_term)
 
 -   Need to perform a data request for a stakeholder, but the stakeholder isn't intimately familiar with the data structure and can't help me with that...
 
-
 <center>![](images/comms_ex_ds.gif)</center>
 :::
 :::
 
 ::: notes
 -   The scenarios are flipped. In the art scenario, I am the SME, In the Data Science Scenario, I am not the SME, and the SME doesn't know wth I need
-- Requires communicating in different ways, but both with the need to get everyone involved on the same page.
+-   Requires communicating in different ways, but both with the need to get everyone involved on the same page.
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Communication 💬 {.yellow background-color="#C8B17E"}
@@ -1608,7 +1522,6 @@ map_ae(df_main, ae_term)
 **Approach:**
 
 -   Identify what I am functionally trying to do without the context of the art, then create a proper reprex or explain the desired result plainly to someone smarter than me.
-
 :::
 
 ::: {.column width="50%"}
@@ -1619,7 +1532,6 @@ map_ae(df_main, ae_term)
 **Approach:**
 
 -   Identify what context or details I am missing OR explain what the current process is so someone smarter than me can assist me.
-
 :::
 :::
 
@@ -1627,7 +1539,7 @@ map_ae(df_main, ae_term)
 
 ::: notes
 -   The scenarios are flipped. In the art scenario, I am the SME, In the Data Science Scenario, I am not the SME, and the SME doesn't know wth I need
-- Requires communicating in different ways, but both with the need to get everyone involved on the same page.
+-   Requires communicating in different ways, but both with the need to get everyone involved on the same page.
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Communication 💬 {.yellow background-color="#C8B17E"}
@@ -1687,16 +1599,15 @@ reprex::reprex(
 
 **Communicating in Action:**
 
-- Translate what you are doing in R or Python to the Subject Matter Expert. Explain the uncertainties, ask clarifying questions about the subject matter and explain where gaps are.
+-   Translate what you are doing in R or Python to the Subject Matter Expert. Explain the uncertainties, ask clarifying questions about the subject matter and explain where gaps are.
 
 <center>![](images/no_tech.png){width="45%"}</center>
 :::
 :::
 
-
 ::: notes
 -   with art, your head may not be thinking "functionally" - youre wrapped up in getting the final result w/o thinking about what you are actually trying to do in R
--   with DS, you may be taksed with communicating with 
+-   with DS, you may be taksed with communicating with
 :::
 
 ##  {background-color="#1a1a1a" background-image="images/background7.png" background-size="cover"}
@@ -1714,23 +1625,23 @@ reprex::reprex(
 <br><br>
 
 <center>
+
 ::: {#orangequote}
->This was a tiny introduction into the concept of one type of generative art
+> This was a tiny introduction into the concept of one type of generative art
 :::
 
 ::: {#orangequote .fragment}
->This was personal: Generative Art was MY motivation to learn and do more 
+> This was personal: Generative Art was MY motivation to learn and do more
 :::
 
 ::: {#orangequote .fragment}
->Doing something I loved made programming/data science digestible
+> Doing something I loved made programming/data science digestible
 :::
+
 </center>
 
-## {background-image="images/background.png" background-size="cover"}
+##  {background-image="images/background.png" background-size="cover"}
 
-## {background-color="#1a1a1a"}
+##  {background-color="#1a1a1a"}
 
-<center>
-![](images/heart_end.png){.false}
-</center>
+<center>![](images/heart_end.png){.false}</center>
