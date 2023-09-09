@@ -149,6 +149,8 @@ or the data science... {pause}
 
 -   I'm hoping there will be something for you to take away from this today.
 
+- Aren't these picutres awesome?! - My awesome husband made them! 
+
 -   So let's get started....
 :::
 
@@ -262,7 +264,7 @@ In this room today, Generative Art is defined as:
 
 
 ::: notes
-Now this is vague and general, and yes. that's on purpose
+Now this is vague and general, and yes. that's on Aim
 
 <br>
 
@@ -1005,6 +1007,10 @@ Gave me another reason to interact with people and share what I was doing...
 
 ::: notes
 Yes, I made a package - Huge accomplishment for me!
+
+- Not so much the package, but the courage to learn package development
+
+- Had a mental block with doing package development until i changed the motivation behind doing it.
 :::
 
 ## Benefits of Creating Generative Art {.turq background-color="#3a7188"}
@@ -1055,6 +1061,12 @@ I owe alot to generative art, the tidyverse, and the R community. My life has ch
 
 <h1>What is Data Science?</h1>
 
+::: notes
+Now that I've gushed about how much I love and benefited from generative art,
+ 
+let's switch gears and quickly remind ourselves of what data science is...
+:::
+
 </center>
 
 ## What is Data Science? {.green background-color="#657750"}
@@ -1064,7 +1076,7 @@ I owe alot to generative art, the tidyverse, and the R community. My life has ch
 In this room today, Data Science is defined as...
 
 ::: {#greenquote}
-> An interdisciplinary field that uses statistics, scientific computing, scientific methods, processes, algorithms and systems [*to extract or extrapolate knowledge and insights from data*]{style="color:#CCD2BC"}.
+> An interdisciplinary field that uses statistics, computing,  methods, processes, and algorithms *to extract or derive knowledge and insights from data*.
 :::
 
 <br><br><br>
@@ -1087,6 +1099,16 @@ In this room today, Data Science is defined as...
 
 </center>
 
+::: notes
+- Now that we're all on the same page about what data science is
+
+- let's get it
+
+- Now, I have tons of example of this
+
+- But for our time today, I want to focus on three main concepts..
+:::
+
 ## Examples of How Generative Art Translates into Data Science {.yellow background-color="#C8B17E"}
 
 ::: {style="padding-bottom: 20px; padding-top: 20px;"}
@@ -1105,7 +1127,7 @@ In this room today, Data Science is defined as...
 
 <br>
 
--   A lot of use-cases and scenarios exist in both realms, where we want to do the same thing over and over.
+-   A lot of scenarios in both fields, where we'd want to do the same thing over and over.
 :::
 
 ::: {.column width="50%"}
@@ -1114,15 +1136,12 @@ In this room today, Data Science is defined as...
 :::
 
 ::: notes
--   It's so important, it even has it's own chapter in the R4DS book
-
 -   It doesn't matter how you do iteration
 
 -   Whether you use base control flows like for-loops, whiles, and repeats, or you've fully adopted tidyverse's purrr ecosystem
 
 -   We can't deny that iteration really tends to take people into the next level of skill, because it allows you to do so much with less.
 
--   If you're not at a point in your journey where you feel comfortable with performing iterations, trying to do iterations for a different purpose might help with any mental blocks you might have.
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Iteration♻️ {.yellow background-color="#C8B17E"}
@@ -1135,7 +1154,7 @@ In this room today, Data Science is defined as...
 
 <br>
 
-**End Goal:**
+**Aim:**
 
 -   Want to create a lot of copies of a shape where each shape has a different color and a different position on the coordinate system
 
@@ -1143,11 +1162,13 @@ In this room today, Data Science is defined as...
 :::
 
 ::: {.column width="50%"}
+
+::: {.fragment}
 <center><u>**Data Sci Scenario**</u></center>
 
 <br>
 
-**End Goal:**
+**Aim:**
 
 -   Want to skim, label, and save multiple processed data sets all at once
 
@@ -1155,6 +1176,8 @@ In this room today, Data Science is defined as...
 
 <center>![](images/ex1_flow.png)</center>
 :::
+:::
+
 :::
 
 ::: notes
@@ -1181,6 +1204,8 @@ On Maternity leave - Did a daily gen art challenge called Genuary. - The prompt 
 :::
 
 ::: {.column width="50%"}
+
+::: {.fragment}
 <center><u>**Data Sci Scenario**</u></center>
 
 <br>
@@ -1190,6 +1215,7 @@ On Maternity leave - Did a daily gen art challenge called Genuary. - The prompt 
 -   Isolate the problem.... How can I do this workflow for just one of the data sets without the console throwing errors?? <br>
 
 <center>![](images/ex1_isolate_ds.png)</center>
+:::
 :::
 :::
 
@@ -1207,7 +1233,7 @@ In art: - the first challenge is creating the data - keep trying until the plot 
 
 <br>
 
-**Iterating in Action:**
+**Solution:**
 
 -   Use your preferred method of iteration to create a generalized workflow.
 
@@ -1231,11 +1257,14 @@ drip <- pmap(drip_opts, ~tibble(
 :::
 
 ::: {.column width="50%"}
+
+::: {.fragment}
+
 <center><u>**Data Sci Scenario**</u></center>
 
 <br>
 
-**Iterating in Action:**
+**Solution:**
 
 -   Use your preferred method of iteration to create a generalized workflow.
 
@@ -1259,6 +1288,7 @@ map(lst_labelled,
              file = glue("{names(lst_labelled[.x])}.RDS")
     ))
 ```
+:::
 :::
 :::
 
@@ -1302,7 +1332,7 @@ In art: - the first challenge is creating the data <br> In Data Science: - You a
 
 <br>
 
-**End Goal:**
+**Aim:**
 
 -   Want to create a function that spits out a color palette of a specified length based on preset choices.
 
@@ -1314,7 +1344,7 @@ In art: - the first challenge is creating the data <br> In Data Science: - You a
 
 <br>
 
-**End Goal:**
+**Aim:**
 
 -   Want to create a function that left joins a table of existing data to another data frame.
 
@@ -1325,7 +1355,7 @@ In art: - the first challenge is creating the data <br> In Data Science: - You a
 :::
 
 ::: notes
--   Whether you are in R or python, this purpose of creating functions are generally the same
+-   Whether you are in R or python, the goal of creating functions are generally the same
 -   We wish to do a specific task, in an isolate environment for a consisent output or result.
 :::
 
@@ -1403,7 +1433,7 @@ map_ae <- function(data = df_main, join_col = ae_term) {
 
 <br>
 
-**Development in Action:**
+**Solution:**
 
 -   Now we can just use our function and do the work in one line.
 
@@ -1419,7 +1449,7 @@ art_pals("pal_2",50)
 
 <br>
 
-**Development in Action:**
+**Solution:**
 
 -   Now we can just use our function and do the work in one line.
 
@@ -1433,7 +1463,9 @@ map_ae(df_main, ae_term)
 :::
 
 ::: notes
--   Whether art or DS, the end goal of reducing code bloat is the same.
+
+- Nah, fam - you need it in ds
+-   Whether art or DS, the Aim of reducing code bloat is the same.
 -   Especially helpful for larger processes where a single purrr function or for loop won't cut it.
 -   Know this is just a taste, this obviously led down a rabbit hole of being able to create my own art package, and help to enhance and maintain existing packages at work
 -   Creating functions is the tip of the iceberg and will lead you into a slippery slope of other crucial things I don't have time to talk about like unit testing and package maintenance.
@@ -1475,7 +1507,7 @@ map_ae(df_main, ae_term)
 
 <br>
 
-**End Goal:**
+**Aim:**
 
 -   Need to ask people for help with developing unit test suites for art functions...but they don't understand what I'm trying to do with the function or test for...
 
@@ -1487,7 +1519,7 @@ map_ae(df_main, ae_term)
 
 <br>
 
-**End Goal:**
+**Aim:**
 
 -   Need to perform a data request for a stakeholder, but the stakeholder isn't intimately familiar with the data structure and can't help me with that...
 
@@ -1543,7 +1575,7 @@ map_ae(df_main, ae_term)
 
 <br>
 
-**Communicating in Action:**
+**Solution:**
 
 -   Create a reprex with the [`reprex` package](https://reprex.tidyverse.org/) (R) or the [`reprexpy` library](https://reprexpy.readthedocs.io/en/latest/) (Python) and only give art "context" when needed. Most issues are a programming/logic one, or a math one that has nothing to do with "art" 😖
 
@@ -1588,7 +1620,7 @@ reprex::reprex(
 
 <br>
 
-**Communicating in Action:**
+**Solution:**
 
 -   Translate what you are doing in R or Python to the Subject Matter Expert. Explain the uncertainties, ask clarifying questions about the subject matter and explain where gaps are.
 
@@ -1631,8 +1663,23 @@ reprex::reprex(
 
 </center>
 
+::: notes
+For those of you interested in generative art, I hope this talk has convinced you to open up your favorite IDE and try it out. For those of you not interested, I encourage you all to consider integrating a hobby or interest into your learning journey if you're trying to improve any technical skills.
+
+For those managing teams at work, could you make room in your team's scheduling to allow for personal development that looks like this? Are you willing to let go of the belief that learning only looks like online courses, textbooks, and boot camps? 
+
+:::
 ##  {background-image="images/background.png" background-size="cover"}
+
+::: notes
+
+Regardless of what you do after this talk, think about how different perspectives and approaches may work for you. If you're having trouble understanding something, YouTube videos aren't cutting it, or blog posts are confusing you...Embrace learning in a low-stress environment fueled only by your interests. Let go of the notion that data science can only be for profit or practical insights. Remember that we can conquer these beautiful but abstract challenges by transforming them ->
+:::
 
 ##  {background-color="#1a1a1a"}
 
 <center>![](images/heart_end.png){.false}</center>
+
+::: notes
+...into passions that we love. And if you're struggling with that fact, that's OK. Just give it some time and remember that it's all about perspective.
+:::
