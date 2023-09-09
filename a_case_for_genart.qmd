@@ -10,6 +10,7 @@ format:
     slide-number: true
     width: 1690
     height: 1080
+    margin: .2
     linkcolor: "#ffffff"
     highlight-style: github
     code-copy: true
@@ -475,29 +476,25 @@ And I get it. It can be tricky, so let's stop for a minute and Imagine that we w
 ::: columns
 ::: {.column width="55%"}
 ```{python, echo = TRUE, eval = FALSE}
-#===============================================================#
-# Library Load-in------------------------------------------------
-#===============================================================#
+#====================================================#
+# Library Load-in-------------------------------------
 from plotnine import *
 import pandas as pd
-#===============================================================#
-# Image Options--------------------------------------------------
-#===============================================================#
+
+# Image Options---------------------------------------
 #Set the color
 orange_hex = "#FFBB58"
 
 #Set the width
 chonk = 10
-#===============================================================#
-# Data Creation--------------------------------------------------
-#===============================================================#
+
+# Data Creation----------------------------------------
 line = pd.DataFrame({"x" : list(range(0,5)),
                      "y" : 1,
                      "color" : orange_hex,
                      "size" : chonk})
-#===============================================================#
-# Plot Creation--------------------------------------------------
-#===============================================================#
+
+# Plot Creation----------------------------------------
 orange_line = (ggplot(line, aes("x", "y"))+
                geom_path(color = line.loc[:,"color"],
                          size = line.loc[:,"size"])+
@@ -505,7 +502,6 @@ orange_line = (ggplot(line, aes("x", "y"))+
 
 #View the plot
 print(orange_line)
-
 ```
 :::
 
@@ -534,9 +530,9 @@ print(orange_line)
 :::
 
 ::: columns
-::: {.column width="55%"}
+::: {.column width="60%"}
 ```{r, echo = TRUE, eval = FALSE}
-# Library Load-ins-----------------------------------------------
+# Library Load-ins---------------------------------
 library(ggplot2); library(dplyr); library(artpack)
 
 # Let's make a basic "cityscape" with a moon 
@@ -557,21 +553,17 @@ library(ggplot2); library(dplyr); library(artpack)
 
 
 
-
-
-
-
-
-# Plot Creation--------------------------------------------------
+# Plot Creation-------------------------------------
 #Data Goes Here |>
   ggplot(aes(x,y)) +
   theme_void() +
-  coord_cartesian(expand = FALSE, xlim = c(0,4), ylim = c(0,3))
+  coord_cartesian(xlim = c(0,4), ylim = c(0,3),
+                  expand = FALSE)
  #....
 ```
 :::
 
-::: {.column width="45%"}
+::: {.column width="40%"}
 <br><br>
 
 <center>![](images/blank_ggplot.png){width="100%"}</center>
@@ -579,11 +571,11 @@ library(ggplot2); library(dplyr); library(artpack)
 :::
 
 ::: notes
--   Again, Try not to focus too much on specific code
+-   Again, we're not focusing on the code, per se,
 
 -   but just observe the general relationship going on here between the data and the visual
 
-This time, start with your libraries..and an idea of what to make - cityscape
+This time, start with your packages..and an idea of what to make - cityscape
 :::
 
 ## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
@@ -593,8 +585,8 @@ This time, start with your libraries..and an idea of what to make - cityscape
 :::
 
 ::: columns
-::: {.column width="55%"}
-```{r, echo = TRUE, eval = FALSE, `code-line-numbers`="1-11,19-20"}
+::: {.column width="60%"}
+```{r, echo = TRUE, eval = FALSE, `code-line-numbers`="1-11,18-19"}
 # Data for the sky---------------------
 df_sky <- 
   tibble(x = 0,
@@ -604,22 +596,28 @@ df_sky <-
          color = art_pals("sunnyside", 100),
          linewidth = 10
   )
+
 # Plot Creation-----------------------
 df_sky |>
-  ggplot(aes(x,y,
-             xend = xend, yend = yend)
-  ) +
+  ggplot(aes(x, y, xend = xend, yend = yend)) +
   theme_void() +
   coord_cartesian(expand = FALSE, 
                   xlim = c(0,4),
                   ylim = c(0,3)) +
   geom_segment(color = df_sky$color,
                linewidth = df_sky$linewidth) 
+
+
+
+
+
+
+
 #...
 ```
 :::
 
-::: {.column width="45%"}
+::: {.column width="40%"}
 <br><br>
 
 <center>![](images/sky_ggplot.png){width="100%"}</center>
@@ -627,10 +625,11 @@ df_sky |>
 :::
 
 ::: notes
--   Want to make a sky in background.
--   I want to use geom_segment, so that requires 2 x points and 2 y points to easily create a line.
--   That choice prompts me to set up a tibble named df_sky, that will translate into a sequence of horizontal lines on the plot with a gradient of colors applied to it from bottom to top.
--   We can see the result of this data frame plotted here.
+-   First I decide to make the sky in the background, so I want that layer on first, almost like a collage
+- I make a data frame with numbers that when mapped on the ggplot will look like horizontal lines filling the page
+- i also add variables for the color and size of the lines
+- and when this data frame is plotted with the geom_segment fx we've added here, we get this beautiful gradient.
+
 :::
 
 
@@ -641,8 +640,8 @@ df_sky |>
 :::
 
 ::: columns
-::: {.column width="55%"}
-```{r, echo = TRUE, eval = FALSE, `code-line-numbers`="1-8,23-29"}
+::: {.column width="60%"}
+```{r, echo = TRUE, eval = FALSE, `code-line-numbers`="1-8,10,18-24"}
 # Data for the moon----------------------------------------------
 df_moon <- tibble(
   x = 2,
@@ -654,10 +653,11 @@ df_moon <- tibble(
 
 # Plot Creation--------------------------------------------------
 df_sky |>
-  ggplot(aes(x,y, xend = xend, yend = yend,)) +
+  ggplot(aes(x,y, xend = xend, yend = yend)) +
   theme_void() +
-  coord_cartesian(expand = FALSE, xlim = c(0,4), ylim = c(0,3)) +
-  geom_segment(color = df_sky$color,
+  coord_cartesian(xlim = c(0,4), ylim = c(0,3),
+                  expand = FALSE) +
+  geom_segment(color = df_sky$color, 
                linewidth = df_sky$linewidth) +
   geom_point(data = df_moon, aes(x,y),
              color = df_moon$color,
@@ -665,14 +665,14 @@ df_sky |>
              size = df_moon$size,
              shape = 21,
              stroke = .5,
-             inherit.aes = FALSE) 
+             inherit.aes = FALSE)
 
 
 #...
 ```
 :::
 
-::: {.column width="45%"}
+::: {.column width="40%"}
 <br><br>
 
 <center>![](images/moon_ggplot.png){width="100%"}</center>
@@ -681,8 +681,10 @@ df_sky |>
 
 ::: notes
 -   Next, let's say we want to have a simple, big moon.
--   We can do this easily by creating data for a single point, setting a big value for it's size and color options
--   while making sure to tweak the geom_point function in the plot with the shape and stroke arguments in the ggplot functions down here...
+-   so again, we make another data frame that only has data for one single point..
+-   a big numeric value for it's size and some color options
+-   We then add this dataframe with the geom_point fx
+-   and throw some tweaks into the geom_point to get that nice border we see here
 :::
 
 ## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
@@ -692,9 +694,9 @@ df_sky |>
 :::
 
 ::: columns
-::: {.column width="55%"}
-```{r, echo = TRUE, eval = FALSE, `code-line-numbers`="1-8,31-32"}
-# Data for the buildings-----------------------------------------
+::: {.column width="60%"}
+```{r, echo = TRUE, eval = FALSE, `code-line-numbers`="1-9,25-28"}
+# Data for the buildings--------------------------------
 df_buildings <- tibble(
   x = 0:4,
   xend = x, 
@@ -703,20 +705,14 @@ df_buildings <- tibble(
   color = "#000000",linewidth = 60
 )
 
-
-# Plot Creation--------------------------------------------------
+# Plot Creation------------------------------------------
 df_sky |>
   ggplot(aes(x,y, xend = xend, yend = yend)) +
   theme_void() +
-  coord_cartesian(expand = FALSE, xlim = c(0,4), ylim = c(0,3)) +
-  geom_segment(color = df_sky$color,
+  coord_cartesian(xlim = c(0,4), ylim = c(0,3),
+                  expand = FALSE) +
+  geom_segment(color = df_sky$color, 
                linewidth = df_sky$linewidth) +
-  geom_point(data = df_stars, aes(x,y),
-             alpha = df_stars$alpha,
-             color = df_stars$color,
-             size = df_stars$size,
-             position = position_jitter(width = .1, height = .1),
-             inherit.aes = FALSE) +
   geom_point(data = df_moon, aes(x,y),
              color = df_moon$color,
              fill = df_moon$fill,
@@ -724,13 +720,14 @@ df_sky |>
              shape = 21,
              stroke = .5,
              inherit.aes = FALSE) +
-  geom_segment(data = df_buildings, color = df_buildings$color,
+  geom_segment(data = df_buildings,
+               color = df_buildings$color,
                linewidth = df_buildings$linewidth)
 
 ```
 :::
 
-::: {.column width="45%"}
+::: {.column width="40%"}
 <br><br>
 
 <center>![](images/buildings_ggplot.png){width="100%"}</center>
@@ -738,8 +735,10 @@ df_sky |>
 :::
 
 ::: notes
--   Finally, we can decide to use geom_segment again and create thick vertical chunks of lines this time that makes a basic silhouette of some buildings.
--   Done again by storing this in a tibble called df_buildings and using geom_segment here... This may have been alot to see, but the main point is that...
+-   Finally, we make one last data frame for some basic buildings
+- This time the numbers will plot chunky vertical lines
+- we can also get a lil' spicy and throw in a sample function to randomize the heights of out buildings.
+- Like all the other layers, we tack it on to the ggplot with geom_segment shown here
 :::
 
 ## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
@@ -761,6 +760,11 @@ df_sky |>
 </center>
 
 ::: notes
+- I also hope you all took note at how intentional alot of the process can be
+- While theres some amazing artists to rely heavily on automated systems, or finetuning AI prompts
+- There are some of us out here spending hours exploring and creating art with code in this manner.
+
+
 So now that everyone is up to speed about what generative art is, and you have some idea of how it can be made, let's talk about the benefits of making art like this
 :::
 
