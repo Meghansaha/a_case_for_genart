@@ -1150,7 +1150,8 @@ In this room today, Data Science is defined as...
 
 **Aim:**
 
--   Want to create a lot of copies of a shape where each shape has a different color and a different position on the coordinate system
+-   Want to create a lot of copies of a shape<br>
+-   Each shape has a different color, size, and position on the coordinate system
 
 <center>![](images/maximalism.png){height="40%"}</center>
 :::
@@ -1163,7 +1164,7 @@ In this room today, Data Science is defined as...
 
 **Aim:**
 
--   Want to skim, label, and save multiple processed data sets all at once
+-   Want to summarize, label, and save multiple processed data sets all at once
 
 <br>
 
@@ -1173,7 +1174,12 @@ In this room today, Data Science is defined as...
 :::
 
 ::: notes
-On Maternity leave:<br> - daily gen art challenge, Genuary.<br> - One of the prompts - Maximalism <br> - Wanted finger-like things from the top and bottom of the page<br> - This a problem of iteration because i want lots of the same thing w/ variations<br> <click><br><br> In a similar situation back at work -<br> - Had A lot of imaging data to reconcile from vendors all at once. <br> - I Wanted to make cleaner/smoother workflow of doing multiple actions to multiple dfs in one go <br> - Also a problem of iteration
+On Maternity leave:<br> 
+- This a problem of iteration because i want lots of the same thing w/ variations<br> <click><br><br>
+In a similar situation back at work:-<br>
+- Had A lot of vendor data to reconcile all at once.<br> 
+- I Wanted to make cleaner/smoother workflow of doing multiple things to multiple dfs in one go <br>
+- Also a problem of iteration
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Iteration♻️ {.yellow background-color="#C8B17E"}
@@ -1188,7 +1194,8 @@ On Maternity leave:<br> - daily gen art challenge, Genuary.<br> - One of the pro
 
 **Approach:**
 
--   Isolate the problem.... how tf do we make a finger-like shape in the first place??
+-   Isolate the problem....
+- how tf do we make a finger-like shape in the first place??
 
 <br>
 
@@ -1203,7 +1210,8 @@ On Maternity leave:<br> - daily gen art challenge, Genuary.<br> - One of the pro
 
 **Approach:**
 
--   Isolate the problem.... How can I do this workflow for just one of the data sets without the console throwing errors?? <br>
+-   Isolate the problem....
+-   Can this work at least once?<br>
 
 <center>![](images/ex1_isolate_ds.png)</center>
 :::
@@ -1211,7 +1219,10 @@ On Maternity leave:<br> - daily gen art challenge, Genuary.<br> - One of the pro
 :::
 
 ::: notes
-In art: <br> - it's a bit diff...the first challenge has an initial step of creating the data <br> - People always ask me how this process goes, especially because I hate math...<br> - keep trying until the plot shows what you're going for <br> - once you get one shape correctly with colors and aesthetics - you've isolated the problem! <br> In Data Science: <br> - You already have the data.. (hopefully it's cleaned and accurate) <br> - Isolate the problem by doing what you want for at least one data frame <br> - Keep debugging until the final output is correct and operating as intended
+In art: <br> -
+-   first challenge has an initial step of creating the data <br> 
+-   for me, this is trial and error
+People always ask me how this process goes, especially because I hate math...<br> - keep trying until the plot shows what you're going for <br> - once you get one shape correctly with colors and aesthetics - you've isolated the problem! <br> In Data Science: <br> - You already have the data.. (hopefully it's cleaned and accurate) <br> - Isolate the problem by doing what you want for at least one data frame <br> - Keep debugging until the final output is correct and operating as intended
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Iteration♻️ {.yellow background-color="#C8B17E"}
@@ -1321,7 +1332,7 @@ For art<br> - programming/developing skills, can really put you on another level
 
 **Aim:**
 
--   Want to create a function that spits out a color palette of a specified length based on preset choices.
+-   Create a function that spits out a color palette based on input choices.
 
 <center>![](images/ex2_art.png){width="100%"}</center>
 :::
@@ -1505,7 +1516,7 @@ map_ae(df_main, ae_term)
 
 **Aim:**
 
--   Need to ask people for help with developing unit test suites for art functions...but they don't understand what I'm trying to do with the function or test for...
+-   Need help developing unit test suites for art functions...
 
 <center>![](images/comms_ex_art.gif)</center>
 :::
@@ -1518,8 +1529,7 @@ map_ae(df_main, ae_term)
 
 **Aim:**
 
--   Need to perform a data request for a stakeholder, but the stakeholder isn't intimately familiar with the data structure and can't help me with that...
-
+-   Need to perform a data request for a stakeholder...
 <center>![](images/comms_ex_ds.gif)</center>
 :::
 :::
@@ -1547,7 +1557,7 @@ These scenarios:<br> - Required communicating in different ways, but they had th
 
 **Approach:**
 
--   Identify what I am functionally trying to do without the context of the art, then create a proper reprex or explain the desired result plainly to someone smarter than me.
+-   Identify what I am functionally trying to do without the context of the art...
 
 <center>![](images/comms_approach.gif)</center>
 :::
@@ -1560,7 +1570,7 @@ These scenarios:<br> - Required communicating in different ways, but they had th
 
 **Approach:**
 
--   Identify what context or details I am missing OR explain what the current process is so someone smarter than me can assist me.
+-   Identify what context or details I am missing...
 
 <br>
 
@@ -1585,7 +1595,7 @@ gen art - required thinking about what I'm doing on a functional level w/o the c
 
 **Solution:**
 
--   Create a reprex with the [`reprex` package](https://reprex.tidyverse.org/) (R) or the [`reprexpy` library](https://reprexpy.readthedocs.io/en/latest/) (Python) and only give art "context" when needed. Most issues are a programming/logic one, or a math one that has nothing to do with "art" 😖
+-   Create a reprex with the [`reprex` package](https://reprex.tidyverse.org/) (R) or the [`reprexpy` library](https://reprexpy.readthedocs.io/en/latest/) (Python)...
 
 <br>
 
@@ -1610,7 +1620,7 @@ reprex::reprex(
 
 **Solution:**
 
--   Translate what you are doing in R or Python to the Subject Matter Expert. Explain the uncertainties, ask clarifying questions about the subject matter and explain where gaps are.
+-   Translate what you are doing in R or Python to the Subject Matter Expert...
 
 <center>![](images/no_tech.png){width="45%"}</center>
 :::
@@ -1618,6 +1628,7 @@ reprex::reprex(
 :::
 
 ::: notes
+- and only give art "context" when needed. Most issues are a programming/logic one, or a math one that has nothing to do with "art" 😖
 -   With art or anything you know alot about..<br>
 -   your head may not be thinking "functionally", meaning <br>
 -   since you're the SME, you may be getting wrapped up in getting the final result w/o thinking about what you are actually trying to do programmatically in R or Python<br>
