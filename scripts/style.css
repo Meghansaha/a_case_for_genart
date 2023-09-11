@@ -244,6 +244,34 @@ body {
   padding-left: 30px;
 }
 
+#examples-of-how-generative-art-translates-into-data-science---communication > div > div:nth-child(2){
+  border-left: 6px solid #1a1a1a;
+  height: 75%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  padding-left: 30px;
+}
+
+#examples-of-how-generative-art-translates-into-data-science---communication-1 > div > div:nth-child(2){
+  border-left: 6px solid #1a1a1a;
+  height: 40%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  padding-left: 30px;
+}
+
+#examples-of-how-generative-art-translates-into-data-science---communication-2 > div > div:nth-child(2){
+  border-left: 6px solid #1a1a1a;
+  height: 75%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  padding-left: 30px;
+}
+
+
 
 #cb1 {
   font-size: 50px;

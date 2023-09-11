@@ -1104,9 +1104,13 @@ In this room today, Data Science is defined as...
 
 - let's get it
 
-- Now, I have tons of example of this
+- Now, I have tons of examples of this
 
 - But for our time today, I want to focus on three main concepts..
+
+- So how this will work is I'll present the concept first
+
+- then give an example for the concept in both a gen art and data science scenario 
 :::
 
 ## Examples of How Generative Art Translates into Data Science {.yellow background-color="#C8B17E"}
@@ -1138,7 +1142,7 @@ In this room today, Data Science is defined as...
 ::: notes
 -   It doesn't matter how you do iteration
 
--   Whether you use base control flows like for-loops, whiles, and repeats, or you've fully adopted tidyverse's purrr ecosystem
+-   Whether you use base control flows like for-loops, whiles, and repeats, or you've fully adopted tidyverse's purrr ecosystem in R
 
 -   We can't deny that iteration really tends to take people into the next level of skill, because it allows you to do so much with less.
 
@@ -1181,7 +1185,16 @@ In this room today, Data Science is defined as...
 :::
 
 ::: notes
-On Maternity leave - Did a daily gen art challenge called Genuary. - The prompt on Jan 29th was Maximalism - Wanted these finger-like things coming from the top and bottom of the page, lots of them. <br> Likewise, back at work - A lot of imaging data to reconcile from vendors all at once. - Wanted to make cleaner/smoother workflow as the amount of vendors can change - Hard coding would get the job done, but make things hard in the long run.
+On Maternity leave:<br>
+- daily gen art challenge, Genuary.<br> 
+- One of the prompts - Maximalism <br>
+- Wanted finger-like things from the top and bottom of the page<br>
+- This a problem of iteration because i want lots of the same thing w/ variations<br>
+<click><br><br>
+In a similar situation back at work -<br>
+- Had A lot of imaging data to reconcile from vendors all at once. <br>
+- I Wanted to make cleaner/smoother workflow of doing multiple actions to multiple dfs in one go <br>
+- Also a problem of iteration
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Iteration♻️ {.yellow background-color="#C8B17E"}
@@ -1220,7 +1233,16 @@ On Maternity leave - Did a daily gen art challenge called Genuary. - The prompt 
 :::
 
 ::: notes
-In art: - the first challenge is creating the data - keep trying until the plot shows what you're going for <br> In Data Science: - You already have the data.. - But nuances may need to be addressed - Isolate the problem by doing what you want for at least one data frame - Keep debugging until the final output is correct and operating as intended
+In art: <br>
+- it's a bit diff...the first challenge has an initial step of creating the data <br>
+- People always ask me how this process goes, especially because I hate math...<br>
+- keep trying until the plot shows what you're going for  <br>
+- once you get one shape correctly with colors and aesthetics - you've isolated the problem!
+<br>
+In Data Science: <br>
+- You already have the data.. (hopefully it's cleaned and accurate) <br>
+- Isolate the problem by doing what you want for at least one data frame <br>
+- Keep debugging until the final output is correct and operating as intended
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Iteration♻️ {.yellow background-color="#C8B17E"}
@@ -1238,14 +1260,15 @@ In art: - the first challenge is creating the data - keep trying until the plot 
 -   Use your preferred method of iteration to create a generalized workflow.
 
 ```{r, echo = TRUE, eval = FALSE}
-#finger options for iterations#
+# Finger options for iterations#
 drip_opts <- list(
   1:n,
   y_starts,
   x_starts,
   fills_colors
 )
-#Finger data from the top-down#
+
+# Finger data from the top-down#
 drip <- pmap(drip_opts, ~tibble(
   x = c(..3, *math for x-axis goes here*),
   y = c(..2, *math for y-axis goes here*),
@@ -1269,31 +1292,38 @@ drip <- pmap(drip_opts, ~tibble(
 -   Use your preferred method of iteration to create a generalized workflow.
 
 ```{r, echo = TRUE, eval = FALSE}
-# Different DFs for iterations
-lst_vendors <- 
-  list("Vender 1" = df_1,
-       "Vendor 2" = df_2
-  )
 # Apply labels to all DFs
 lst_labelled <- 
-  imap(lst_vendors, ~set_derived_variable_labels(
-         .x,.y, path = here("some_local_path_of_variables.csv")
-         ))
+  imap(lst_vendors_dfs, ~set_derived_variable_labels(
+         .x,.y, path = here("some_path.csv"))
+       )
+
 # Skim all the DFs
-map(lst_labelled, ~ skimr::skim(.x)
-)
-#saving master analytic data set
+map(lst_labelled, ~ skimr::skim(.x))
+
+# Saving master analytic data set
 map(lst_labelled,
     ~saveRDS(.x,
-             file = glue("{names(lst_labelled[.x])}.RDS")
-    ))
+             file = glue(
+               "{names(lst_labelled[.x])}.RDS"
+               )))
 ```
 :::
 :::
 :::
 
 ::: notes
-In art: - the first challenge is creating the data <br> In Data Science: - You already have the data.. - But nuances may need to be addressed - Isolate the problem by doing what you want for at least one data frame
+In art: 
+- Once you've isolated the problem, the challenge into to successfully introduce iteration
+- My preferred method is using purrr in R
+<br>
+This process is the same in DS <br>
+- but know that I did NOT understand how to use purrr functions <br>
+- confidently UNTIL i needed it for art, even after trying for a good amount of time <br>
+- Doing it with art felt more tangible with my brain when no stakes were on the table
+<br>
+
+So, naturally, now that I felt comfortable with iteration, naturally the next concept that came was development -> <click>
 :::
 
 ## Examples of How Generative Art Translates into Data Science {.yellow background-color="#C8B17E"}
@@ -1307,8 +1337,8 @@ In art: - the first challenge is creating the data <br> In Data Science: - You a
 ::: columns
 ::: {.column width="50%"}
 -   Learning and honing in on development skills is another **HUGE** feat <br><br>
--   In the art realm, this promotes cleaner and robust workflows and more complex operations <br><br>
--   In Data Science, it does the same, but you're *really* moving up to new levels✨.
+-   In Generative Art, this promotes cleaner and robust workflows and more complex operations <br><br>
+-   In Data Science, it does the same, but you're ***really*** moving up to new levels✨.
 :::
 
 ::: {.column width="50%"}
@@ -1317,9 +1347,10 @@ In art: - the first challenge is creating the data <br> In Data Science: - You a
 :::
 
 ::: notes
--   For art, can really start to set your stuff apart from beginner/simpler things <br>
--   For DS, branching into development is HIGHLY desirable.
--   Allows you to take more advantage of the "open-source" paradigm by creating programs for your organization and others in the community.
+For art<br>
+-   programming/developing skills, can really put you on another level of complexity and skill<br>
+-   Development is HIGHLY desirable in DS because <br>
+-   it allows you to take more advantage of the "open-source" paradigm by creating programs for your organization and others in the community.
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Development 📦 {.yellow background-color="#C8B17E"}
@@ -1336,10 +1367,12 @@ In art: - the first challenge is creating the data <br> In Data Science: - You a
 
 -   Want to create a function that spits out a color palette of a specified length based on preset choices.
 
-<center>![](images/ex2_art.png)</center>
+<center>![](images/ex2_art.png){width="100%"}</center>
 :::
 
 ::: {.column width="50%"}
+
+::: {.fragment}
 <center><u>**Data Sci Scenario**</u></center>
 
 <br>
@@ -1350,13 +1383,24 @@ In art: - the first challenge is creating the data <br> In Data Science: - You a
 
 <br>
 
-<center>![](images/ex2_ds.png)</center>
+<center>![](images/ex2_ds.png){width="100%"}</center>
+
+:::
 :::
 :::
 
 ::: notes
--   Whether you are in R or python, the goal of creating functions are generally the same
--   We wish to do a specific task, in an isolate environment for a consisent output or result.
+Maternity leave (gen art scenario):<br>
+- Was working on the artpack package<br>
+-   Realized I was always using a certain process over and over and over.<br>
+-   I realized it would be helpful to create a function<br>
+-   to complete the process in one line to reduce some code bloat
+<br>
+Back at work (Data Sci scenario):<br>
+-   We already had an existing fx created in an internal package
+-   that had stopped working as intended
+-   So I needed to burn it down and create a new and improved function
+
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Development 📦 {.yellow background-color="#C8B17E"}
@@ -1377,9 +1421,10 @@ In art: - the first challenge is creating the data <br> In Data Science: - You a
 art_pals <- function(colors = "pal_1", n = 5) {
   
   # Preset Pals
-  pal = switch(colors, 
-               "pal_1" = c("#000000", "#ffffff", "#1a1a1a"),
-               "pal_2" = c("#1a2242", "#ea2242", "#9ad742")
+  pal = switch(
+    colors,
+    "pal_1" = c("#000000", "#ffffff", "#1a1a1a"),
+    "pal_2" = c("#1a2242", "#ea2242", "#9ad742")
   )
   
   # Creating pal with specified n
@@ -1392,6 +1437,8 @@ art_pals <- function(colors = "pal_1", n = 5) {
 :::
 
 ::: {.column width="50%"}
+
+::: {.fragment}
 <center><u>**Data Sci Scenario**</u></center>
 
 <br>
@@ -1401,7 +1448,8 @@ art_pals <- function(colors = "pal_1", n = 5) {
 -   Isolate: How do we handle the input, code for the work in the function's body, and return the intended output/side effect to us?
 
 ```{r, eval = FALSE, echo = TRUE}
-map_ae <- function(data = df_main, join_col = ae_term) {
+map_ae <- function(data = df_main,
+                   join_col = ae_term) {
   
   # Preset data frame gets pulled in
   df_ae <- load(*df_ae path here*)
@@ -1414,13 +1462,15 @@ map_ae <- function(data = df_main, join_col = ae_term) {
   return(final_df)
 }
 ```
-:::
-:::
 
+:::
+:::
+:::
 ::: notes
 -   Whether it's for art or data science, the approach is the same
--   Work has to be done to get from input to output
--   This can also open a can of worms to unit testing and pkg dev.
+-   Whether you are in R or python, This concept of developing fx are similar 
+-   We wish to do a specific task, in an isolated environment for a consistent output or result.
+
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Development 📦 {.yellow background-color="#C8B17E"}
@@ -1440,11 +1490,12 @@ map_ae <- function(data = df_main, join_col = ae_term) {
 ```{r, eval = FALSE, echo = TRUE}
 art_pals("pal_2",50)
 
-*Returns 50 calculated colors based on the input `pal_2`*
+*Returns 50 calculated colors based on `pal_2`*
 ```
 :::
 
 ::: {.column width="50%"}
+::: {.fragment}
 <center><u>**Data Sci Scenario**</u></center>
 
 <br>
@@ -1461,13 +1512,13 @@ map_ae(df_main, ae_term)
 ```
 :::
 :::
-
+:::
 ::: notes
-
-- Nah, fam - you need it in ds
--   Whether art or DS, the Aim of reducing code bloat is the same.
--   Especially helpful for larger processes where a single purrr function or for loop won't cut it.
--   Know this is just a taste, this obviously led down a rabbit hole of being able to create my own art package, and help to enhance and maintain existing packages at work
+-   Obviously I work primarily in R but <br>
+-   Whether you are in R or python, the goal of creating functions are the same <br>
+-   We wish to do a specific task, in an isolated environment for a consistent output or result. <br>
+-   Creating functions for the artpack package while on maternity leave got me ready to jump back in ready to develop things at work <br>
+-   Know this is just a taste, this obviously led down a rabbit hole of being able to create my own art package, and help to enhance and maintain existing packages at work <br>
 -   Creating functions is the tip of the iceberg and will lead you into a slippery slope of other crucial things I don't have time to talk about like unit testing and package maintenance.
 :::
 
@@ -1492,9 +1543,11 @@ map_ae(df_main, ae_term)
 :::
 
 ::: notes
--   For art, you don't need to communicate really...but it can help you get better if you do.
--   This may come naturally if you're trying to figure something out and can't - POSIT community boards, SO, Google Searching, etc.
--   Data Science, communication is non-negotiable. YOU MUST DO THIS.
+-   IMO, you don't need to communicate really for art if you don't want to...but it can help you get better if you do. <br>
+-   A natural example: if you're trying to figure something out and can't - POSIT community boards, SO, Google Searching, etc.<br>
+-   But for Data Science?, -Nah, fam- communication is non-negotiable. YOU MUST DO THIS or ELSE. <br>
+-   Even tho communicating with art is not required <br>
+-   I did get to practice this skill out a bit in a different way while on maternity leave
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Communication 💬 {.yellow background-color="#C8B17E"}
@@ -1515,6 +1568,7 @@ map_ae(df_main, ae_term)
 :::
 
 ::: {.column width="50%"}
+::: {.fragment}
 <center><u>**Data Sci Scenario**</u></center>
 
 <br>
@@ -1526,10 +1580,26 @@ map_ae(df_main, ae_term)
 <center>![](images/comms_ex_ds.gif)</center>
 :::
 :::
+:::
 
 ::: notes
--   The scenarios are flipped. In the art scenario, I am the SME, In the Data Science Scenario, I am not the SME, and the SME doesn't know wth I need
--   Requires communicating in different ways, but both with the need to get everyone involved on the same page.
+On Maternity Leave (gen art scenario):<br>
+-   I needed to ask people for help with package development stuff for artpack. <br>
+-   (Big thank you to Daniel Sjoberg - creator of many awesome packages like gtsummary and ggsurvfit)<br>
+- While Daniel was gracious enough to let me bother him with questions <br>
+- I realized that I needed to translate what I was doing when asking for help <br>
+
+Back at work (data sci scenario): <br>
+- People were requesting data <br>
+- but the people requesting the data didn't know what I needed to complete <br>
+
+Comparing these scenarios are interesting b/c<br>
+-   The scenarios are flipped but similar.<br>
+- In the art scenario, I am the SME <br>
+- In the Data Science Scenario, I am not the SME <br>
+
+These scenarios:<br>
+-   Required communicating in different ways, but they had the need of getting everyone involved on the same page.
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Communication 💬 {.yellow background-color="#C8B17E"}
@@ -1545,9 +1615,12 @@ map_ae(df_main, ae_term)
 **Approach:**
 
 -   Identify what I am functionally trying to do without the context of the art, then create a proper reprex or explain the desired result plainly to someone smarter than me.
+
+<center>![](images/comms_approach.gif)</center>
 :::
 
 ::: {.column width="50%"}
+::: {.fragment}
 <center><u>**Data Sci Scenario**</u></center>
 
 <br>
@@ -1555,14 +1628,20 @@ map_ae(df_main, ae_term)
 **Approach:**
 
 -   Identify what context or details I am missing OR explain what the current process is so someone smarter than me can assist me.
-:::
-:::
+
+<br>
 
 <center>![](images/comms_approach.gif)</center>
+:::
+:::
+:::
+
+
 
 ::: notes
--   The scenarios are flipped. In the art scenario, I am the SME, In the Data Science Scenario, I am not the SME, and the SME doesn't know wth I need
--   Requires communicating in different ways, but both with the need to get everyone involved on the same page.
+gen art - required thinking about what I'm doing on a functional level w/o the context of art and introducing people into the problem that way <br>
+<br>
+data sci - required accessing the situation in R, IDing what external pieces of info I was missing and then working with the SME to help them, help me so we could get on the same page.
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Communication 💬 {.yellow background-color="#C8B17E"}
@@ -1581,28 +1660,8 @@ map_ae(df_main, ae_term)
 
 <br>
 
-```{r echo = FALSE, eval = TRUE, include = TRUE}
-  is.color <- function(...) {
-    # is the input a base R color?
-    r_color <-
-      sapply(
-        ...,
-        function(x) x %in% colors()
-      )
-    # is the input a valid hex color code?
-    hex_color <-
-      sapply(
-        ...,
-        function(x) grepl("^#[A-Fa-f0-9]{6}", tolower(x))
-      )
-    out <- r_color + hex_color
-    output <- ifelse(out > 0, TRUE, FALSE)
-    return(output)
-  } 
 
-```
-
-```{r echo = TRUE, eval = TRUE}
+```{r echo = TRUE, eval = FALSE}
 # Some function that I can't get to work as expected----
 reprex::reprex(
   {
@@ -1616,6 +1675,9 @@ reprex::reprex(
 :::
 
 ::: {.column width="50%"}
+
+::: {.fragment}
+
 <center><u>**Data Sci Scenario**</u></center>
 
 <br>
@@ -1625,12 +1687,18 @@ reprex::reprex(
 -   Translate what you are doing in R or Python to the Subject Matter Expert. Explain the uncertainties, ask clarifying questions about the subject matter and explain where gaps are.
 
 <center>![](images/no_tech.png){width="45%"}</center>
+
+:::
 :::
 :::
 
 ::: notes
--   with art, your head may not be thinking "functionally" - youre wrapped up in getting the final result w/o thinking about what you are actually trying to do in R
--   with DS, you may be taksed with communicating with
+-   With art or anything you know alot about..<br>
+-   your head may not be thinking "functionally", meaning <br>
+-   since you're the SME, you may be getting wrapped up in getting the final result w/o thinking about what you are actually trying to do programmatically in R or Python<br>
+- Got over my fear of creating reprexes during this time as well, because I needed to learn how to do this to push work along<br>
+-   with DS, you may be tasked with communicating with others who are not knowledgeable about programming, or even the data they are asking for. If you get too bogged down into the programming without crucial external contextual info, you may be grinding your gears, or stuck for a bit until you clear that up<br>
+- The best thing to do in the data science scenario is to pull yourself out of your IDE, and Talk with the SME 
 :::
 
 ##  {background-color="#1a1a1a" background-image="images/background7.png" background-size="cover"}
@@ -1673,7 +1741,7 @@ For those managing teams at work, could you make room in your team's scheduling 
 
 ::: notes
 
-Regardless of what you do after this talk, think about how different perspectives and approaches may work for you. If you're having trouble understanding something, YouTube videos aren't cutting it, or blog posts are confusing you...Embrace learning in a low-stress environment fueled only by your interests. Let go of the notion that data science can only be for profit or practical insights. Remember that we can conquer these beautiful but abstract challenges by transforming them ->
+Regardless of what you do after this talk, I want you to think about how different perspectives and approaches may work for you. If you're having trouble understanding something, YouTube videos aren't cutting it, or blog posts are confusing you...Embrace learning in a low-stress environment fueled only by your interests. Let go of the notion that data science or programming can only be for profit or practical insights. Remember that we can conquer these beautiful but abstract challenges by transforming them ->
 :::
 
 ##  {background-color="#1a1a1a"}

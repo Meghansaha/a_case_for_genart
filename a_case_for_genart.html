@@ -8,7 +8,7 @@
 <link href="a_case_for_genart_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="a_case_for_genart_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="a_case_for_genart_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.274">
+  <meta name="generator" content="quarto-1.4.128">
 
   <meta name="author" content="Meghan Harris, MPH">
   <title>It’s All About Perspective</title>
@@ -1812,8 +1812,10 @@ Examples of How Generative Art Translates into Data Science
 <ul>
 <li><p>Now that we’re all on the same page about what data science is</p></li>
 <li><p>let’s get it</p></li>
-<li><p>Now, I have tons of example of this</p></li>
+<li><p>Now, I have tons of examples of this</p></li>
 <li><p>But for our time today, I want to focus on three main concepts..</p></li>
+<li><p>So how this will work is I’ll present the concept first</p></li>
+<li><p>then give an example for the concept in both a gen art and data science scenario</p></li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -1857,7 +1859,7 @@ Iteration♻️
 <aside class="notes">
 <ul>
 <li><p>It doesn’t matter how you do iteration</p></li>
-<li><p>Whether you use base control flows like for-loops, whiles, and repeats, or you’ve fully adopted tidyverse’s purrr ecosystem</p></li>
+<li><p>Whether you use base control flows like for-loops, whiles, and repeats, or you’ve fully adopted tidyverse’s purrr ecosystem in R</p></li>
 <li><p>We can’t deny that iteration really tends to take people into the next level of skill, because it allows you to do so much with less.</p></li>
 </ul>
 <style type="text/css">
@@ -1906,7 +1908,7 @@ Iteration♻️
 </div>
 </div>
 <aside class="notes">
-<p>On Maternity leave - Did a daily gen art challenge called Genuary. - The prompt on Jan 29th was Maximalism - Wanted these finger-like things coming from the top and bottom of the page, lots of them. <br> Likewise, back at work - A lot of imaging data to reconcile from vendors all at once. - Wanted to make cleaner/smoother workflow as the amount of vendors can change - Hard coding would get the job done, but make things hard in the long run.</p>
+<p>On Maternity leave:<br> - daily gen art challenge, Genuary.<br> - One of the prompts - Maximalism <br> - Wanted finger-like things from the top and bottom of the page<br> - This a problem of iteration because i want lots of the same thing w/ variations<br> <click><br><br> In a similar situation back at work -<br> - Had A lot of imaging data to reconcile from vendors all at once. <br> - I Wanted to make cleaner/smoother workflow of doing multiple actions to multiple dfs in one go <br> - Also a problem of iteration</click></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1953,7 +1955,7 @@ Iteration♻️
 </div>
 </div>
 <aside class="notes">
-<p>In art: - the first challenge is creating the data - keep trying until the plot shows what you’re going for <br> In Data Science: - You already have the data.. - But nuances may need to be addressed - Isolate the problem by doing what you want for at least one data frame - Keep debugging until the final output is correct and operating as intended</p>
+<p>In art: <br> - it’s a bit diff…the first challenge has an initial step of creating the data <br> - People always ask me how this process goes, especially because I hate math…<br> - keep trying until the plot shows what you’re going for <br> - once you get one shape correctly with colors and aesthetics - you’ve isolated the problem! <br> In Data Science: <br> - You already have the data.. (hopefully it’s cleaned and accurate) <br> - Isolate the problem by doing what you want for at least one data frame <br> - Keep debugging until the final output is correct and operating as intended</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1980,21 +1982,22 @@ Iteration♻️
 <li>Use your preferred method of iteration to create a generalized workflow.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">#finger options for iterations#</span></span>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># Finger options for iterations#</span></span>
 <span id="cb7-2"><a href="#cb7-2"></a>drip_opts <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
 <span id="cb7-3"><a href="#cb7-3"></a>  <span class="dv">1</span><span class="sc">:</span>n,</span>
 <span id="cb7-4"><a href="#cb7-4"></a>  y_starts,</span>
 <span id="cb7-5"><a href="#cb7-5"></a>  x_starts,</span>
 <span id="cb7-6"><a href="#cb7-6"></a>  fills_colors</span>
 <span id="cb7-7"><a href="#cb7-7"></a>)</span>
-<span id="cb7-8"><a href="#cb7-8"></a><span class="co">#Finger data from the top-down#</span></span>
-<span id="cb7-9"><a href="#cb7-9"></a>drip <span class="ot">&lt;-</span> <span class="fu">pmap</span>(drip_opts, <span class="sc">~</span><span class="fu">tibble</span>(</span>
-<span id="cb7-10"><a href="#cb7-10"></a>  <span class="at">x =</span> <span class="fu">c</span>(..<span class="dv">3</span>, <span class="sc">*</span>math <span class="cf">for</span> x<span class="sc">-</span>axis goes here<span class="sc">*</span>),</span>
-<span id="cb7-11"><a href="#cb7-11"></a>  <span class="at">y =</span> <span class="fu">c</span>(..<span class="dv">2</span>, <span class="sc">*</span>math <span class="cf">for</span> y<span class="sc">-</span>axis goes here<span class="sc">*</span>),</span>
-<span id="cb7-12"><a href="#cb7-12"></a>  <span class="at">group =</span> <span class="fu">group_numbers</span>(..<span class="dv">1</span>),</span>
-<span id="cb7-13"><a href="#cb7-13"></a>  <span class="at">fill =</span> <span class="fu">c</span>(..<span class="dv">4</span>)</span>
-<span id="cb7-14"><a href="#cb7-14"></a>)) <span class="sc">|&gt;</span></span>
-<span id="cb7-15"><a href="#cb7-15"></a>  <span class="fu">list_rbind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-8"><a href="#cb7-8"></a></span>
+<span id="cb7-9"><a href="#cb7-9"></a><span class="co"># Finger data from the top-down#</span></span>
+<span id="cb7-10"><a href="#cb7-10"></a>drip <span class="ot">&lt;-</span> <span class="fu">pmap</span>(drip_opts, <span class="sc">~</span><span class="fu">tibble</span>(</span>
+<span id="cb7-11"><a href="#cb7-11"></a>  <span class="at">x =</span> <span class="fu">c</span>(..<span class="dv">3</span>, <span class="sc">*</span>math <span class="cf">for</span> x<span class="sc">-</span>axis goes here<span class="sc">*</span>),</span>
+<span id="cb7-12"><a href="#cb7-12"></a>  <span class="at">y =</span> <span class="fu">c</span>(..<span class="dv">2</span>, <span class="sc">*</span>math <span class="cf">for</span> y<span class="sc">-</span>axis goes here<span class="sc">*</span>),</span>
+<span id="cb7-13"><a href="#cb7-13"></a>  <span class="at">group =</span> <span class="fu">group_numbers</span>(..<span class="dv">1</span>),</span>
+<span id="cb7-14"><a href="#cb7-14"></a>  <span class="at">fill =</span> <span class="fu">c</span>(..<span class="dv">4</span>)</span>
+<span id="cb7-15"><a href="#cb7-15"></a>)) <span class="sc">|&gt;</span></span>
+<span id="cb7-16"><a href="#cb7-16"></a>  <span class="fu">list_rbind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="fragment">
@@ -2007,30 +2010,28 @@ Iteration♻️
 <li>Use your preferred method of iteration to create a generalized workflow.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># Different DFs for iterations</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a>lst_vendors <span class="ot">&lt;-</span> </span>
-<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">list</span>(<span class="st">"Vender 1"</span> <span class="ot">=</span> df_1,</span>
-<span id="cb8-4"><a href="#cb8-4"></a>       <span class="st">"Vendor 2"</span> <span class="ot">=</span> df_2</span>
-<span id="cb8-5"><a href="#cb8-5"></a>  )</span>
-<span id="cb8-6"><a href="#cb8-6"></a><span class="co"># Apply labels to all DFs</span></span>
-<span id="cb8-7"><a href="#cb8-7"></a>lst_labelled <span class="ot">&lt;-</span> </span>
-<span id="cb8-8"><a href="#cb8-8"></a>  <span class="fu">imap</span>(lst_vendors, <span class="sc">~</span><span class="fu">set_derived_variable_labels</span>(</span>
-<span id="cb8-9"><a href="#cb8-9"></a>         .x,.y, <span class="at">path =</span> <span class="fu">here</span>(<span class="st">"some_local_path_of_variables.csv"</span>)</span>
-<span id="cb8-10"><a href="#cb8-10"></a>         ))</span>
-<span id="cb8-11"><a href="#cb8-11"></a><span class="co"># Skim all the DFs</span></span>
-<span id="cb8-12"><a href="#cb8-12"></a><span class="fu">map</span>(lst_labelled, <span class="sc">~</span> skimr<span class="sc">::</span><span class="fu">skim</span>(.x)</span>
-<span id="cb8-13"><a href="#cb8-13"></a>)</span>
-<span id="cb8-14"><a href="#cb8-14"></a><span class="co">#saving master analytic data set</span></span>
-<span id="cb8-15"><a href="#cb8-15"></a><span class="fu">map</span>(lst_labelled,</span>
-<span id="cb8-16"><a href="#cb8-16"></a>    <span class="sc">~</span><span class="fu">saveRDS</span>(.x,</span>
-<span id="cb8-17"><a href="#cb8-17"></a>             <span class="at">file =</span> <span class="fu">glue</span>(<span class="st">"{names(lst_labelled[.x])}.RDS"</span>)</span>
-<span id="cb8-18"><a href="#cb8-18"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># Apply labels to all DFs</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>lst_labelled <span class="ot">&lt;-</span> </span>
+<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">imap</span>(lst_vendors_dfs, <span class="sc">~</span><span class="fu">set_derived_variable_labels</span>(</span>
+<span id="cb8-4"><a href="#cb8-4"></a>         .x,.y, <span class="at">path =</span> <span class="fu">here</span>(<span class="st">"some_path.csv"</span>))</span>
+<span id="cb8-5"><a href="#cb8-5"></a>       )</span>
+<span id="cb8-6"><a href="#cb8-6"></a></span>
+<span id="cb8-7"><a href="#cb8-7"></a><span class="co"># Skim all the DFs</span></span>
+<span id="cb8-8"><a href="#cb8-8"></a><span class="fu">map</span>(lst_labelled, <span class="sc">~</span> skimr<span class="sc">::</span><span class="fu">skim</span>(.x))</span>
+<span id="cb8-9"><a href="#cb8-9"></a></span>
+<span id="cb8-10"><a href="#cb8-10"></a><span class="co"># Saving master analytic data set</span></span>
+<span id="cb8-11"><a href="#cb8-11"></a><span class="fu">map</span>(lst_labelled,</span>
+<span id="cb8-12"><a href="#cb8-12"></a>    <span class="sc">~</span><span class="fu">saveRDS</span>(.x,</span>
+<span id="cb8-13"><a href="#cb8-13"></a>             <span class="at">file =</span> <span class="fu">glue</span>(</span>
+<span id="cb8-14"><a href="#cb8-14"></a>               <span class="st">"{names(lst_labelled[.x])}.RDS"</span></span>
+<span id="cb8-15"><a href="#cb8-15"></a>               )))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </div>
 <aside class="notes">
-<p>In art: - the first challenge is creating the data <br> In Data Science: - You already have the data.. - But nuances may need to be addressed - Isolate the problem by doing what you want for at least one data frame</p>
+<p>In art: - Once you’ve isolated the problem, the challenge into to successfully introduce iteration - My preferred method is using purrr in R <br> This process is the same in DS <br> - but know that I did NOT understand how to use purrr functions <br> - confidently UNTIL i needed it for art, even after trying for a good amount of time <br> - Doing it with art felt more tangible with my brain when no stakes were on the table <br></p>
+<p>So, naturally, now that I felt comfortable with iteration, naturally the next concept that came was development -&gt; <click></click></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -2055,8 +2056,8 @@ Development 📦
 <div class="column" style="width:50%;">
 <ul>
 <li>Learning and honing in on development skills is another <strong>HUGE</strong> feat <br><br></li>
-<li>In the art realm, this promotes cleaner and robust workflows and more complex operations <br><br></li>
-<li>In Data Science, it does the same, but you’re <em>really</em> moving up to new levels✨.</li>
+<li>In Generative Art, this promotes cleaner and robust workflows and more complex operations <br><br></li>
+<li>In Data Science, it does the same, but you’re <strong><em>really</em></strong> moving up to new levels✨.</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <center>
@@ -2065,11 +2066,7 @@ Development 📦
 </div>
 </div>
 <aside class="notes">
-<ul>
-<li>For art, can really start to set your stuff apart from beginner/simpler things <br></li>
-<li>For DS, branching into development is HIGHLY desirable.</li>
-<li>Allows you to take more advantage of the “open-source” paradigm by creating programs for your organization and others in the community.</li>
-</ul>
+<p>For art<br> - programming/developing skills, can really put you on another level of complexity and skill<br> - Development is HIGHLY desirable in DS because <br> - it allows you to take more advantage of the “open-source” paradigm by creating programs for your organization and others in the community.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -2096,9 +2093,10 @@ Development 📦
 <li>Want to create a function that spits out a color palette of a specified length based on preset choices.</li>
 </ul>
 <center>
-<img data-src="images/ex2_art.png">
+<img data-src="images/ex2_art.png" style="width:100.0%">
 </center>
 </div><div class="column" style="width:50%;">
+<div class="fragment">
 <center>
 <u><strong>Data Sci Scenario</strong></u>
 </center>
@@ -2109,15 +2107,13 @@ Development 📦
 </ul>
 <p><br></p>
 <center>
-<img data-src="images/ex2_ds.png">
+<img data-src="images/ex2_ds.png" style="width:100.0%">
 </center>
 </div>
 </div>
+</div>
 <aside class="notes">
-<ul>
-<li>Whether you are in R or python, the goal of creating functions are generally the same</li>
-<li>We wish to do a specific task, in an isolate environment for a consisent output or result.</li>
-</ul>
+<p>Maternity leave (gen art scenario):<br> - Was working on the artpack package<br> - Realized I was always using a certain process over and over and over.<br> - I realized it would be helpful to create a function<br> - to complete the process in one line to reduce some code bloat <br> Back at work (Data Sci scenario):<br> - We already had an existing fx created in an internal package - that had stopped working as intended - So I needed to burn it down and create a new and improved function</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -2147,19 +2143,21 @@ Development 📦
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>art_pals <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">colors =</span> <span class="st">"pal_1"</span>, <span class="at">n =</span> <span class="dv">5</span>) {</span>
 <span id="cb9-2"><a href="#cb9-2"></a>  </span>
 <span id="cb9-3"><a href="#cb9-3"></a>  <span class="co"># Preset Pals</span></span>
-<span id="cb9-4"><a href="#cb9-4"></a>  pal <span class="ot">=</span> <span class="cf">switch</span>(colors, </span>
-<span id="cb9-5"><a href="#cb9-5"></a>               <span class="st">"pal_1"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"#000000"</span>, <span class="st">"#ffffff"</span>, <span class="st">"#1a1a1a"</span>),</span>
-<span id="cb9-6"><a href="#cb9-6"></a>               <span class="st">"pal_2"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"#1a2242"</span>, <span class="st">"#ea2242"</span>, <span class="st">"#9ad742"</span>)</span>
-<span id="cb9-7"><a href="#cb9-7"></a>  )</span>
-<span id="cb9-8"><a href="#cb9-8"></a>  </span>
-<span id="cb9-9"><a href="#cb9-9"></a>  <span class="co"># Creating pal with specified n</span></span>
-<span id="cb9-10"><a href="#cb9-10"></a>  final_pal <span class="ot">=</span> <span class="fu">colorRampPalette</span>(pal)(n)</span>
-<span id="cb9-11"><a href="#cb9-11"></a>  </span>
-<span id="cb9-12"><a href="#cb9-12"></a>  <span class="co"># Return final pal</span></span>
-<span id="cb9-13"><a href="#cb9-13"></a>  <span class="fu">return</span>(final_pal)</span>
-<span id="cb9-14"><a href="#cb9-14"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-4"><a href="#cb9-4"></a>  pal <span class="ot">=</span> <span class="cf">switch</span>(</span>
+<span id="cb9-5"><a href="#cb9-5"></a>    colors,</span>
+<span id="cb9-6"><a href="#cb9-6"></a>    <span class="st">"pal_1"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"#000000"</span>, <span class="st">"#ffffff"</span>, <span class="st">"#1a1a1a"</span>),</span>
+<span id="cb9-7"><a href="#cb9-7"></a>    <span class="st">"pal_2"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"#1a2242"</span>, <span class="st">"#ea2242"</span>, <span class="st">"#9ad742"</span>)</span>
+<span id="cb9-8"><a href="#cb9-8"></a>  )</span>
+<span id="cb9-9"><a href="#cb9-9"></a>  </span>
+<span id="cb9-10"><a href="#cb9-10"></a>  <span class="co"># Creating pal with specified n</span></span>
+<span id="cb9-11"><a href="#cb9-11"></a>  final_pal <span class="ot">=</span> <span class="fu">colorRampPalette</span>(pal)(n)</span>
+<span id="cb9-12"><a href="#cb9-12"></a>  </span>
+<span id="cb9-13"><a href="#cb9-13"></a>  <span class="co"># Return final pal</span></span>
+<span id="cb9-14"><a href="#cb9-14"></a>  <span class="fu">return</span>(final_pal)</span>
+<span id="cb9-15"><a href="#cb9-15"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
+<div class="fragment">
 <center>
 <u><strong>Data Sci Scenario</strong></u>
 </center>
@@ -2169,26 +2167,28 @@ Development 📦
 <li>Isolate: How do we handle the input, code for the work in the function’s body, and return the intended output/side effect to us?</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>map_ae <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">data =</span> df_main, <span class="at">join_col =</span> ae_term) {</span>
-<span id="cb10-2"><a href="#cb10-2"></a>  </span>
-<span id="cb10-3"><a href="#cb10-3"></a>  <span class="co"># Preset data frame gets pulled in</span></span>
-<span id="cb10-4"><a href="#cb10-4"></a>  df_ae <span class="ot">&lt;-</span> <span class="fu">load</span>(<span class="sc">*</span>df_ae path here<span class="sc">*</span>)</span>
-<span id="cb10-5"><a href="#cb10-5"></a>  </span>
-<span id="cb10-6"><a href="#cb10-6"></a>  <span class="co"># Creating new df with left_join</span></span>
-<span id="cb10-7"><a href="#cb10-7"></a>  final_df <span class="ot">&lt;-</span> df_main <span class="sc">|&gt;</span></span>
-<span id="cb10-8"><a href="#cb10-8"></a>    <span class="fu">left_join</span>(df_ae, <span class="at">by =</span> <span class="st">"ae_term"</span>)</span>
-<span id="cb10-9"><a href="#cb10-9"></a>  </span>
-<span id="cb10-10"><a href="#cb10-10"></a>  <span class="co"># Return final df</span></span>
-<span id="cb10-11"><a href="#cb10-11"></a>  <span class="fu">return</span>(final_df)</span>
-<span id="cb10-12"><a href="#cb10-12"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>map_ae <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">data =</span> df_main,</span>
+<span id="cb10-2"><a href="#cb10-2"></a>                   <span class="at">join_col =</span> ae_term) {</span>
+<span id="cb10-3"><a href="#cb10-3"></a>  </span>
+<span id="cb10-4"><a href="#cb10-4"></a>  <span class="co"># Preset data frame gets pulled in</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a>  df_ae <span class="ot">&lt;-</span> <span class="fu">load</span>(<span class="sc">*</span>df_ae path here<span class="sc">*</span>)</span>
+<span id="cb10-6"><a href="#cb10-6"></a>  </span>
+<span id="cb10-7"><a href="#cb10-7"></a>  <span class="co"># Creating new df with left_join</span></span>
+<span id="cb10-8"><a href="#cb10-8"></a>  final_df <span class="ot">&lt;-</span> df_main <span class="sc">|&gt;</span></span>
+<span id="cb10-9"><a href="#cb10-9"></a>    <span class="fu">left_join</span>(df_ae, <span class="at">by =</span> <span class="st">"ae_term"</span>)</span>
+<span id="cb10-10"><a href="#cb10-10"></a>  </span>
+<span id="cb10-11"><a href="#cb10-11"></a>  <span class="co"># Return final df</span></span>
+<span id="cb10-12"><a href="#cb10-12"></a>  <span class="fu">return</span>(final_df)</span>
+<span id="cb10-13"><a href="#cb10-13"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div>
 </div>
 <aside class="notes">
 <ul>
 <li>Whether it’s for art or data science, the approach is the same</li>
-<li>Work has to be done to get from input to output</li>
-<li>This can also open a can of worms to unit testing and pkg dev.</li>
+<li>Whether you are in R or python, This concept of developing fx are similar</li>
+<li>We wish to do a specific task, in an isolated environment for a consistent output or result.</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -2218,9 +2218,10 @@ Development 📦
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">art_pals</span>(<span class="st">"pal_2"</span>,<span class="dv">50</span>)</span>
 <span id="cb11-2"><a href="#cb11-2"></a></span>
-<span id="cb11-3"><a href="#cb11-3"></a><span class="sc">*</span>Returns <span class="dv">50</span> calculated colors based on the input <span class="st">`</span><span class="at">pal_2</span><span class="st">`</span><span class="sc">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="sc">*</span>Returns <span class="dv">50</span> calculated colors based on <span class="st">`</span><span class="at">pal_2</span><span class="st">`</span><span class="sc">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
+<div class="fragment">
 <center>
 <u><strong>Data Sci Scenario</strong></u>
 </center>
@@ -2237,11 +2238,14 @@ Development 📦
 </div>
 </div>
 </div>
+</div>
 <aside class="notes">
 <ul>
-<li>Whether art or DS, the Aim of reducing code bloat is the same.</li>
-<li>Especially helpful for larger processes where a single purrr function or for loop won’t cut it.</li>
-<li>Know this is just a taste, this obviously led down a rabbit hole of being able to create my own art package, and help to enhance and maintain existing packages at work</li>
+<li>Obviously I work primarily in R but <br></li>
+<li>Whether you are in R or python, the goal of creating functions are the same <br></li>
+<li>We wish to do a specific task, in an isolated environment for a consistent output or result. <br></li>
+<li>Creating functions for the artpack package while on maternity leave got me ready to jump back in ready to develop things at work <br></li>
+<li>Know this is just a taste, this obviously led down a rabbit hole of being able to create my own art package, and help to enhance and maintain existing packages at work <br></li>
 <li>Creating functions is the tip of the iceberg and will lead you into a slippery slope of other crucial things I don’t have time to talk about like unit testing and package maintenance.</li>
 </ul>
 <style type="text/css">
@@ -2279,9 +2283,11 @@ Communication 💬
 </div>
 <aside class="notes">
 <ul>
-<li>For art, you don’t need to communicate really…but it can help you get better if you do.</li>
-<li>This may come naturally if you’re trying to figure something out and can’t - POSIT community boards, SO, Google Searching, etc.</li>
-<li>Data Science, communication is non-negotiable. YOU MUST DO THIS.</li>
+<li>IMO, you don’t need to communicate really for art if you don’t want to…but it can help you get better if you do. <br></li>
+<li>A natural example: if you’re trying to figure something out and can’t - POSIT community boards, SO, Google Searching, etc.<br></li>
+<li>But for Data Science?, -Nah, fam- communication is non-negotiable. YOU MUST DO THIS or ELSE. <br></li>
+<li>Even tho communicating with art is not required <br></li>
+<li>I did get to practice this skill out a bit in a different way while on maternity leave</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -2312,6 +2318,7 @@ Communication 💬
 <img data-src="images/comms_ex_art.gif">
 </center>
 </div><div class="column" style="width:50%;">
+<div class="fragment">
 <center>
 <u><strong>Data Sci Scenario</strong></u>
 </center>
@@ -2325,11 +2332,12 @@ Communication 💬
 </center>
 </div>
 </div>
+</div>
 <aside class="notes">
-<ul>
-<li>The scenarios are flipped. In the art scenario, I am the SME, In the Data Science Scenario, I am not the SME, and the SME doesn’t know wth I need</li>
-<li>Requires communicating in different ways, but both with the need to get everyone involved on the same page.</li>
-</ul>
+<p>On Maternity Leave (gen art scenario):<br> - I needed to ask people for help with package development stuff for artpack. <br> - (Big thank you to Daniel Sjoberg - creator of many awesome packages like gtsummary and ggsurvfit)<br> - While Daniel was gracious enough to let me bother him with questions <br> - I realized that I needed to translate what I was doing when asking for help <br></p>
+<p>Back at work (data sci scenario): <br> - People were requesting data <br> - but the people requesting the data didn’t know what I needed to complete <br></p>
+<p>Comparing these scenarios are interesting b/c<br> - The scenarios are flipped but similar.<br> - In the art scenario, I am the SME <br> - In the Data Science Scenario, I am not the SME <br></p>
+<p>These scenarios:<br> - Required communicating in different ways, but they had the need of getting everyone involved on the same page.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -2355,7 +2363,11 @@ Communication 💬
 <ul>
 <li>Identify what I am functionally trying to do without the context of the art, then create a proper reprex or explain the desired result plainly to someone smarter than me.</li>
 </ul>
+<center>
+<img data-src="images/comms_approach.gif">
+</center>
 </div><div class="column" style="width:50%;">
+<div class="fragment">
 <center>
 <u><strong>Data Sci Scenario</strong></u>
 </center>
@@ -2364,16 +2376,15 @@ Communication 💬
 <ul>
 <li>Identify what context or details I am missing OR explain what the current process is so someone smarter than me can assist me.</li>
 </ul>
-</div>
-</div>
+<p><br></p>
 <center>
 <img data-src="images/comms_approach.gif">
 </center>
+</div>
+</div>
+</div>
 <aside class="notes">
-<ul>
-<li>The scenarios are flipped. In the art scenario, I am the SME, In the Data Science Scenario, I am not the SME, and the SME doesn’t know wth I need</li>
-<li>Requires communicating in different ways, but both with the need to get everyone involved on the same page.</li>
-</ul>
+<p>gen art - required thinking about what I’m doing on a functional level w/o the context of art and introducing people into the problem that way <br> <br> data sci - required accessing the situation in R, IDing what external pieces of info I was missing and then working with the SME to help them, help me so we could get on the same page.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -2412,6 +2423,7 @@ Communication 💬
 <span id="cb13-9"><a href="#cb13-9"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
+<div class="fragment">
 <center>
 <u><strong>Data Sci Scenario</strong></u>
 </center>
@@ -2425,10 +2437,15 @@ Communication 💬
 </center>
 </div>
 </div>
+</div>
 <aside class="notes">
 <ul>
-<li>with art, your head may not be thinking “functionally” - youre wrapped up in getting the final result w/o thinking about what you are actually trying to do in R</li>
-<li>with DS, you may be taksed with communicating with</li>
+<li>With art or anything you know alot about..<br></li>
+<li>your head may not be thinking “functionally”, meaning <br></li>
+<li>since you’re the SME, you may be getting wrapped up in getting the final result w/o thinking about what you are actually trying to do programmatically in R or Python<br></li>
+<li>Got over my fear of creating reprexes during this time as well, because I needed to learn how to do this to push work along<br></li>
+<li>with DS, you may be tasked with communicating with others who are not knowledgeable about programming, or even the data they are asking for. If you get too bogged down into the programming without crucial external contextual info, you may be grinding your gears, or stuck for a bit until you clear that up<br></li>
+<li>The best thing to do in the data science scenario is to pull yourself out of your IDE, and Talk with the SME</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -2550,6 +2567,7 @@ Final Thoughts
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
+'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
