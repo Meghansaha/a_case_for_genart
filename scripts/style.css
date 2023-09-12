@@ -201,7 +201,7 @@ body {
 
 #examples-of-how-generative-art-translates-into-data-science---iteration-1 > div > div:nth-child(2){
   border-left: 6px solid #1a1a1a;
-  height: 75%;
+  height: 50%;
   position: absolute;
   left: 50%;
   margin-left: -3px;
@@ -255,7 +255,7 @@ body {
 
 #examples-of-how-generative-art-translates-into-data-science---communication-1 > div > div:nth-child(2){
   border-left: 6px solid #1a1a1a;
-  height: 40%;
+  height: 25%;
   position: absolute;
   left: 50%;
   margin-left: -3px;

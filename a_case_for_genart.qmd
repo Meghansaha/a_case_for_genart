@@ -110,8 +110,7 @@ transition: fade
 ![](images/ga2.png)
 :::
 
-
-<span style="float:right"> @KazeKomboArt</span>
+[ @KazeKomboArt]{style="float:right"}
 :::
 
 ::: notes
@@ -130,7 +129,7 @@ So whether you're here for the art {pause}
 :::
 :::
 
-<span style="float:right"> @KazeKomboArt</span>
+[ @KazeKomboArt]{style="float:right"}
 
 ::: notes
 or the data science... {pause}
@@ -140,7 +139,7 @@ or the data science... {pause}
 
 <center>![](images/learn1.png){width="50%"}</center>
 
-<span style="float:right"> @KazeKomboArt</span>
+[ @KazeKomboArt]{style="float:right"}
 
 ::: notes
 ...or just learning, {pause}
@@ -260,7 +259,7 @@ In this room today, Generative Art is defined as:
 > **Artwork created through a program in any language or interface. As long as a program executes the generation of the art, it can be considered generative art.**
 
 ::: notes
-Now this is vague and general, and yes. that's on Aim
+Now this is vague and general, and yes. that's on Purpose
 
 <br>
 
@@ -338,7 +337,7 @@ Now...
 
 -   I'm going to be real with ya'll, I don't have enough time here to truly explain in depth how to make complicated art with code
 
--   I mean, Posit, Jenny, Hadley, ya'll got my e-mail, I can help with the art workshop new year if ya'll want, I'm just saying, but for right now
+-   I mean, Posit, Jenny, Hadley, ya'll got my e-mail, I can help with the art workshop next year if ya'll want, I'm just saying, but for right now
 
 -   All of the code for the art on github repo
 
@@ -412,7 +411,9 @@ Now...
 <center>
 
 ::: {#bluequote}
+
 > "I don't understand how you get the data to put into \[ *insert your graphical tool of choice here* \]"
+
 :::
 
 <br><br><br>
@@ -444,7 +445,7 @@ And I get it. It can be tricky, so let's stop for a minute and Imagine that we w
 <center>![](images/graph_ex.gif){.false width="60%"}</center>
 
 ::: notes
--   Now this may be way easier to people because there's a visual guide now. the grid lines here.
+-   Now this may be way easier for people -\> a visual guide of grid lines,
 
 -   But if you stop for a minute and think...where have we probably seen a grid before?
 
@@ -458,9 +459,9 @@ And I get it. It can be tricky, so let's stop for a minute and Imagine that we w
 ::: notes
 -   So now using a grid as guidance, in the real world..
 
--   we can set values to every mark we make on the paper.
+-   we can set values to every mark we make on the paper...
 
--   Just like a coordinate system in your favorite graphical tool would
+-   Just like a coordinate system in your favorite graphical tool would.
 
 -   We have 4 coordinate points in this line, each with an x and y value
 
@@ -468,9 +469,9 @@ And I get it. It can be tricky, so let's stop for a minute and Imagine that we w
 
 -   and a constant value of 1 on the y axis repeated 4 times to make a straight horizontal line.
 
--   Now this may be simple, but this is essentially all it takes to create generative art.
+-   Now this may seem overly simple, but this is all it takes to create generative art.
 
--   The trick here is that you need to understand the relationship between the visuals you want, and the data you need to make them in regards to a coordinate system.
+-   The trick here is that you need to understand the relationship between the visuals you want, the data you need and the coordinate system you set.
 
 -   Let's look at this in more detail, without getting into too much detail...because time...
 :::
@@ -521,7 +522,7 @@ print(orange_line)
 :::
 
 ::: notes
--   There can be different approaches, but here's one way in python.
+-   There can be different approaches to our last example, but here's one way in python.
 -   Now without getting too bogged down in the specifics of the code, the process is relatively simple
 -   First you load in your libraries you need, then you can do some prep for your data.
 -   Here setting values for color and size
@@ -543,8 +544,7 @@ print(orange_line)
 # Library Load-ins---------------------------------
 library(ggplot2); library(dplyr); library(artpack)
 
-# Let's make a basic "cityscape" with a moon 
-
+# Let's make: a "cityscape" with a moon and buildings
 
 
 
@@ -754,13 +754,19 @@ df_sky |>
 <center>
 
 ::: {#bluequote}
+
 > The concept of translating data into visuals is the same no matter how simple or complex a piece is...
+
 :::
 
 <br> <br>
 
+::: fragment
 ::: {#bluequote}
+
 > The **hard** part is usually the programming or the math🤢
+
+:::
 :::
 
 </center>
@@ -812,7 +818,9 @@ So now that everyone is up to speed about what generative art is, and you have s
 
 ::: fragment
 ::: {#turqquote}
+
 > If you enjoy creating art...you might learn some things 🤔
+
 :::
 :::
 
@@ -821,15 +829,15 @@ So now that everyone is up to speed about what generative art is, and you have s
 :::
 
 ::: notes
--   I have an idea that.. {first} -\> next click -\>
+-   I have an idea that.. first next click
 
-{after} - I'm not trying to be funny, I can't just stand up here and say this is a proven fact. I'm not an expert in determining how people learn efficiently...but the best I can do is give you personal examples of my experience with creating generative art...
+after - I'm not trying to be funny, I can't just stand up here and say this is a proven fact. I'm not an expert in determining how people learn efficiently...but the best I can do is give you personal examples of my experience with creating generative art...
 :::
 
 ## Benefits of Creating Generative Art {.turq background-color="#3a7188"}
 
 ::: {style="padding-bottom: 20px;"}
-### The Obvious 🎨
+<h3> The Obvious 🎨 </h3>
 
 -   Improved Data Visualization Skills
 
@@ -837,13 +845,17 @@ So now that everyone is up to speed about what generative art is, and you have s
 :::
 
 ::: notes
-An example I love to use for this are my tidy Tuesday submissions.. you know, that weekly data viz challenge we have? Used to be super popular on Twitter before it became a hellsite.. This was my first submission...and you couldn't tell me NOTHING. I felt so proud of this. And honestly, I had every reason to be. Making this was a great accomplishment at the time because I taught myself how to do it.
+- An example I love to use.. my tidy Tuesday submissions..<br>
+- weekly data viz challenge we have?<br>
+- Used to be super popular on Twitter before it became a hellsite..<br>
+- This was my first submission...and you couldn't tell me NOTHING.<br>
+- So proud I figured out a lollipop chart
 :::
 
 ## Benefits of Creating Generative Art {.turq background-color="#3a7188"}
 
 ::: {style="padding-bottom: 20px;"}
-### The Obvious 🎨
+<h3> The Obvious 🎨 </h3>
 
 -   Improved Data Visualization Skills
 
@@ -857,7 +869,7 @@ This was my work after about 2 months of creating generative art...
 ## Benefits of Creating Generative Art {.turq background-color="#3a7188"}
 
 ::: {style="padding-bottom: 20px;"}
-### The Obvious 🎨
+<h3> The Obvious 🎨 </h3>
 
 -   Improved Data Visualization Skills
 
@@ -865,13 +877,13 @@ This was my work after about 2 months of creating generative art...
 :::
 
 ::: notes
-And my most recent tidy tuesday I did this year... obviously, i deveolped knowledge of how to make things more aesthetically pleasing, and how to hack my tool of choice for some coll results.
+And my most recent tidy tuesday I did this year... obviously, i developed knowledge of how to make things more aesthetically pleasing, and how to hack my tool of choice for some coll results.
 :::
 
 ## Benefits of Creating Generative Art {.turq background-color="#3a7188"}
 
 ::: {style="padding-bottom: 20px;"}
-### The Abstract 🧠
+<h3> The Abstract 🧠 </h3>
 
 -   Mathematical/Logical Reasoning
 
@@ -879,19 +891,13 @@ And my most recent tidy tuesday I did this year... obviously, i deveolped knowle
 :::
 
 ::: notes
-Now for some more abstract examples...
-
-Imagine how PISSED I was when I found out math was involved to make art..
-
-Art can require you to be knowledgeable about patterns, numeric sequences, and general logic..
-
-logical reasoning is what makes it possible to go from a grid of points like this...
+Now for some more abstract examples... -Now remember yall, I HATE math <br> - so Imagine how PISSED I was when I found out math was involved to make art..<br> - You can just not deny that - Certain types of Art can require you to be knowledgeable about patterns, numeric sequences, and general logic.. logical reasoning is what makes it possible to go from a grid of points like this...
 :::
 
 ## Benefits of Creating Generative Art {.turq background-color="#3a7188"}
 
 ::: {style="padding-bottom: 20px;"}
-### The Abstract 🧠
+<h3> The Abstract 🧠 </h3>
 
 -   Mathematical/Logical Reasoning
 
@@ -905,7 +911,7 @@ To a grid with skipped patterns like this...
 ## Benefits of Creating Generative Art {.turq background-color="#3a7188"}
 
 ::: {style="padding-bottom: 20px;"}
-### The Abstract 🧠
+<h3> The Abstract 🧠 </h3>
 
 -   Mathematical/Logical Reasoning
 
@@ -919,7 +925,7 @@ To a finished piece of art like this, without having to manually create the data
 ## Benefits of Creating Generative Art {.turq background-color="#3a7188"}
 
 ::: {style="padding-bottom: 20px;"}
-### The Abstract 🧠
+<h3> The Abstract 🧠 </h3>
 
 -   Functional Programming
 
@@ -953,16 +959,17 @@ circle_randomizer(
 :::
 
 ::: notes
--   Art is why I created my first "real" function ever in R.
--   besides simply printing "Hello World"
--   As you make more art - want more complicated pieces
+-   FUN FACT: Art is why I created my first "real" function ever in R.<br>
+-   besides simply printing "Hello World"<br>
+-   As you make more art - want more complicated pieces<br>
 -   You start to realize how helpful it is to learn more about programming in general.
+-   Example of a function that makes pieces like this is available in that link in the code comments
 :::
 
 ## Benefits of Creating Generative Art {.turq background-color="#3a7188"}
 
 ::: {style="padding-bottom: 20px;"}
-### The Unexpected 😲
+<h3> The Unexpected 😲 </h3>
 
 -   The [#genartclub](https://twitter.com/search?q=%23genartclub&src=typed_query) and [#rtistry](https://fosstodon.org/search) community
 
@@ -970,7 +977,11 @@ circle_randomizer(
 :::
 
 ::: notes
-Gave me another reason to interact with people and share what I was doing...
+-   Gave me another reason to interact with people and share what I was doing...<br>
+-   funny enough, this tweet i made last year<br>
+-   Talking about how I wanted to create a package<br>
+-   because i've been doing more generative art, but I honestly was always afraid to start<br>
+-   Because I did not feel smart enough not having a formal developer background
 :::
 
 ## Benefits of Creating Generative Art {.turq background-color="#3a7188"}
@@ -1002,32 +1013,6 @@ Yes, I made a package - Huge accomplishment for me!
 -   Not so much the package, but the courage to learn package development
 
 -   Had a mental block with doing package development until i changed the motivation behind doing it.
-:::
-
-## Benefits of Creating Generative Art {.turq background-color="#3a7188"}
-
-::: {style="padding-bottom: 20px;"}
-<h3>The Unexpected 😲</h3>
-
--   Rtistry Textbook?! - "Rtistry: Methods For Visual Generative Art Using R"
-:::
-
-::: columns
-::: {.column width="50%"}
-<center>![](images/book_snip.png){width="100%"}</center>
-:::
-
-::: {.column width="50%"}
-<br><br><br>
-
--   Yes!!
--   Co-authored with [Antonio Páez](https://fosstodon.org/@paezha@mastodon.online), [Antonio Chinchón](https://twitter.com/aschinchon), and [Jacquie Tran](https://fosstodon.org/@jacquietran@mastodon.social)
--   First open-sourced textbook dedicated to teaching readers how to create generative art in R
-:::
-:::
-
-::: notes
-Yes, I made a package - Huge accomplishment for me!
 :::
 
 ## Benefits of Creating Generative Art {.turq background-color="#3a7188"}
@@ -1118,11 +1103,15 @@ In this room today, Data Science is defined as...
 
 <br>
 
+::: fragment
 -   Important concept in both art and Data Science.
+:::
 
 <br>
 
+::: fragment
 -   A lot of scenarios in both fields, where we'd want to do the same thing over and over.
+:::
 :::
 
 ::: {.column width="50%"}
@@ -1131,10 +1120,6 @@ In this room today, Data Science is defined as...
 :::
 
 ::: notes
--   It doesn't matter how you do iteration
-
--   Whether you use base control flows like for-loops, whiles, and repeats, or you've fully adopted tidyverse's purrr ecosystem in R
-
 -   We can't deny that iteration really tends to take people into the next level of skill, because it allows you to do so much with less.
 :::
 
@@ -1174,58 +1159,40 @@ In this room today, Data Science is defined as...
 :::
 
 ::: notes
-On Maternity leave:<br> 
-- This a problem of iteration because i want lots of the same thing w/ variations<br> <click><br><br>
-In a similar situation back at work:-<br>
-- Had A lot of vendor data to reconcile all at once.<br> 
-- I Wanted to make cleaner/smoother workflow of doing multiple things to multiple dfs in one go <br>
-- Also a problem of iteration
+-   both problems of iteration
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Iteration♻️ {.yellow background-color="#C8B17E"}
+
+**Approach:**
+
+-   Isolate the problem....
 
 <br>
 
 ::: columns
 ::: {.column width="50%"}
 <center><u>**Gen Art Scenario**</u></center>
-
-<br>
-
-**Approach:**
-
--   Isolate the problem....
-- how tf do we make a finger-like shape in the first place??
-
-<br>
 
 <center>![](images/ex1_isolate_art.png)</center>
 :::
 
 ::: {.column width="50%"}
-::: fragment
 <center><u>**Data Sci Scenario**</u></center>
-
-<br>
-
-**Approach:**
-
--   Isolate the problem....
--   Can this work at least once?<br>
 
 <center>![](images/ex1_isolate_ds.png)</center>
 :::
 :::
-:::
 
 ::: notes
-In art: <br> -
--   first challenge has an initial step of creating the data <br> 
--   for me, this is trial and error
-People always ask me how this process goes, especially because I hate math...<br> - keep trying until the plot shows what you're going for <br> - once you get one shape correctly with colors and aesthetics - you've isolated the problem! <br> In Data Science: <br> - You already have the data.. (hopefully it's cleaned and accurate) <br> - Isolate the problem by doing what you want for at least one data frame <br> - Keep debugging until the final output is correct and operating as intended
+In art: <br> - - first challenge has an initial step of creating the data <br> In DS: - Already have data that's hopefully good, challenge is just getting your stuff to run properly at least one time
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Iteration♻️ {.yellow background-color="#C8B17E"}
+
+**Solution:**
+
+-   Use your preferred method of iteration to create a generalized workflow.
 
 <br>
 
@@ -1234,10 +1201,6 @@ People always ask me how this process goes, especially because I hate math...<br
 <center><u>**Gen Art Scenario**</u></center>
 
 <br>
-
-**Solution:**
-
--   Use your preferred method of iteration to create a generalized workflow.
 
 ```{r, echo = TRUE, eval = FALSE}
 # Finger options for iterations#
@@ -1260,19 +1223,15 @@ drip <- pmap(drip_opts, ~tibble(
 :::
 
 ::: {.column width="50%"}
-::: fragment
 <center><u>**Data Sci Scenario**</u></center>
 
 <br>
 
-**Solution:**
-
--   Use your preferred method of iteration to create a generalized workflow.
-
 ```{r, echo = TRUE, eval = FALSE}
 # Apply labels to all DFs
 lst_labelled <- 
-  imap(lst_vendors_dfs, ~set_derived_variable_labels(
+  imap(lst_vendors_dfs, 
+       ~set_derived_variable_labels(
          .x,.y, path = here("some_path.csv"))
        )
 
@@ -1288,10 +1247,9 @@ map(lst_labelled,
 ```
 :::
 :::
-:::
 
 ::: notes
-In art: - Once you've isolated the problem, the challenge into to successfully introduce iteration - My preferred method is using purrr in R <br> This process is the same in DS <br> - but know that I did NOT understand how to use purrr functions <br> - confidently UNTIL i needed it for art, even after trying for a good amount of time <br> - Doing it with art felt more tangible with my brain when no stakes were on the table <br>
+In art: - Once you've isolated the problem, the challenge is to successfully introduce iteration -<br> I like and pr <br> - confidently UNTIL i needed it for art, even after trying for a good amount of time <br> - Doing it with art felt more tangible with my brain when no stakes were on the table <br>
 
 So, naturally, now that I felt comfortable with iteration, naturally the next concept that came was development -\> <click>
 :::
@@ -1307,8 +1265,14 @@ So, naturally, now that I felt comfortable with iteration, naturally the next co
 ::: columns
 ::: {.column width="50%"}
 -   Learning and honing in on development skills is another **HUGE** feat <br><br>
+
+::: fragment
 -   In Generative Art, this promotes cleaner and robust workflows and more complex operations <br><br>
+:::
+
+::: fragment
 -   In Data Science, it does the same, but you're ***really*** moving up to new levels✨.
+:::
 :::
 
 ::: {.column width="50%"}
@@ -1360,17 +1324,15 @@ Maternity leave (gen art scenario):<br> - Was working on the artpack package<br>
 
 ## Examples of How Generative Art Translates into Data Science - Development 📦 {.yellow background-color="#C8B17E"}
 
-<br>
+**Approach:**
+
+-   Isolate: How do we handle the input?, how is it moving through the function? What is coming out?
 
 ::: columns
 ::: {.column width="50%"}
 <center><u>**Gen Art Scenario**</u></center>
 
 <br>
-
-**Approach:**
-
--   Isolate: How do we handle the input, code for the work in the function's body, and return the intended output/side effect to us?
 
 ```{r, eval = FALSE, echo = TRUE}
 art_pals <- function(colors = "pal_1", n = 5) {
@@ -1392,14 +1354,9 @@ art_pals <- function(colors = "pal_1", n = 5) {
 :::
 
 ::: {.column width="50%"}
-::: fragment
 <center><u>**Data Sci Scenario**</u></center>
 
 <br>
-
-**Approach:**
-
--   Isolate: How do we handle the input, code for the work in the function's body, and return the intended output/side effect to us?
 
 ```{r, eval = FALSE, echo = TRUE}
 map_ae <- function(data = df_main,
@@ -1418,7 +1375,6 @@ map_ae <- function(data = df_main,
 ```
 :::
 :::
-:::
 
 ::: notes
 -   Whether it's for art or data science, the approach is the same
@@ -1428,6 +1384,10 @@ map_ae <- function(data = df_main,
 
 ## Examples of How Generative Art Translates into Data Science - Development 📦 {.yellow background-color="#C8B17E"}
 
+**Solution:**
+
+-   Use your (hopefully) working function and reduce code bloat
+
 <br>
 
 ::: columns
@@ -1435,10 +1395,6 @@ map_ae <- function(data = df_main,
 <center><u>**Gen Art Scenario**</u></center>
 
 <br>
-
-**Solution:**
-
--   Now we can just use our function and do the work in one line.
 
 ```{r, eval = FALSE, echo = TRUE}
 art_pals("pal_2",50)
@@ -1448,14 +1404,9 @@ art_pals("pal_2",50)
 :::
 
 ::: {.column width="50%"}
-::: fragment
 <center><u>**Data Sci Scenario**</u></center>
 
 <br>
-
-**Solution:**
-
--   Now we can just use our function and do the work in one line.
 
 ```{r, eval = FALSE, echo = TRUE}
 map_ae(df_main, ae_term)
@@ -1463,7 +1414,6 @@ map_ae(df_main, ae_term)
 *Returns a joined data frame*
 *with data from `df_main` and `df_ae`*
 ```
-:::
 :::
 :::
 
@@ -1487,8 +1437,14 @@ map_ae(df_main, ae_term)
 ::: columns
 ::: {.column width="50%"}
 -   It's **debatable** if you *need* communication for art<br><br>
+
+::: fragment
 -   Explaining art methods, and collaborating on issues requires communication <br><br>
+:::
+
+::: fragment
 -   In Data Science, you **NEED to communicate *or else*** 💀
+:::
 :::
 
 ::: {.column width="50%"}
@@ -1505,8 +1461,6 @@ map_ae(df_main, ae_term)
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Communication 💬 {.yellow background-color="#C8B17E"}
-
-<br>
 
 ::: columns
 ::: {.column width="50%"}
@@ -1530,7 +1484,8 @@ map_ae(df_main, ae_term)
 **Aim:**
 
 -   Need to perform a data request for a stakeholder...
-<center>![](images/comms_ex_ds.gif)</center>
+
+    <center>![](images/comms_ex_ds.gif)</center>
 :::
 :::
 :::
@@ -1547,6 +1502,10 @@ These scenarios:<br> - Required communicating in different ways, but they had th
 
 ## Examples of How Generative Art Translates into Data Science - Communication 💬 {.yellow background-color="#C8B17E"}
 
+**Approach:**
+
+-   Identify what matters...
+
 <br>
 
 ::: columns
@@ -1555,28 +1514,22 @@ These scenarios:<br> - Required communicating in different ways, but they had th
 
 <br>
 
-**Approach:**
-
--   Identify what I am functionally trying to do without the context of the art...
-
-<center>![](images/comms_approach.gif)</center>
+*"What I am functionally trying to do **without** the context of the art?"*
 :::
 
 ::: {.column width="50%"}
-::: fragment
 <center><u>**Data Sci Scenario**</u></center>
 
 <br>
 
-**Approach:**
+*"What **external** context or details about the data am I missing?"*
+:::
+:::
 
--   Identify what context or details I am missing...
-
+::: box
 <br>
 
-<center>![](images/comms_approach.gif)</center>
-:::
-:::
+<center>![](images/comms_approach.gif){width="25%"}</center>
 :::
 
 ::: notes
@@ -1587,15 +1540,17 @@ gen art - required thinking about what I'm doing on a functional level w/o the c
 
 <br>
 
+**Solution:**
+
+-   Take the right course of action to get the desired result...
+
+<br>
+
 ::: columns
 ::: {.column width="50%"}
 <center><u>**Gen Art Scenario**</u></center>
 
-<br>
-
-**Solution:**
-
--   Create a reprex with the [`reprex` package](https://reprex.tidyverse.org/) (R) or the [`reprexpy` library](https://reprexpy.readthedocs.io/en/latest/) (Python)...
+<br> Create a reprex with the [`reprex` package](https://reprex.tidyverse.org/) (R) or the [`reprexpy` library](https://reprexpy.readthedocs.io/en/latest/) (Python)...
 
 <br>
 
@@ -1613,22 +1568,16 @@ reprex::reprex(
 :::
 
 ::: {.column width="50%"}
-::: fragment
 <center><u>**Data Sci Scenario**</u></center>
 
 <br>
 
-**Solution:**
-
--   Translate what you are doing in R or Python to the Subject Matter Expert...
-
 <center>![](images/no_tech.png){width="45%"}</center>
-:::
 :::
 :::
 
 ::: notes
-- and only give art "context" when needed. Most issues are a programming/logic one, or a math one that has nothing to do with "art" 😖
+-   and only give art "context" when needed. Most issues are a programming/logic one, or a math one that has nothing to do with "art" 😖
 -   With art or anything you know alot about..<br>
 -   your head may not be thinking "functionally", meaning <br>
 -   since you're the SME, you may be getting wrapped up in getting the final result w/o thinking about what you are actually trying to do programmatically in R or Python<br>
@@ -1657,12 +1606,20 @@ reprex::reprex(
 > This was a tiny introduction into the concept of one type of generative art
 :::
 
-::: {#orangequote .fragment}
+<br>
+
+::: fragment
+::: {#orangequote}
 > This was personal: Generative Art was MY motivation to learn and do more
 :::
+:::
 
-::: {#orangequote .fragment}
+<br>
+
+::: fragment
+::: {#orangequote}
 > Doing something I loved made programming/data science digestible
+:::
 :::
 
 </center>
