@@ -140,17 +140,6 @@ body {
   font-size: 50px;
 }
 
-#purpquote > blockquote{
-  margin: 0;
-  position: relative;
-  top: 50%;
-  transform: translateY(30%);
-  color: #ffffff;
-  background-color: #0c0f27;
-  padding: 20px;
-  font-size: 50px;
-}
-
 #turqquote > blockquote{
   margin: 0;
   position: relative;
@@ -158,6 +147,28 @@ body {
   transform: translateY(30%);
   color: #ffffff;
   background-color: #06212d;
+  padding: 20px;
+  font-size: 50px;
+}
+
+#greenquote > blockquote{
+  margin: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(30%);
+  color: #ffffff;
+  background-color: #202618;
+  padding: 20px;
+  font-size: 50px;
+}
+
+#orangequote > blockquote{
+  margin: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(30%);
+  color: #000000;
+  background-color: #d9ad8c;
   padding: 20px;
   font-size: 50px;
 }
@@ -177,4 +188,192 @@ body {
   display: inline-block;
   margin-bottom: -10px;
   border: 0px solid #000000;
+}
+
+#examples-of-how-generative-art-translates-into-data-science---iteration > div > div:nth-child(2){
+  border-left: 6px solid #1a1a1a;
+  height: 75%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  padding-left: 30px;
+}
+
+#examples-of-how-generative-art-translates-into-data-science---iteration-1 > div > div:nth-child(2){
+  border-left: 6px solid #1a1a1a;
+  height: 50%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  padding-left: 30px;
+}
+
+#examples-of-how-generative-art-translates-into-data-science---iteration-2 > div > div:nth-child(2){
+  border-left: 6px solid #1a1a1a;
+  height: 75%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  padding-left: 30px;
+}
+
+#examples-of-how-generative-art-translates-into-data-science---development > div > div:nth-child(2){
+  border-left: 6px solid #1a1a1a;
+  height: 75%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  padding-left: 30px;
+}
+
+#examples-of-how-generative-art-translates-into-data-science---development-1 > div > div:nth-child(2){
+  border-left: 6px solid #1a1a1a;
+  height: 75%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  padding-left: 30px;
+}
+
+#examples-of-how-generative-art-translates-into-data-science---development-2 > div > div:nth-child(2){
+  border-left: 6px solid #1a1a1a;
+  height: 75%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  padding-left: 30px;
+}
+
+#examples-of-how-generative-art-translates-into-data-science---communication > div > div:nth-child(2){
+  border-left: 6px solid #1a1a1a;
+  height: 75%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  padding-left: 30px;
+}
+
+#examples-of-how-generative-art-translates-into-data-science---communication-1 > div > div:nth-child(2){
+  border-left: 6px solid #1a1a1a;
+  height: 25%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  padding-left: 30px;
+}
+
+#examples-of-how-generative-art-translates-into-data-science---communication-2 > div > div:nth-child(2){
+  border-left: 6px solid #1a1a1a;
+  height: 75%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  padding-left: 30px;
+}
+
+
+
+#cb1 {
+  font-size: 50px;
+}
+
+#cb1 > pre > code {
+  overflow-x:hidden;
+}
+
+#cb2 {
+  font-size: 50px;
+}
+
+#cb2 > pre > code {
+  overflow-x:hidden;
+}
+
+#cb3 {
+  font-size: 50px;
+}
+
+#cb3 > pre > code {
+  overflow-x:hidden;
+}
+
+#cb4 {
+  font-size: 50px;
+}
+
+#cb4 > pre > code {
+  overflow-x:hidden;
+}
+
+#cb5 {
+  font-size: 50px;
+}
+
+#cb5 > pre > code {
+  overflow-x:hidden;
+}
+
+#cb6 {
+  font-size: 50px;
+}
+
+#cb6 > pre > code {
+  overflow-x:hidden;
+}
+
+#cb7 {
+  font-size: 50px;
+}
+
+#cb7 > pre > code {
+  overflow-x:hidden;
+}
+
+#cb8 {
+  font-size: 50px;
+}
+
+#cb8 > pre > code {
+  overflow-x:hidden;
+}
+
+#cb9 {
+  font-size: 50px;
+}
+
+#cb9 > pre > code {
+  overflow-x:hidden;
+}
+
+
+#cb10 {
+  font-size: 50px;
+}
+
+#cb10 > pre > code {
+  overflow-x:hidden;
+}
+
+#cb11 {
+  font-size: 50px;
+}
+
+#cb11 > pre > code {
+  overflow-x:hidden;
+}
+
+#cb12 {
+  font-size: 50px;
+}
+
+#cb12 > pre > code {
+  overflow-x:hidden;
+}
+
+#cb13 {
+  font-size: 50px;
+}
+
+#cb13 > pre > code {
+  overflow-x:hidden;
 }
