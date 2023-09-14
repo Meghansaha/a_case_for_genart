@@ -8,7 +8,7 @@
 <link href="a_case_for_genart_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="a_case_for_genart_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="a_case_for_genart_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.274">
+  <meta name="generator" content="quarto-1.4.128">
 
   <meta name="author" content="Meghan Harris, MPH">
   <title>It’s All About Perspective</title>
@@ -391,7 +391,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-color="#1a1a1a" data-background-image="images/background.png" data-background-position="center" data-background-size="stretch" data-notes="Hello, Im Meghan Harris, I’m a data scientist at the Prostate Cancer Clinical Trials Consortium, and I’m also a generative artist that’s here to introduce you all to generative art and give a glimpse into a different approach to learning data science. Before I do that, I have to say, I feel like I’m only talking here today because I stopped working 10 months ago. Let me explain. I didn’t go off the deep end and quit my job or anything, but as you can see here…" class="quarto-title-block center">
+<section id="title-slide" data-background-color="#1a1a1a" data-background-image="images/background.png" data-background-position="center" data-background-size="stretch" data-notes="Hello, Im Meghan Harris, I’m a data scientist at the Prostate Cancer Clinical Trials Consortium, and I’m also a generative artist that’s here to introduce you all to generative art and a different approach to learning data science. Before I do that, I have to say, I feel like I’m only talking here today because I stopped working 10 months ago. Let me explain. I didn’t go off the deep end and quit my job or anything, but as you can see here…" class="quarto-title-block center">
   <h1 class="title">It’s All About Perspective</h1>
   <p class="subtitle">Making A Case for Generative Art</p>
 
@@ -761,10 +761,10 @@ What is Generative Art?
 <aside class="notes">
 <p>Now this is vague and general, and yes. that’s on Purpose<br></p>
 <ul>
-<li><p>Because I can guarantee you, that there are multiple definitions of generative art floating around in your minds, collectively in this room right now.</p></li>
-<li><p>Also, assumption: At least 1 person in here is thinking of AI art.</p></li>
-<li><p>And I want to address this.. We are not talking about AI art today</p></li>
-<li><p>and, In fact, I want to make two statements regarding AI art and automation…</p></li>
+<li><p>Because I can guarantee you, that there are multiple definitions of generative art floating around in this room right now.</p></li>
+<li><p>I’m also assuming that at least 1 of you is thinking of AI art.</p></li>
+<li><p>And I just want to say We are not talking about AI art today</p></li>
+<li><p>and i do have two statements regarding that…</p></li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -1150,7 +1150,7 @@ Some “Primitive” Graphical Tools🛠
 <aside class="notes">
 <ul>
 <li>then you can do some prep for your data.</li>
-<li>Here storing values in objects for the color and size of our line</li>
+<li>Here, we’re storing values in objects for the color and size of our line</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -1209,7 +1209,7 @@ Some “Primitive” Graphical Tools🛠
 <aside class="notes">
 <ul>
 <li>Next, the Most important step is creating the data frame</li>
-<li>here its a pandas dataframe with x and y coordinates, and values for our color, and size of our line</li>
+<li>here its a pandas dataframe with x and y coordinates, and values for our color and size of our line</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -1267,7 +1267,7 @@ Some “Primitive” Graphical Tools🛠
 </div>
 <aside class="notes">
 <ul>
-<li>this is what you’ll feed into the set ggplot fxs at the bottom to create the plot</li>
+<li>Finally, we feed this dataframe into the set ggplot fxs at the bottom to create the plot</li>
 <li>And after we print it, we get the image on the right</li>
 <li>This was a simple example, so let’s step it up a bit in R</li>
 </ul>
@@ -1329,10 +1329,10 @@ Some “Primitive” Graphical Tools🛠
 <aside class="notes">
 <ul>
 <li>Again, we’re not focusing on the code, per se,</li>
-<li>but we just want to observe the general relationship going on here between the data and the visual</li>
+<li>but we just want to observe the general relationship going on between the data and the visual</li>
 <li>Again, we start with your packages</li>
 <li>and an idea of what to make - cityscape, sky, moon, and buildings</li>
-<li>First I decide to make the sky in the background, so I make data for that first.</li>
+<li>First I decide to make the sky in the background, so that’s first</li>
 <li>I make a data frame with numbers that when mapped on the ggplot will look like horizontal lines filling the page</li>
 <li>i also add variables for the color and size of the lines</li>
 <li>and when this data frame is plotted with the geom_segment fx we’ve added here, we get this beautiful gradient.</li>
@@ -1767,9 +1767,9 @@ The Unexpected 😲
 <aside class="notes">
 <ul>
 <li>Making generative art gave me another reason to interact with people and share what I was doing…</li>
-<li>funny enough, this tweet i made last year</li>
-<li>Talking with others about how I wanted to create a package</li>
-<li>because i’ve been doing more generative art, and felt there was need</li>
+<li>funny enough, in this tweet i made last year</li>
+<li>I was Talking with others about how I wanted to create a package</li>
+<li>because i’ve been doing more art, and felt there was need</li>
 <li>But I honestly was always afraid to start</li>
 <li>Because I did not feel smart enough</li>
 <li>because I didn’t having a formal developer background</li>
@@ -1883,12 +1883,7 @@ Examples of How Generative Art Translates into Data Science
 <ul>
 <li>Now that we’re all on the same page about what data science is</li>
 <li>let’s get into examples</li>
-<li>Now, I have tons of examples of this</li>
-<li>But for our time today, I want to focus on three main concepts..</li>
-<li>So how this will work is I’ll present the concept first</li>
-<li>then give an example for the concept in both</li>
-<li>a gen art scenario I had on maternity leave</li>
-<li>and data science scenario I had back at work</li>
+<li>Now, I have tons of examples but I’ll only focus on three main concepts..</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -2096,7 +2091,7 @@ Iteration♻️
 <ul>
 <li>I will point out that my examples here are using purrr functions in R.</li>
 <li>But whether you’re using Purrr in R, or for loops in Python,</li>
-<li>all that matters is that you are doing what you need to, in a way that is intended and works for you <br></li>
+<li>all that matters is that you are doing what you need to, in a way that works for you <br></li>
 </ul>
 <p>Ok, so if we’re doing iterations, naturally, what comes next is development<click></click></p>
 <style type="text/css">
@@ -2141,7 +2136,7 @@ Development 📦
 </div>
 </div>
 <aside class="notes">
-<p>Development is HIGHLY desirable in: <br> - art because it can upgrade the complexity of your work - DS because it allows you to take more advantage of the “open-source” paradigm within our community by creating programs for yourself, internally for your organization, and others.</p>
+<p>Development is HIGHLY desirable in Data Science: <br> - because it allows you to take more advantage of the “open-source” paradigm within our community by creating programs for yourself, internally for your organization, and others.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -2190,7 +2185,7 @@ Development 📦
 <aside class="notes">
 <p>“So while on maternity leave, I had a task in a art scenario that required…”<br> “Back at work, I had a task in a Data Science Scenario”</p>
 <p>So these are two different things, but the process for tackling both is very similar<br> art scenario:<br> - Realized I was copying and pasting a block of code alot, so I wanted to reduce my code bloat in the artpack package<br></p>
-<p>ds scenario:<br> - We already had an existing fx created in an internal package that had stopped working as intended, So I needed to burn it down and create a new and improved function</p>
+<p>data science scenario:<br> - We already had an existing fx in an internal package that had stopped working as intended, So I needed to burn it down and create a new and improved function</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -2257,7 +2252,7 @@ Development 📦
 <aside class="notes">
 <ul>
 <li>Whether it’s for art or data science, the approach is the same</li>
-<li>You have to go through a process of iterative process of debugging and development</li>
+<li>You have to go through a iterative process of debugging and development</li>
 <li>to try to create a function that is ideally efficient and runs as intended.</li>
 </ul>
 <style type="text/css">
@@ -2630,6 +2625,7 @@ Final Thoughts
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
+'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,

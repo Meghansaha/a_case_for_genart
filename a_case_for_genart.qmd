@@ -24,7 +24,7 @@ title-slide-attributes:
   data-background-size: "stretch"
   data-background-position: "center"
   data-background-color: "#1a1a1a"
-  data-notes: "Hello, Im Meghan Harris, I'm a data scientist at the Prostate Cancer Clinical Trials Consortium, and I'm also a generative artist that's here to introduce you all to generative art and give a glimpse into a different approach to learning data science. Before I do that, I have to say, I feel like I'm only talking here today because I stopped working 10 months ago. Let me explain. I didn't go off the deep end and quit my job or anything, but as you can see here..."
+  data-notes: "Hello, Im Meghan Harris, I'm a data scientist at the Prostate Cancer Clinical Trials Consortium, and I'm also a generative artist that's here to introduce you all to generative art and  a different approach to learning data science. Before I do that, I have to say, I feel like I'm only talking here today because I stopped working 10 months ago. Let me explain. I didn't go off the deep end and quit my job or anything, but as you can see here..."
 transition: fade
 ---
 
@@ -273,13 +273,13 @@ In this room today, Generative Art is defined as:
 ::: notes
 Now this is vague and general, and yes. that's on Purpose<br>
 
--   Because I can guarantee you, that there are multiple definitions of generative art floating around in your minds, collectively in this room right now.
+-   Because I can guarantee you, that there are multiple definitions of generative art floating around in this room right now.
 
--   Also, assumption: At least 1 person in here is thinking of AI art.
+-   I'm also assuming that at least 1 of you is thinking of AI art.
 
--   And I want to address this.. We are not talking about AI art today
+-   And I just want to say We are not talking about AI art today
 
--   and, In fact, I want to make two statements regarding AI art and automation...
+-   and i do have two statements regarding that...
 :::
 
 ## What is Generative Art? {.purple background-color="#6c4161"}
@@ -595,7 +595,7 @@ print(orange_line)
 
 ::: notes
 -   then you can do some prep for your data.
--   Here storing values in objects for the color and size of our line
+-   Here, we're storing values in objects for the color and size of our line
 :::
 
 ## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
@@ -645,7 +645,7 @@ print(orange_line)
 
 ::: notes
 -   Next, the Most important step is creating the data frame
--   here its a pandas dataframe with x and y coordinates, and values for our color, and size of our line
+-   here its a pandas dataframe with x and y coordinates, and values for our color and size of our line
 
 :::
 
@@ -695,7 +695,7 @@ print(orange_line)
 :::
 
 ::: notes
--   this is what you'll feed into the set ggplot fxs at the bottom to create the plot
+-   Finally, we feed this dataframe into the set ggplot fxs at the bottom to create the plot
 -   And after we print it, we get the image on the right
 - This was a simple example, so let's step it up a bit in R
 :::
@@ -749,10 +749,10 @@ df_sky |>
 
 ::: notes
 -   Again, we're not focusing on the code, per se,
--   but we just want to observe the general relationship going on here between the data and the visual
+-   but we just want to observe the general relationship going on between the data and the visual
 - Again, we start with your packages
 -   and an idea of what to make - cityscape, sky, moon, and buildings
--   First I decide to make the sky in the background, so I make data for that first.
+-   First I decide to make the sky in the background, so that's first
 -   I make a data frame with numbers that when mapped on the ggplot will look like horizontal lines filling the page
 -   i also add variables for the color and size of the lines
 -   and when this data frame is plotted with the geom_segment fx we've added here, we get this beautiful gradient.
@@ -1060,9 +1060,9 @@ To a finished piece of art like this, without having to manually create the data
 
 ::: notes
 -   Making generative art gave me another reason to interact with people and share what I was doing...
--   funny enough, this tweet i made last year
--   Talking with others about how I wanted to create a package
--   because i've been doing more generative art, and felt there was need
+-   funny enough, in this tweet i made last year
+-   I was Talking with others about how I wanted to create a package
+-   because i've been doing more art, and felt there was need
 -   But I honestly was always afraid to start
 -   Because I did not feel smart enough
 -   because I didn't having a formal developer background
@@ -1148,12 +1148,7 @@ In this room today, Data Science is defined as...
 ::: notes
 -   Now that we're all on the same page about what data science is
 -   let's get into examples
--   Now, I have tons of examples of this
--   But for our time today, I want to focus on three main concepts..
--   So how this will work is I'll present the concept first
--   then give an example for the concept in both
--   a gen art scenario I had on maternity leave 
--   and data science scenario I had back at work
+-   Now, I have tons of examples but I'll only focus on three main concepts..
 :::
 
 ## Examples of How Generative Art Translates into Data Science {.yellow background-color="#C8B17E"}
@@ -1326,7 +1321,7 @@ Solution is the same In art and ds alike:<br>
 
 -   I will point out that my examples here are using purrr functions in R.
 -   But whether you're using Purrr in R, or for loops in Python, 
--   all that matters is that you are doing what you need to, in a way that is intended and works for you
+-   all that matters is that you are doing what you need to, in a way that works for you
 <br>
 
 Ok, so if we're doing iterations, naturally, what comes next is development<click>
@@ -1359,9 +1354,8 @@ Ok, so if we're doing iterations, naturally, what comes next is development<clic
 :::
 
 ::: notes
-Development is HIGHLY desirable in: <br>
--   art because it can upgrade the complexity of your work
--   DS because it allows you to take more advantage of the "open-source" paradigm within our community by creating programs for yourself, internally for your organization, and others.
+Development is HIGHLY desirable in Data Science: <br>
+-   because it allows you to take more advantage of the "open-source" paradigm within our community by creating programs for yourself, internally for your organization, and others.
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Development 📦 {.yellow background-color="#C8B17E"}
@@ -1406,8 +1400,8 @@ So these are two different things, but the process for tackling both is very sim
 art scenario:<br>
 -   Realized I was copying and pasting a block of code alot, so I wanted to reduce my code bloat in the artpack package<br>
 
-ds scenario:<br>
--   We already had an existing fx created in an internal package that had stopped working as intended, So I needed to burn it down and create a new and improved function
+data science scenario:<br>
+-   We already had an existing fx in an internal package that had stopped working as intended, So I needed to burn it down and create a new and improved function
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Development 📦 {.yellow background-color="#C8B17E"}
@@ -1466,7 +1460,7 @@ map_ae <- function(data = df_main,
 
 ::: notes
 -   Whether it's for art or data science, the approach is the same
--   You have to go through a process of iterative process of debugging and development
+-   You have to go through a iterative process of debugging and development
 -   to try to create a function that is ideally efficient and runs as intended. 
 
 :::
