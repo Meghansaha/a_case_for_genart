@@ -391,7 +391,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-color="#1a1a1a" data-background-image="images/background.png" data-background-position="center" data-background-size="stretch" data-notes="Hello, Im Meghan Harris, I’m a data scientist at the Prostate Cancer Clinical Trials Consortium, and I’m also a generative artist that’s here to introduce you all to generative art and a different approach to learning data science. Before I do that, I have to say, I feel like I’m only talking here today because I stopped working 10 months ago. Let me explain. I didn’t go off the deep end and quit my job or anything, but as you can see here…" class="quarto-title-block center">
+<section id="title-slide" data-background-color="#1a1a1a" data-background-image="images/background.png" data-background-position="center" data-background-size="stretch" data-notes="Hello, Im Meghan Harris, I’m a data scientist at the Prostate Cancer Clinical Trials Consortium, and I’m also a generative artist that’s here to introduce you all to generative art and a different approach to learning data science. Before I do that, I have to say, I feel like I’m only standing here today because I stopped working 10 months ago. I didn’t quit my job or anything, but as you can see here…" class="quarto-title-block center">
   <h1 class="title">It’s All About Perspective</h1>
   <p class="subtitle">Making A Case for Generative Art</p>
 
@@ -478,7 +478,7 @@ Meghan Harris, MPH
 <ul>
 <li><p>By the end of my leave</p></li>
 <li><p>I was amazed at how coding art like this</p></li>
-<li><p>helped with practical data science skills I needed when I returned to work</p></li>
+<li><p>helped with the practical data science skills I needed when I returned to work</p></li>
 <li><p>I credit this for smoothing out my transition back into work and I want to give a tiny glimpse into how that was possible</p></li>
 </ul>
 <style type="text/css">
@@ -1024,15 +1024,15 @@ Some “Primitive” Graphical Tools🛠
 </center>
 <aside class="notes">
 <ul>
-<li><p>So knowing this..</p></li>
-<li><p>we can set values to every mark we make on the paper…</p></li>
-<li><p>Just like a coordinate system in your favorite graphical tool would.</p></li>
-<li><p>We have 4 coordinate points in this line, each with an x and y value</p></li>
-<li><p>Where we have 4 values from 1 to 4 on the X axis horizontally</p></li>
-<li><p>and a constant value of 1 on the y axis repeated 4 times to make a straight horizontal line.</p></li>
-<li><p>Now this may seem overly simple, but this is all it takes to create generative art.</p></li>
-<li><p>The trick here is that you need to understand the relationship between the visuals you want, the data you need and the coordinate system you set.</p></li>
-<li><p>Let’s look at this in more detail in Python..</p></li>
+<li>So knowing this..</li>
+<li>we can set values to every mark we make on the paper…</li>
+<li>Just like a coordinate system in your favorite graphical tool would.</li>
+<li>We have 4 coordinate points in this line, each with an x and y value</li>
+<li>Where we have 4 values from 1 to 4 on the X axis horizontally</li>
+<li>and a constant value of 1 on the y axis repeated 4 times to make a straight horizontal line.</li>
+<li>Now this may seem overly simple, but this is all it takes to create generative art.</li>
+<li>The trick here is that you need to understand the relationship between the visuals you want, the data you need and the coordinate system you set.</li>
+<li>Let’s look at this in more detail in Python..</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -1269,7 +1269,7 @@ Some “Primitive” Graphical Tools🛠
 </div>
 <aside class="notes">
 <ul>
-<li>Finally, we feed this dataframe into the set ggplot fxs at the bottom to create the plot</li>
+<li>Finally, we feed this dataframe into the set of ggplot fxs at the bottom to create the plot</li>
 <li>And after we print it, we get the image on the right</li>
 <li>This was a simple example, so let’s step it up a bit in R</li>
 </ul>
@@ -1332,12 +1332,12 @@ Some “Primitive” Graphical Tools🛠
 <ul>
 <li>Again, we’re not focusing on the code, per se,</li>
 <li>but we just want to observe the general relationship going on between the data and the visual</li>
-<li>Again, we start with your packages</li>
+<li>Again, we start with your packages (say them)</li>
 <li>and an idea of what to make - cityscape, sky, moon, and buildings</li>
-<li>First I decide to make the sky in the background, so that’s first</li>
+<li>First I decide to make the sky in the background, so..</li>
 <li>I make a data frame with numbers that when mapped on the ggplot will look like horizontal lines filling the page</li>
 <li>i also add variables for the color and size of the lines</li>
-<li>and when this data frame is plotted with the geom_segment fx we’ve added here, we get this beautiful gradient.</li>
+<li>and when this data frame is plotted with the geom_segment fx we’ve added to our ggplot, we get this beautiful gradient on the right.</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -1396,11 +1396,11 @@ Some “Primitive” Graphical Tools🛠
 </div>
 <aside class="notes">
 <ul>
-<li>Next, let’s say we want to have a simple, big moon.</li>
+<li>Next, let’s say we want to have a BIG, simple moon.</li>
 <li>so again, we make another data frame that only has data for one single point..</li>
-<li>a big numeric value for it’s size and some color options</li>
-<li>We then add this dataframe into the plot with the geom_point fx</li>
-<li>and throw some tweaks into the geom_point to get that nice border we see here</li>
+<li>It also has a big numeric value for it’s size and some color options</li>
+<li>We then add this dataframe into the plot with the geom_point fx at the bottom</li>
+<li>and that creates our image on the right</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -1460,10 +1460,10 @@ Some “Primitive” Graphical Tools🛠
 <aside class="notes">
 <ul>
 <li>Finally, we make one last data frame for some basic buildings</li>
-<li>This time the numbers will plot chunky vertical lines</li>
+<li>This time the dataframe with have numbers that will plot chunky vertical lines</li>
 <li>we can also get a lil’ spicy and throw in a sample function to randomize the heights of our buildings.</li>
-<li>and Like all the other layers, we tack it on to the ggplot with geom_segment shown at the bottom here</li>
-<li>and that’s the gist, I know that was really quick, but the main thing I was you to take from this is that…</li>
+<li>and Like all the other layers, we tack it on to the ggplot with geom_segment fx shown at the bottom</li>
+<li>and then we get the image on right, Now, I know that was really quick, but the main thing I was you to take from this is that…</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -1572,7 +1572,7 @@ Benefits of Creating<br>Generative Art
 <ul>
 <li>I have an idea that.. first next click</li>
 </ul>
-<p>after - I’m not trying to be funny, I can’t just stand up here and say this is a proven fact. I’m not an expert in determining how people learn efficiently…but the best I can do is give you personal examples of my experience with creating generative art…</p>
+<p>after - I’m not trying to be funny, I can’t just stand up here and say this is a proven fact.<br><br> - the best I can do is give you personal examples of my experience with creating generative art…</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -2019,7 +2019,7 @@ Iteration♻️
 </div>
 </div>
 <aside class="notes">
-<p>In the art scenario: <br> - Isolation looked like figuring out the data<br> In the DS scenario: <br> - Hopefully your data is clean and good so isolation looks like just getting your processes to run on at least one data frame, at least once without issues.</p>
+<p>In the art scenario: <br> - Isolation looked like figuring out the data. What are the numbers that will plot the shape I want<br> In the DS scenario: <br> - Hopefully your data is clean and good so isolation looks like just getting your processes to run on at least one data frame, at least once without issues.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -2059,9 +2059,9 @@ Iteration♻️
 </div>
 </div>
 <aside class="notes">
-<p>Solution is the same In art and ds alike:<br> - Once you’ve isolated the problem, the challenge is to just successfully introduce iteration<br></p>
+<p>Solution is the same in both scenarios:<br> - Once you’ve isolated the problem, the challenge is to just successfully introduce iteration<br></p>
 <ul>
-<li>I will point out that my examples here are using purrr functions in R.</li>
+<li>I will point out that my preferred method is using purrr functions in R.</li>
 <li>But whether you’re using Purrr in R, or for loops in Python,</li>
 <li>all that matters is that you are doing what you need to, in a way that works for you <br></li>
 </ul>
@@ -2197,7 +2197,7 @@ Development 📦
 </div>
 <aside class="notes">
 <ul>
-<li>Whether it’s for art or data science, or in R or Python, the approach is the same</li>
+<li>No matter the scenario, the approach is the same</li>
 <li>You have to go through a iterative process of debugging and development</li>
 <li>to try to create a function that is ideally efficient and runs as intended.</li>
 </ul>
@@ -2245,7 +2245,7 @@ Development 📦
 </div>
 </div>
 <aside class="notes">
-<p>“So the solution is simple, just use…”<br> - Whether you are doing art or data science, in R or python, the goal of creating functions are the same <br> - We just wish to do a specific task.. - in an isolated environment.. - for a consistent output or result. - regardless of if it’s for art or data science - Also, Creating functions is really the gateway into a slippery slope of other crucial development things like unit testing and package maintenance.</p>
+<p>“So the solution is simple, just use…”<br><br> - Whether you are doing art or data science, or using R or python, the goal of creating functions are the same <br> - We just wish to do a specific task.. <br> - in an isolated environment..<br> - for a consistent output or result.<br> - Also, Creating functions is really the gateway into a slippery slope of other crucial development things like unit testing and package maintenance.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -2425,7 +2425,8 @@ Communication 💬
 </div>
 </div>
 <aside class="notes">
-<p>Looks a little different, but is really similar:<br> art scenario:<br> - Solution was: take the art “context” out of my question and identify what i wanted to do programmatically - Perfect opportunity for me to practice making reprexes<br><br> - I did so With the reprex package available in R - but for python users you can use the reprex-PIE package in python<br><br> DS scenario:<br> - If you’re tasked with completing a request and - You’re getting too bogged down in the programming - It’s a good idea to stop and ask yourself if you are missing external contextual info - If you feel bogged down deep into the programming and you think it may be because you’re missing info - The best thing to do is to pull yourself out of your IDE, and just Talk with the SME</p>
+<p>Looks a little different, but is really similar:<br> art scenario:<br> - Solution was: take the art “context” out of my question and identify what i wanted to do programmatically - Perfect opportunity for me to practice making reprexes (Reproducible Examples)<br><br> - I did so With the reprex package available in R</p>
+<p>DS scenario:<br> - If you’re tasked with completing a request and - You’re getting too bogged down in the programming - It’s a good idea to stop and ask yourself if you are missing any external contextual info - and if so, step away from the console and talk to your SME</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;

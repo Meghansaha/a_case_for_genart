@@ -24,7 +24,7 @@ title-slide-attributes:
   data-background-size: "stretch"
   data-background-position: "center"
   data-background-color: "#1a1a1a"
-  data-notes: "Hello, Im Meghan Harris, I'm a data scientist at the Prostate Cancer Clinical Trials Consortium, and I'm also a generative artist that's here to introduce you all to generative art and  a different approach to learning data science. Before I do that, I have to say, I feel like I'm only talking here today because I stopped working 10 months ago. Let me explain. I didn't go off the deep end and quit my job or anything, but as you can see here..."
+  data-notes: "Hello, Im Meghan Harris, I'm a data scientist at the Prostate Cancer Clinical Trials Consortium, and I'm also a generative artist that's here to introduce you all to generative art and  a different approach to learning data science. Before I do that, I have to say, I feel like I'm only standing here today because I stopped working 10 months ago. I didn't quit my job or anything, but as you can see here..."
 transition: fade
 ---
 
@@ -75,7 +75,7 @@ transition: fade
 
 -   I was amazed at how coding art like this
 
--   helped with practical data science skills I needed when I returned to work
+-   helped with the practical data science skills I needed when I returned to work
 
 -   I credit this for smoothing out my transition back into work and I want to give a tiny glimpse into how that was possible
 :::
@@ -278,9 +278,7 @@ Now this is vague and general, and yes. that's on Purpose<br>
 -   Because I can guarantee you, that there are multiple definitions of generative art floating around in this room right now.
 
 -   I'm also assuming that at least 1 of you is thinking of AI art.
-
 -   And I just want to say We are not talking about AI art today
-
 -   and i do have two statements regarding that...
 :::
 
@@ -361,12 +359,9 @@ Now...
 -   I mean, Posit, Jenny, Hadley, ya'll got my e-mail, I can help with the art workshop next year if ya'll want, I'm just saying, but for right now
 
 -   All of the code examples for the art you'll see today is on this talk's github repo
-
 -   so you all can listen to me attempt to give a crash course right now,
-
 -   but after the dust is settled and you're back home, know that these resources are available to you to digest later.
-
-- Because we are about to Zoom
+-   Because we are about to Zoom
 :::
 
 ## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
@@ -484,21 +479,13 @@ And I get it. It can be tricky, so let's stop for a minute and Imagine that we w
 
 ::: notes
 -   So knowing this..
-
 -   we can set values to every mark we make on the paper...
-
 -   Just like a coordinate system in your favorite graphical tool would.
-
 -   We have 4 coordinate points in this line, each with an x and y value
-
 -   Where we have 4 values from 1 to 4 on the X axis horizontally
-
 -   and a constant value of 1 on the y axis repeated 4 times to make a straight horizontal line.
-
 -   Now this may seem overly simple, but this is all it takes to create generative art.
-
 -   The trick here is that you need to understand the relationship between the visuals you want, the data you need and the coordinate system you set.
-
 -   Let's look at this in more detail in Python..
 :::
 
@@ -701,7 +688,7 @@ print(orange_line)
 :::
 
 ::: notes
--   Finally, we feed this dataframe into the set ggplot fxs at the bottom to create the plot
+-   Finally, we feed this dataframe into the set of ggplot fxs at the bottom to create the plot
 -   And after we print it, we get the image on the right
 - This was a simple example, so let's step it up a bit in R
 :::
@@ -756,12 +743,12 @@ df_sky |>
 ::: notes
 -   Again, we're not focusing on the code, per se,
 -   but we just want to observe the general relationship going on between the data and the visual
-- Again, we start with your packages
+- Again, we start with your packages (say them)
 -   and an idea of what to make - cityscape, sky, moon, and buildings
--   First I decide to make the sky in the background, so that's first
+-   First I decide to make the sky in the background, so..
 -   I make a data frame with numbers that when mapped on the ggplot will look like horizontal lines filling the page
 -   i also add variables for the color and size of the lines
--   and when this data frame is plotted with the geom_segment fx we've added here, we get this beautiful gradient.
+-   and when this data frame is plotted with the geom_segment fx we've added to our ggplot, we get this beautiful gradient on the right.
 :::
 
 ## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
@@ -811,11 +798,11 @@ df_sky |>
 :::
 
 ::: notes
--   Next, let's say we want to have a simple, big moon.
+-   Next, let's say we want to have a BIG, simple moon.
 -   so again, we make another data frame that only has data for one single point..
--   a big numeric value for it's size and some color options
--   We then add this dataframe into the plot with the geom_point fx
--   and throw some tweaks into the geom_point to get that nice border we see here
+-   It also has a big numeric value for it's size and some color options
+-   We then add this dataframe into the plot with the geom_point fx at the bottom
+-   and that creates our image on the right
 :::
 
 ## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
@@ -867,10 +854,10 @@ df_sky |>
 
 ::: notes
 -   Finally, we make one last data frame for some basic buildings
--   This time the numbers will plot chunky vertical lines
+-   This time the dataframe with have numbers that will plot chunky vertical lines
 -   we can also get a lil' spicy and throw in a sample function to randomize the heights of our buildings.
--   and Like all the other layers, we tack it on to the ggplot with geom_segment shown at the bottom here
-- and that's the gist, I know that was really quick, but the main thing I was you to take from this is that...
+-   and Like all the other layers, we tack it on to the ggplot with geom_segment fx shown at the bottom 
+- and then we get the image on right, Now, I know that was really quick, but the main thing I was you to take from this is that...
 :::
 
 ## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
@@ -898,6 +885,7 @@ df_sky |>
 </center>
 
 ::: notes
+-   If you hate math like I do, that's OK, you can still make art.
 -   I also hope you all took note of how "intentional" alot of the process can be
 -   While there's some artists out there that rely heavily on automated systems, or finetuning AI prompts
 -   There are some of us out here spending hours exploring and creating art with code in this manner.
@@ -958,7 +946,8 @@ So now that everyone is up to speed about what generative art is, and you have s
 ::: notes
 -   I have an idea that.. first next click
 
-after - I'm not trying to be funny, I can't just stand up here and say this is a proven fact. I'm not an expert in determining how people learn efficiently...but the best I can do is give you personal examples of my experience with creating generative art...
+after - I'm not trying to be funny, I can't just stand up here and say this is a proven fact.<br><br>
+- the best I can do is give you personal examples of my experience with creating generative art...
 :::
 
 ## Benefits of Creating Generative Art {.turq background-color="#3a7188"}
@@ -1004,7 +993,7 @@ This was my work after about 2 months of creating generative art...
 :::
 
 ::: notes
-And my most recent tidy tuesday I did this year... obviously, i developed knowledge of how to make things more aesthetically pleasing, and how to hack my tool of choice for some coll results.
+And my most recent tidy tuesday I did this year... obviously, i developed knowledge of how to make things more aesthetically pleasing, and how to hack my tool of choice for some cool results.
 :::
 
 ## Benefits of Creating Generative Art {.turq background-color="#3a7188"}
@@ -1019,7 +1008,8 @@ And my most recent tidy tuesday I did this year... obviously, i developed knowle
 
 ::: notes
 Now for some more abstract examples...<br>
--Now remember yall, I HATE math 
+- One of which is mathematical/logical reasoning<br>
+- Now remember yall, I HATE math 
 - so Imagine how PISSED I was when I found out math was involved to make art..
 - You can just not deny that
 - Certain types of Art can require you to be knowledgeable about patterns, numeric sequences, and general logic.. logical reasoning is what makes it possible to go from a grid of points like this...
@@ -1067,12 +1057,10 @@ To a finished piece of art like this, without having to manually create the data
 ::: notes
 -   Making generative art gave me another reason to interact with people and share what I was doing...
 -   funny enough, in this tweet i made last year
--   I was Talking with others about how I wanted to create a package
--   because i've been doing more art, and felt there was need
--   But I honestly was always afraid to start
--   Because I did not feel smart enough
--   because I didn't having a formal developer background
-- Which is now hilarious to me because, another unexpected benefit was..
+-   I was Talking with others about how I wanted to create an art package
+-   but i was admitting that I was afraid to
+-   because I didn't having a formal developer background, and didn't feel smart enough
+-   Which is now hilarious to me because, another unexpected benefit was..
 :::
 
 ## Benefits of Creating Generative Art {.turq background-color="#3a7188"}
@@ -1256,7 +1244,7 @@ In this room today, Data Science is defined as...
 
 ::: notes
 In the art scenario: <br> 
-- Isolation looked like figuring out the data<br> 
+- Isolation looked like figuring out the data. What are the numbers that will plot the shape I want<br> 
 In the DS scenario: <br>
 - Hopefully your data is clean and good so isolation looks like just getting your processes to run on at least one data frame, at least once without issues.
 :::
@@ -1288,10 +1276,10 @@ In the DS scenario: <br>
 :::
 
 ::: notes
-Solution is the same In art and ds alike:<br>
+Solution is the same in both scenarios:<br>
 - Once you've isolated the problem, the challenge is to just successfully introduce iteration<br>
 
--   I will point out that my examples here are using purrr functions in R.
+-   I will point out that my preferred method is using purrr functions in R.
 -   But whether you're using Purrr in R, or for loops in Python, 
 -   all that matters is that you are doing what you need to, in a way that works for you
 <br>
@@ -1403,7 +1391,7 @@ data science scenario:<br>
 :::
 
 ::: notes
--   Whether it's for art or data science, or in R or Python, the approach is the same
+-   No matter the scenario, the approach is the same
 -   You have to go through a iterative process of debugging and development
 -   to try to create a function that is ideally efficient and runs as intended. 
 
@@ -1445,12 +1433,11 @@ map_ae(df_main, ae_term)
 :::
 
 ::: notes
-"So the solution is simple, just use..."<br>
--   Whether you are doing art or data science, in R or python, the goal of creating functions are the same <br>
--   We just wish to do a specific task..
--   in an isolated environment..
--   for a consistent output or result.
--   regardless of if it's for art or data science
+"So the solution is simple, just use..."<br><br>
+-   Whether you are doing art or data science, or using R or python, the goal of creating functions are the same <br>
+-   We just wish to do a specific task.. <br>
+-   in an isolated environment..<br>
+-   for a consistent output or result.<br>
 -   Also, Creating functions is really the gateway into a slippery slope of other crucial development things like unit testing and package maintenance.
 :::
 
@@ -1611,15 +1598,14 @@ reprex::reprex(
 Looks a little different, but is really similar:<br>
 art scenario:<br>
 -   Solution was: take the art "context" out of my question and identify what i wanted to do programmatically 
--   Perfect opportunity for me to practice making reprexes<br><br>
+-   Perfect opportunity for me to practice making reprexes (Reproducible Examples)<br><br>
 -   I did so With the reprex package available in R
--   but for python users you can use the reprex-PIE package in python<br><br>
+
 DS scenario:<br>
 -   If you're tasked with completing a request and
 -   You're getting too bogged down in the programming
-- It's a good idea to stop and ask yourself if you are missing external contextual info
-- If you feel bogged down deep into the programming and you think it may be because you're missing info
--   The best thing to do is to pull yourself out of your IDE, and just Talk with the SME
+- It's a good idea to stop and ask yourself if you are missing any external contextual info
+- and if so, step away from the console and talk to your SME
 :::
 
 ##  {background-color="#1a1a1a" background-image="images/background7.png" background-size="cover"}
