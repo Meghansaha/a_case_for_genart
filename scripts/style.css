@@ -33,6 +33,23 @@ body {
   font-family: 'Mulish', sans-serif;
 }
 
+li {
+    font-size: 1.2em;
+}
+
+#section > center > div > figure > figcaption {
+    font-size: 1.2em;
+}
+
+#section-1 > center > div > figure > figcaption {
+    font-size: 1.2em;
+}
+
+#section-2 > center > div > figure > figcaption {
+    font-size: 1.2em;
+}
+
+
 .reveal .progress span {
     display: block;
     height: 100%;
@@ -118,8 +135,12 @@ body {
 } 
 
 
-#bullet{
-      margin-left: -200px;
+#bullet > ul > li > h4 > span {
+      background-color: rgba(0,0,0,.8);
+      border-radius: 25px 15px 225px 15px/15px 225px 15px 255px;
+      margin-top: 30px;
+      padding: 5px;
+      line-height: 170%;
 }
 
 
@@ -127,7 +148,12 @@ body {
   color: #ffffff;
   background-color: #280b20;
   padding: 20px;
+  margin: 0;
+  position: relative;
+  color: #ffffff;
+  font-size: 50px;
 }
+
 
 #bluequote > blockquote{
   margin: 0;
@@ -176,6 +202,14 @@ body {
 .reveal pre.sourceCode code {
   /* height: 500px; */
   max-height: 100%;
+}
+
+#what-is-generative-art > p:nth-child(3) {
+  font-size: 50px;
+}
+
+#what-is-data-science > p:nth-child(3){
+  font-size: 50px;
 }
 
 #how-can-we-make-generative-art-in-r-or-python-1 > div > div:nth-child(1) > center > img{
