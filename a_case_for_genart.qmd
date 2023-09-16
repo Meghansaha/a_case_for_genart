@@ -157,11 +157,11 @@ or the data science... {pause}
 
 ## What are we Talking About Today? {.black background-color="#1a1a1a" background-image="images/map1.png" background-size="cover"}
 
-<div>
+::: {#bullet}
 
--   <h3>What is Generative Art?</h3>
+-   <h4><span>What is Generative Art?</span></h4>
 
-</div>
+:::
 
 ::: notes
 So, a quick run-down of our time today...
@@ -169,73 +169,73 @@ So, a quick run-down of our time today...
 
 ## What are we Talking About Today? {.black background-color="#1a1a1a" background-image="images/map2.png" background-size="cover"}
 
-<div>
+::: {#bullet}
 
--   <h3>What is Generative Art?</h3>
+-   <h4><span>What is Generative Art?</span></h4>
 
--   <h3>How Can we Make Generative Art in R or Python?</h3>
+-   <h4><span>How Can we Make Generative Art in R or Python?</span></h4>
 
-</div>
+:::
 
 ## What are we Talking About Today? {.black background-color="#1a1a1a" background-image="images/map3.png" background-size="cover"}
 
-<div>
+::: {#bullet}
 
--   <h3>What is Generative Art?</h3>
+-   <h4><span>What is Generative Art?</span></h4>
 
--   <h3>How Can we Make Generative Art in R or Python?</h3>
+-   <h4><span>How Can we Make Generative Art in R or Python?</span></h4>
 
--   <h3>Benefits of Creating Generative Art</h3>
+-   <h4><span>Benefits of Creating Generative Art</span></h4>
 
-</div>
+:::
 
 ## What are we Talking About Today? {.black background-color="#1a1a1a" background-image="images/map4.png" background-size="cover"}
 
-<div>
+::: {#bullet}
 
--   <h3>What is Generative Art?</h3>
+-   <h4><span>What is Generative Art?</span></h4>
 
--   <h3>How Can we Make Generative Art in R or Python?</h3>
+-   <h4><span>How Can we Make Generative Art in R or Python?</span></h4>
 
--   <h3>Benefits of Creating Generative Art</h3>
+-   <h4><span>Benefits of Creating Generative Art</span></h4>
 
--   <h3>What is Data Science?</h3>
+-   <h4><span>What is Data Science?</span></h4>
 
-</div>
+:::
 
 ## What are we Talking About Today? {.black background-color="#1a1a1a" background-image="images/map5.png" background-size="cover"}
 
-<div>
+::: {#bullet}
 
--   <h3>What is Generative Art?</h3>
+-   <h4><span>What is Generative Art?</span></h4>
 
--   <h3>How Can we Make Generative Art in R or Python?</h3>
+-   <h4><span>How Can we Make Generative Art in R or Python?</span></h4>
 
--   <h3>Benefits of Creating Generative Art</h3>
+-   <h4><span>Benefits of Creating Generative Art</span></h4>
 
--   <h3>What is Data Science?</h3>
+-   <h4><span>What is Data Science?</span></h4>
 
--   <h3>Examples of How Generative Art Translates into Data Science</h3>
+-   <h4><span>Examples of How Generative Art Translates into Data Science</span></h4>
 
-</div>
+:::
 
 ## What are we Talking About Today? {.black background-color="#1a1a1a" background-image="images/map6.png" background-size="cover"}
 
-<div>
+::: {#bullet}
 
--   <h3>What is Generative Art?</h3>
+-   <h4><span>What is Generative Art?</span></h4>
 
--   <h3>How Can we Make Generative Art in R or Python?</h3>
+-   <h4><span>How Can we Make Generative Art in R or Python?</span></h4>
 
--   <h3>Benefits of Creating Generative Art</h3>
+-   <h4><span>Benefits of Creating Generative Art</span></h4>
 
--   <h3>What is Data Science?</h3>
+-   <h4><span>What is Data Science?</span></h4>
 
--   <h3>Examples of How Generative Art Translates into Data Science</h3>
+-   <h4><span>Examples of How Generative Art Translates into Data Science</span></h4>
 
--   <h3>Final Thoughts</h3>
+-   <h4><span>Final Thoughts</span></h4>
 
-</div>
+:::
 
 ##  {background-color="#1a1a1a" background-image="images/background2.png" background-size="cover"}
 
@@ -292,6 +292,8 @@ Now this is vague and general, and yes. that's on Purpose<br>
 
 > While all AI Art is generative art... <br>
 
+<br>
+
 ::: fragment
 > ...All generative art **IS NOT** AI art
 :::
@@ -305,6 +307,8 @@ Now this is vague and general, and yes. that's on Purpose<br>
 
 > While some generative art is randomly calculated by the computer... <br>
 :::
+
+<br>
 
 ::: fragment
 > ...Some generative art is intentional and deliberately calculated by a human
@@ -330,7 +334,7 @@ How we can make it in R or Python<br>
 
 ::: notes
 -   Safe to say we have some "data" people in here and that some of you have probably created data visualizations with R or Python.
--   Iff you know how to make visuals in R or Python, you're already so clost to making generative art...
+-   If you know how to make visuals in R or Python, you're already so close to making generative art...
 :::
 
 ## How Can we Make Generative Art in R or Python? {.mutedblue background-color="#4e5483"}
@@ -1271,24 +1275,7 @@ In the DS scenario: <br>
 
 <br>
 
-```{r, echo = TRUE, eval = FALSE}
-# Finger options for iterations#
-drip_opts <- list(
-  1:n,
-  y_starts,
-  x_starts,
-  fills_colors
-)
-
-# Finger data from the top-down#
-drip <- pmap(drip_opts, ~tibble(
-  x = c(..3, *math for x-axis goes here*),
-  y = c(..2, *math for y-axis goes here*),
-  group = group_numbers(..1),
-  fill = c(..4)
-)) |>
-  list_rbind()
-```
+<center>![](images/ex1snip_art.png){width="100%"}</center>
 :::
 
 ::: {.column width="50%"}
@@ -1296,24 +1283,7 @@ drip <- pmap(drip_opts, ~tibble(
 
 <br>
 
-```{r, echo = TRUE, eval = FALSE}
-# Apply labels to all DFs
-lst_labelled <- 
-  imap(lst_vendors_dfs, 
-       ~set_derived_variable_labels(
-         .x,.y, path = here("some_path.csv"))
-       )
-
-# Skim all the DFs
-map(lst_labelled, ~ skimr::skim(.x))
-
-# Saving master analytic data set
-map(lst_labelled,
-    ~saveRDS(.x,
-             file = glue(
-               "{names(lst_labelled[.x])}.RDS"
-               )))
-```
+<center>![](images/ex1snip_ds.png){width="100%"}</center>
 :::
 :::
 
@@ -1339,14 +1309,14 @@ Ok, so if we're doing iterations, naturally, what comes next is development<clic
 
 ::: columns
 ::: {.column width="50%"}
--   Learning and honing in on development skills is another **HUGE** feat <br><br>
+-   Learning and honing in on development skills can take you to new levels✨. <br><br>
 
 ::: fragment
 -   In Generative Art, this promotes cleaner and robust workflows and more complex operations <br><br>
 :::
 
 ::: fragment
--   In Data Science, it does the same, but you're ***really*** moving up to new levels✨.
+-   In Data Science, it does the same, but it's invaluable
 :::
 :::
 
@@ -1357,7 +1327,7 @@ Ok, so if we're doing iterations, naturally, what comes next is development<clic
 
 ::: notes
 Development is HIGHLY desirable in Data Science: <br>
--   because it allows you to take more advantage of the "open-source" paradigm within our community by creating programs for yourself, internally for your organization, and others.
+-   because it allows you to take more advantage of the "open-source" paradigm we have within our community by creating programs for yourself, internally for your organization, and others.
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Development 📦 {.yellow background-color="#C8B17E"}
@@ -1374,6 +1344,8 @@ Development is HIGHLY desirable in Data Science: <br>
 
 -   Create a function that spits out a color palette based on input choices.
 
+<br>
+
 <center>![](images/ex2_art.png){width="100%"}</center>
 :::
 
@@ -1387,7 +1359,6 @@ Development is HIGHLY desirable in Data Science: <br>
 
 -   Want to create a function that left joins a table of existing data to another data frame.
 
-<br>
 
 <center>![](images/ex2_ds.png){width="100%"}</center>
 :::
@@ -1418,23 +1389,8 @@ data science scenario:<br>
 
 <br>
 
-```{r, eval = FALSE, echo = TRUE}
-art_pals <- function(colors = "pal_1", n = 5) {
-  
-  # Preset Pals
-  pal = switch(
-    colors,
-    "pal_1" = c("#000000", "#ffffff", "#1a1a1a"),
-    "pal_2" = c("#1a2242", "#ea2242", "#9ad742")
-  )
-  
-  # Creating pal with specified n
-  final_pal = colorRampPalette(pal)(n)
-  
-  # Return final pal
-  return(final_pal)
-}
-```
+<center>![](images/dev_snip_art.png){width="100%"}</center>
+
 :::
 
 ::: {.column width="50%"}
@@ -1442,26 +1398,12 @@ art_pals <- function(colors = "pal_1", n = 5) {
 
 <br>
 
-```{r, eval = FALSE, echo = TRUE}
-map_ae <- function(data = df_main,
-                   join_col = ae_term) {
-  
-  # Preset data frame gets pulled in
-  df_ae <- load(*df_ae path here*)
-  
-  # Creating new df with left_join
-  final_df <- df_main |>
-    left_join(df_ae, by = "ae_term")
-  
-  # Return final df
-  return(final_df)
-}
-```
+<center>![](images/dev_snip_ds.png){width="100%"}</center>
 :::
 :::
 
 ::: notes
--   Whether it's for art or data science, the approach is the same
+-   Whether it's for art or data science, or in R or Python, the approach is the same
 -   You have to go through a iterative process of debugging and development
 -   to try to create a function that is ideally efficient and runs as intended. 
 
@@ -1504,7 +1446,7 @@ map_ae(df_main, ae_term)
 
 ::: notes
 "So the solution is simple, just use..."<br>
--   Whether you are in R or python, the goal of creating functions are the same <br>
+-   Whether you are doing art or data science, in R or python, the goal of creating functions are the same <br>
 -   We just wish to do a specific task..
 -   in an isolated environment..
 -   for a consistent output or result.
@@ -1524,9 +1466,6 @@ map_ae(df_main, ae_term)
 ::: {.column width="50%"}
 -   It's **debatable** if you *need* communication for art<br><br>
 
-::: fragment
--   Explaining art methods, and collaborating on issues requires communication <br><br>
-:::
 
 ::: fragment
 -   In Data Science, you **NEED to communicate *or else*** 💀
@@ -1540,7 +1479,8 @@ map_ae(df_main, ae_term)
 
 ::: notes
 "Ok, so my last concept I have here in communication"<br>
--   Even tho it's not required for art, I did get to practice this skill out a bit on maternity leave
+- maybe for art: explaining art methods, collaborating w/ others...<br>
+- Even tho it's not required for art, I did get to practice this skill out a bit on maternity leave
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Communication 💬 {.yellow background-color="#C8B17E"}
@@ -1641,7 +1581,7 @@ Identifying what matters<br>
 ::: {.column width="50%"}
 <center><u>**Art Scenario**</u></center>
 
-<br> Create a reprex with the [`reprex` package](https://reprex.tidyverse.org/) (R) or the [`reprexpy` library](https://reprexpy.readthedocs.io/en/latest/) (Python)...
+<br> Create a reprex with the [`reprex` package](https://reprex.tidyverse.org/)
 
 <br>
 
