@@ -52,9 +52,9 @@ recording of this talk will be provided here when available
 
 - [R Orange Single Line Example](code_examples/orange_line_ex.R)
 
-- [Python Cityscape Example](code_examples/cityscape.R)
+- [Python Cityscape Example](code_examples/cityscape_ex.py)
 
-- [R Cityscape Example](code_examples/cityscape.py)
+- [R Cityscape Example](code_examples/cityscape_ex.R)
 
 ------------------------------------------------------------------------
 

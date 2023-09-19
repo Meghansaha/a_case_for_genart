@@ -1425,7 +1425,7 @@ Some “Primitive” Graphical Tools🛠
 <div class="sourceCode cell-code" id="cb7" data-code-line-numbers="1-9,25-28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># Data for the buildings--------------------------------</span></span>
 <span id="cb7-2"><a href="#cb7-2"></a>df_buildings <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
 <span id="cb7-3"><a href="#cb7-3"></a>  <span class="at">x =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">4</span>,</span>
-<span id="cb7-4"><a href="#cb7-4"></a>  <span class="at">xend =</span> x, </span>
+<span id="cb7-4"><a href="#cb7-4"></a>  <span class="at">xend =</span> x,</span>
 <span id="cb7-5"><a href="#cb7-5"></a>  <span class="at">y =</span> <span class="dv">0</span>,</span>
 <span id="cb7-6"><a href="#cb7-6"></a>  <span class="at">yend =</span> <span class="fu">sample</span>(<span class="fu">seq</span>(.<span class="dv">5</span>,<span class="dv">2</span>, <span class="at">l =</span> <span class="dv">10</span>), <span class="dv">5</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
 <span id="cb7-7"><a href="#cb7-7"></a>  <span class="at">color =</span> <span class="st">"#000000"</span>,<span class="at">linewidth =</span> <span class="dv">60</span></span>
@@ -1437,7 +1437,7 @@ Some “Primitive” Graphical Tools🛠
 <span id="cb7-13"><a href="#cb7-13"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
 <span id="cb7-14"><a href="#cb7-14"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">4</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">3</span>),</span>
 <span id="cb7-15"><a href="#cb7-15"></a>                  <span class="at">expand =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb7-16"><a href="#cb7-16"></a>  <span class="fu">geom_segment</span>(<span class="at">color =</span> df_sky<span class="sc">$</span>color, </span>
+<span id="cb7-16"><a href="#cb7-16"></a>  <span class="fu">geom_segment</span>(<span class="at">color =</span> df_sky<span class="sc">$</span>color,</span>
 <span id="cb7-17"><a href="#cb7-17"></a>               <span class="at">linewidth =</span> df_sky<span class="sc">$</span>linewidth) <span class="sc">+</span></span>
 <span id="cb7-18"><a href="#cb7-18"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> df_moon, <span class="fu">aes</span>(x,y),</span>
 <span id="cb7-19"><a href="#cb7-19"></a>             <span class="at">color =</span> df_moon<span class="sc">$</span>color,</span>

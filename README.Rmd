@@ -40,9 +40,9 @@ This talk is being presented on September 20<sup>th</sup> 2023, 1:00 PM CDT at t
 
 -   [R Orange Single Line Example](code_examples/orange_line_ex.R)
 
--   [Python Cityscape Example](code_examples/cityscape.R)
+-   [Python Cityscape Example](code_examples/cityscape_ex.py)
 
--   [R Cityscape Example](code_examples/cityscape.py)
+-   [R Cityscape Example](code_examples/cityscape_ex.R)
 
 ------------------------------------------------------------------------
 
