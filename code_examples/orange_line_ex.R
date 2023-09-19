@@ -18,7 +18,7 @@ line <-
   tibble(x = 1:4,
          y = 1,
          color = orange_hex,
-         linewdith = chonk
+         linewidth = chonk
   )
 
 # Plot Creation and View-------------------------------
