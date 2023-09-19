@@ -2,9 +2,7 @@
 output: github_document
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-<img src="images/case_banner.png" alt="It's All About Perspective: Making A Case For Generative Art" style="max-width='100%'"/>
+<img src="images/case_banner.png" alt="It&apos;s All About Perspective: Making A Case For Generative Art" style="max-width=&apos;100%&apos;"/>
 
 # **Resources for It's All About Perspective: Making A Case For Generative Art** <br>
 
@@ -24,7 +22,7 @@ This repository contains supplemental resources and materials that coincide with
 
 This repository serves as a resource for relevant supplemental code, materials, and talks for those seeking to learn more about generative art.
 
-<br>
+------------------------------------------------------------------------
 
 ## **Slides and Talk Recording**
 
@@ -32,14 +30,56 @@ The slides for *"It's All About Perspective"* can be found on the repository [he
 
 <br>
 
-This talk being presented on September 20<sup>th</sup> 2023, 1:00 PM CDT at the Hyatt Regency Chicago (Chicago, Illinois) United States. A recording of this talk will be provided here when available
+This talk is being presented on September 20<sup>th</sup> 2023, 1:00 PM CDT at the Hyatt Regency Chicago (Chicago, Illinois) United States. A recording of this talk will be provided here when available
 
-<br><br>
+------------------------------------------------------------------------
 
-## **Example Codes**
+## **Talk Example Code**
 
-## **Previous Talks**
+-   [Python Orange Single Line Example](code_examples/orange_line_ex.py)
+
+-   [R Orange Single Line Example](code_examples/orange_line_ex.R)
+
+-   [Python Cityscape Example](code_examples/cityscape.R)
+
+-   [R Cityscape Example](code_examples/cityscape.py)
+
+------------------------------------------------------------------------
+
+## **Previous Code For Inspiration**
+
+-   [25 Days of rtistry Repository](https://github.com/Meghansaha/25DaysofRtistry)
+
+-   [Genuary 2023 Submission Repository](https://meghansaha.github.io/genuary_subs/)
+
+-   [Bars Example](https://github.com/Meghansaha/Functions_in_Rtistry/blob/master/scripts/bars_example.R) - (An example on using Purrr functions for Rtistry)
+
+## **Previous Talks and Slides**
+
+-   [Intro to Rtistry Using ggplot2 in R Talk](https://lnkd.in/gDcQTK5d)
+
+-   [Intro to Rtistry Using ggplot2 in R Slides](https://lnkd.in/ghGDreS8)
+
+-   [Functions in Rtistry Slides](https://github.com/Meghansaha/Functions_in_Rtistry)
+
+-   [Collages and Patterns Talk](https://github.com/Meghansaha/collages_and_patterns/tree/master)
+
+-   [Collages and Patterns Slides](https://meghansaha.github.io/collages_and_patterns/#/title-slide)
+
+------------------------------------------------------------------------
 
 ## **Previous Blog Posts**
 
+-   [Thinking Outside the Grid - A "bare bones" intro to Rtistry concepts in R using ggplot.](https://www.thetidytrekker.com/post/thinking-outside-the-grid)
+
+-   [Making Waves in ggplot: An Rtistry Tutorial](https://thetidytrekker.com/post/making-waves/making-waves)
+
+------------------------------------------------------------------------
+
 ## **Other Resources**
+
+-   [artpack](https://meghansaha.github.io/artpack/) Package
+
+-   "[Anatomy of Generative Art](https://github.com/Ijeamakaanyene/anatomy_of_generative_art)" Talk and Repository- [Ijemaka Anyene](https://ijeamaka.art/portfolio/)
+
+-   "[Art From Code](https://art-from-code.netlify.app/)" Workshop Materials - [Danielle Navarro](https://djnavarro.net/)

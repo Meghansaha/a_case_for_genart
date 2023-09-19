@@ -77,7 +77,7 @@ transition: fade
 
 -   helped with the practical data science skills I needed when I returned to work
 
--   I credit this for smoothing out my transition back into work and I want to give a tiny glimpse into how that was possible
+-   I want to give a tiny glimpse into how that was possible
 :::
 
 ##  {background-color="#1a1a1a" background-image="images/background1.png" background-size="cover"}
@@ -817,7 +817,7 @@ df_sky |>
 # Data for the buildings--------------------------------
 df_buildings <- tibble(
   x = 0:4,
-  xend = x, 
+  xend = x,
   y = 0,
   yend = sample(seq(.5,2, l = 10), 5, replace = TRUE),
   color = "#000000",linewidth = 60
@@ -829,7 +829,7 @@ df_sky |>
   theme_void() +
   coord_cartesian(xlim = c(0,4), ylim = c(0,3),
                   expand = FALSE) +
-  geom_segment(color = df_sky$color, 
+  geom_segment(color = df_sky$color,
                linewidth = df_sky$linewidth) +
   geom_point(data = df_moon, aes(x,y),
              color = df_moon$color,
@@ -1007,12 +1007,10 @@ And my most recent tidy tuesday I did this year... obviously, i developed knowle
 :::
 
 ::: notes
-Now for some more abstract examples...<br>
-- One of which is mathematical/logical reasoning<br>
-- Now remember yall, I HATE math 
-- so Imagine how PISSED I was when I found out math was involved to make art..
-- You can just not deny that
-- Certain types of Art can require you to be knowledgeable about patterns, numeric sequences, and general logic.. logical reasoning is what makes it possible to go from a grid of points like this...
+Now There were some more abstract examples...<br>
+- like mathematical/logical reasoning<br>
+- yeahhh... Imagine how PISSED I was when I found out math was involved to make art..
+- But the truth is that Art can require you to know about patterns, numeric sequences, and general logic.. that logic is what makes it possible to go from a grid of points like this...
 :::
 
 ## Benefits of Creating Generative Art {.turq background-color="#3a7188"}
@@ -1143,6 +1141,8 @@ In this room today, Data Science is defined as...
 -   Now that we're all on the same page about what data science is
 -   let's get into examples
 -   Now, I have tons of examples but I'll only focus on three main concepts..
+-   How this will work:
+-   Present the concept, then give an example of its use in an art scenario and data science scenario
 :::
 
 ## Examples of How Generative Art Translates into Data Science {.yellow background-color="#C8B17E"}
@@ -1359,10 +1359,10 @@ Development is HIGHLY desirable in Data Science: <br>
 
 So these are two different things, but the process for tackling both is very similar<br>
 art scenario:<br>
--   Realized I was copying and pasting a block of code alot, so I wanted to reduce my code bloat in the artpack package<br>
+-   I wanted to reduce code bloat, so just stop copy and pasting things over and over
 
 data science scenario:<br>
--   We already had an existing fx in an internal package that had stopped working as intended, So I needed to burn it down and create a new and improved function
+-   At work, a fx stopped working in our internal pacakge, so I needed to make a new one
 :::
 
 ## Examples of How Generative Art Translates into Data Science - Development 📦 {.yellow background-color="#C8B17E"}
@@ -1649,13 +1649,14 @@ DS scenario:<br>
 ::: notes
 -   For those of you interested in generative art, I hope this talk gives you the push to open up your favorite IDE and try it out.
 -   For those of you that are not interested, I encourage you all to consider integrating a hobby or interest into your learning journeys
--   Managers and leads at work, could you make room in your team's scheduling to allow for personal development that looks like this?
--   Are you willing to let go of the belief that learning only looks like courses and textbooks?
+-   Managers and leads at work, could you make room in your team's scheduling to allow for personal development that looks like this? -> click next
+
 :::
 
 ##  {background-image="images/background.png" background-size="cover"}
 
 ::: notes
+-   Are you willing to let go of the belief that learning only looks like courses and textbooks?
 -   Regardless of what you do after this talk, I want you to think about how different learning approaches may work for you.
 -   If you're currently having trouble understanding something
 -   Try to embrace learning in a low-stress environment fueled only by your interests.
