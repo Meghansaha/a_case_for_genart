@@ -352,6 +352,8 @@ How we can make it in R or Python<br>
 </center>
 
 ::: notes
+"MIGHT NOT BE AS HARD AS YOU THINK" (Read the damn slide girl)
+
 Now...
 
 -   I'm going to be real with ya'll, I don't have enough time here to truly explain in depth how to make complicated art with code
