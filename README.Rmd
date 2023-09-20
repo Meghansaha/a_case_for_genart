@@ -62,7 +62,7 @@ This talk is being presented on September 20<sup>th</sup> 2023, 1:00 PM CDT at t
 
 -   [Functions in Rtistry Slides](https://github.com/Meghansaha/Functions_in_Rtistry)
 
--   [Collages and Patterns Talk](https://github.com/Meghansaha/collages_and_patterns/tree/master)
+-   [Collages and Patterns Talk](https://www.youtube.com/watch?v=hc7VaKRcrcY)
 
 -   [Collages and Patterns Slides](https://meghansaha.github.io/collages_and_patterns/#/title-slide)
 

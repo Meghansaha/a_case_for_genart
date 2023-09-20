@@ -80,7 +80,7 @@ recording of this talk will be provided here when available
   Slides](https://github.com/Meghansaha/Functions_in_Rtistry)
 
 - [Collages and Patterns
-  Talk](https://github.com/Meghansaha/collages_and_patterns/tree/master)
+  Talk](https://www.youtube.com/watch?v=hc7VaKRcrcY)
 
 - [Collages and Patterns
   Slides](https://meghansaha.github.io/collages_and_patterns/#/title-slide)
